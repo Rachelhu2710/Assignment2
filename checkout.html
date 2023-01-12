@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/checkout.css" rel="stylesheet" type="text/css"/>
+    <link href="css/general.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Checkout</title>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="women.html">Women</a>
+        <a href="men.html">Men</a>
+        <a href="kids.html">Kids</a>
+        <a href="about.html">About Us</a>
+    </nav>
+    <form>
+        <p>
+            <label>Name: </label>
+            <input id="naming" type="text" placeholder="Name" required>
+        </p>
+        <p>
+            <label>Phone Number:</label>
+            <input id="phoneno" type="tel" placeholder="Phone Number" pattern = "[8-9]{1}[0-9]{7}" required>
+        </p>
+        <p>
+            <label>Email: </label>
+            <input id="email" type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+        </p>
+        <input class="submit" type="submit" onclick="validate()">
+    </form>
+    <div id = "display">
+       <h2><u>Receipt</u> </h2>
+    </div>
+    <script src="js/order.js"></script>
+</body>
+</html>

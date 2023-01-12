@@ -1,0 +1,115 @@
+.content
+{
+  width: 25%;
+}
+.shoesimage
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+} 
+ .container img
+{
+  max-width: 95%;
+} 
+#shoes9
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes9:hover
+{
+  color: lightslategray;
+}
+#shoes10
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes10:hover
+{
+  color: lightslategray;
+}
+#shoes11
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes11:hover
+{
+  color: lightslategrey;
+}
+#shoes12
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes12:hover
+{
+  color: lightslategray;
+}
+#shoes13
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes13:hover
+{
+  color: lightslategray;
+}
+#shoes14
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes14:hover
+{
+  color: lightslategray;
+}
+#shoes15
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes15:hover
+{
+  color: lightslategray;
+}
+#shoes16
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#shoes16:hover
+{
+  color: lightslategray;
+}
+@media (max-width: 768px) {
+  .content{
+    width: 50%;
+  }
+}

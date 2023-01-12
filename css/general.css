@@ -1,0 +1,53 @@
+body
+{
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 20px; 
+}
+.navigation
+ {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #252424;
+  overflow: auto;
+}
+
+.navigation a 
+{
+  justify-content:space-around;
+  display: flex;
+  flex-basis:1% ;
+  flex-grow:1 ;
+  padding: 0;
+  padding-top:10px ;
+  padding-bottom: 10px;
+  max-width: 100%;
+  float: left; 
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  width: 20%;
+}
+
+.navigation a:hover
+{
+  background-color: #ddd;
+  color: black;
+}
+
+.navigation a.current 
+{
+  background-color:bisque;
+  color: black;
+}
+@media(max-width: 426px)
+{
+  .navigation a 
+  {
+    font-size: 9px; 
+  } 
+  body
+  {
+    font-size: 9px;
+  }
+}
+

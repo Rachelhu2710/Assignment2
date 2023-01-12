@@ -1,0 +1,30 @@
+img
+{
+  max-width: 100%;
+}
+.picture
+{
+  display: flex;
+  flex-direction: column;
+} 
+ .picture .pokemon
+{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.picture .coca-cola
+{
+  margin-top: 8px;
+  margin-bottom: 8px;
+} 
+.history
+{
+  width: 98%;
+  background-color: #EAE3C9;
+  margin-right: auto;
+  margin-left: auto;
+}
+h2
+{
+  text-align: center;
+}
