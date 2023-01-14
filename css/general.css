@@ -1,53 +1,192 @@
-body
-{
-  font-family: 'Albert Sans', sans-serif;
-  font-size: 20px; 
-}
-.navigation
- {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #252424;
-  overflow: auto;
-}
 
-.navigation a 
-{
-  justify-content:space-around;
+
+header{
+    
   display: flex;
-  flex-basis:1% ;
-  flex-grow:1 ;
-  padding: 0;
-  padding-top:10px ;
-  padding-bottom: 10px;
-  max-width: 100%;
-  float: left; 
-  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 5px grey;
+  min-width: 100%;
+  position: fixed;
+  background-color: white;
+
+}
+
+
+
+#shop,#artists,#shows,#about
+{padding: 10px;
+font-family:  'Albert Sans', sans-serif;
+font-size: 16px;
+transition: 0.8s;
+color: black;
+text-decoration: none;
+position: relative;
+}
+#l1,#l2,#l3,#l4,#l5{list-style: none;}
+#img-1
+{width: 80px;
+
+}
+.shop-list
+{  list-style: none;
+   position: absolute;
+   background-color: white;
+   padding: 0;
+   height: 300px;
+   top: 48px;
+   left: 0px;
+  padding-left: 30px;
+   width: 100%;
+   box-shadow: 2px 2px 2px  rgb(91, 57, 13);
+   border-radius: 3px;
+   display: none;
+   z-index: 1;
+
+}
+#sl1,#sl11,#sl12
+{text-decoration: none;
+list-style: none;
+color: black;
+font-size: 20px;
+line-height:30px;
+display: block;
+}
+
+
+.column {
+  float: left;
+  width: 33%;
+  height: 250px;
+  background-color: white;
+}
+
+/* Style links inside the columns */
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
   text-decoration: none;
-  font-size: 17px;
-  text-align: center;
-  width: 20%;
+  display: block;
+  text-align: left;
 }
 
-.navigation a:hover
-{
+/* Add a background color on hover */
+.column a:hover {
   background-color: #ddd;
-  color: black;
 }
 
-.navigation a.current 
-{
-  background-color:bisque;
-  color: black;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-@media(max-width: 426px)
-{
-  .navigation a 
-  {
-    font-size: 9px; 
-  } 
-  body
-  {
-    font-size: 9px;
-  }
-}
+#l1:hover > .shop-list
+{  transition: 0.5;
+   display: block;}
 
+
+.shop-list:hover{background-color: rgb(238, 226, 204);}
+#sl1:hover
+{background-color: black;
+color: white;}
+#sl11:hover
+{background-color: black;
+color: white;}
+#sl12:hover
+{background-color: black;
+color: white;}
+
+.artists-list
+{list-style: none;
+   position: absolute;
+   background-color: white;
+   padding: 0;
+   height: 100px;
+   top: 38px;
+   box-shadow: 2px 2px 2px  rgb(91, 57, 13);
+   border-radius: 3px;
+   display: none;
+}
+#al1,#al11,#al12
+{text-decoration: none;
+   list-style: none;
+   color: black;
+   font-size: 20px;
+   line-height:30px;
+   display: block;}
+.artists-list:hover{background-color: rgb(238, 226, 204);}
+#al1:hover
+{background-color: black;
+color: white;}
+#al11:hover
+{background-color: black;
+color: white;}
+#al12:hover
+{background-color: black;
+color: white;}
+#l2:hover > .artists-list
+{ transition: 0.5s;
+   display: block;}
+
+
+
+.about-list
+{list-style: none;
+   position: absolute;
+   background-color: white;
+   padding: 0;
+   height: 50px;
+   top: 38px;
+   box-shadow: 2px px 2px  rgb(91, 57, 13);
+   border-radius: 3px;
+   width: 80px;
+   right: 0px;
+   display: none;
+   
+
+}
+#al13
+{text-decoration: none;
+   list-style: none;
+   color: black;
+   font-size: 18px;
+   margin-top: 10px;
+   line-height:30px;
+   display: block;;}
+
+
+   .about-list:hover{background-color: rgb(238, 226, 204);}
+   #al13:hover
+   {background-color: black;
+   color: white;}
+
+
+   
+
+   #l5:hover > .about-list
+   { transition: 0.5s;
+   display: block;}
+
+/* #img-1
+{transition: 0.8s;}
+
+#shop:hover
+{background-color: black;
+color: white;
+cursor: pointer;}  
+#artists:hover
+{background-color: black;
+color: white;cursor: pointer;} 
+#img-1:hover
+{box-shadow:5px 5px 5px black;
+color: white;cursor: pointer;} 
+#shows:hover
+{background-color: black;
+color: white;cursor: pointer;} 
+#about:hover
+{background-color: black;
+color: white;cursor: pointer;}
