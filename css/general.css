@@ -1,99 +1,133 @@
-header{
-    
+
+header{  
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 5px 5px 5px grey;
   min-width: 100%;
   position: fixed;
-  background-color: white;
+  background-color:white;
 
 }
-
-
-#shop,#artists,#shows,#about
-{padding: 10px;
-font-family:  'Albert Sans', sans-serif;
-font-size: 16px;
-transition: 0.8s;
-color: black;
-text-decoration: none;
-position: relative;
-}
-#l1,#l2,#l3,#l4,#l5{list-style: none;}
 #img-1
-{width: 80px;
-
-}
-.shop-list
-{  list-style: none;
-   position: absolute;
-   background-color: white;
-   padding: 0;
-   height: 300px;
-   top: 48px;
-   left: 0px;
-   width: 100%;
-   box-shadow: 2px 2px 2px  rgb(91, 57, 13);
-   border-radius: 3px;
-   display: none;
-   z-index: 0;
-
-}
-#sl1,#sl11,#sl12
-{text-decoration: none;
-list-style: none;
-color: black;
-font-size: 20px;
-line-height:30px;
-display: block;
-}
-
-
-.column {
+{width: 80px;}
+ 
+ /* Links inside the navbar */
+ .navbar a {
    float: left;
-   padding-left: 5%;
-  width: 31.3%;
-  height: 250px;
-  background-color: white;
-}
+   font-size: 16px;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+ 
+ /* The dropdown container */
+ .dropdown {
+   float: left;
+   overflow: hidden;
+ }
+ 
+ /* Dropdown button */
+ .dropdown  {
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color: rgb(255, 255, 255);
+   padding: 14px 16px;
+   background-color: inherit;
+   font: inherit; /* Important for vertical align on mobile phones */
+   margin: 0; /* Important for vertical align on mobile phones */
+ }
+ .dropbtn{
 
-/* Style links inside the columns */
-.column a {
-  float: none;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color:black;
+   background-color: rgb(255, 255, 255);
+   padding: 14px 16px;
+   margin: 0; 
 
-/* Add a background color on hover */
-.column a:hover {
-  background-color: #ddd;
-}
+ }
+ 
+ /* Add a red background color to navbar links on hover */
+ .navbar a:hover, .dropdown:hover .dropbtn {
+   background-color: rgb(145, 140, 140);
+ }
+ 
+ /* Dropdown content (hidden by default) */
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   width: 100%;
+   justify-content: space-around;
+   left: 0;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ /* Mega Menu header, if needed */
+ .dropdown-content .header {
+   background: rgb(111, 23, 23);
+   padding: 16px;
+   color: white;
+ }
+ 
+ /* Show the dropdown menu on hover */
+ .dropdown:hover .dropdown-content {
+   display: flex;
+ }
+ 
+ /* Create three equal columns that floats next to each other */
+ .column {
+   text-align: center;
+   width: 33.3%;
+   background-color: rgb(255, 255, 255);
+   /* height: 100%; */
+   color: #000;
+ }
+ 
+ /* Style links inside the columns */
+ .column a {
+   float: center;
+   color: black;
+   padding: 16px;
+   text-decoration: none;
+   display: block;
+   text-align: center;
+ }
+ 
+ /* Add a background color on hover */
+ .column a:hover {
+   background-color: #ddd;
+ }
+ 
+ /* Clear floats after the columns */
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#l1:hover > .shop-list
-{  transition: 0.5;
-   display: block;}
 
 
-.shop-list:hover{background-color: rgb(238, 226, 204);}
-#sl1:hover
-{background-color: black;
-color: white;}
-#sl11:hover
-{background-color: black;
-color: white;}
-#sl12:hover
-{background-color: black;
-color: white;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .artists-list
 {list-style: none;
@@ -184,4 +218,4 @@ color: white;cursor: pointer;}
 color: white;cursor: pointer;} 
 #about:hover
 {background-color: black;
-color: white;cursor: pointer;}
+color: white;cursor: pointer;} */
