@@ -1,10 +1,6 @@
-
-
 header{
     
   display: flex;
-  padding-left: 5px;
-  padding-right: 5px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 5px 5px 5px grey;
@@ -13,7 +9,6 @@ header{
   background-color: white;
 
 }
-
 
 
 #shop,#artists,#shows,#about
@@ -38,12 +33,11 @@ position: relative;
    height: 300px;
    top: 48px;
    left: 0px;
-  padding-left: 30px;
    width: 100%;
    box-shadow: 2px 2px 2px  rgb(91, 57, 13);
    border-radius: 3px;
    display: none;
-   z-index: 1;
+   z-index: 0;
 
 }
 #sl1,#sl11,#sl12
@@ -57,8 +51,9 @@ display: block;
 
 
 .column {
-  float: left;
-  width: 33%;
+   float: left;
+   padding-left: 5%;
+  width: 31.3%;
   height: 250px;
   background-color: white;
 }
