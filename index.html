@@ -9,18 +9,24 @@
     <link href="css/general.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Lobster&family=Quicksand&family=Trispace&display=swap" rel="stylesheet">
+    
     <title>HomePage</title>
 </head>
 <body style="margin: 0;">
     <header style="z-index: 1;">
-     
+       
+      
+      <a id="main-options" href="#home">user</a>
         
         <div id="header-colum-2"><a href="#" id="logo-1"><img id="img-1" src="images/PUMA-GIF.gif" alt="logo"></a></div>
         
-        <a href="#home">user</a>
+       
       
         <div class="dropdown">
-          <button class="dropbtn">Shop
+          <button  id="main-options" class="dropbtn"> Shop
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
@@ -45,18 +51,26 @@
             
           </div>
         </div>
-    
-        
-       
-        
-        
-         </div>
-        <div id="header-column-4">
-          <img id="img-2" src="images/shopping-cart.png" alt="cart">
+        <div style="display: flex;align-items: center;">
+        <div class="search-bar">
+          <input type="text" class="textbox" placeholder="search"/>
+          <ion-icon class="search-btn" name="search-outline"></ion-icon>
+          
         </div>
+        <div id="header-column-4">
+          
+          <ion-icon id="img-2"  alt="cart" name="cart-outline"></ion-icon>
+        </div>
+       </div>
+        
+        
+        
+      
        
         
         </header> 
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         
 </body>
 </html>
