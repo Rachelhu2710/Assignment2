@@ -4,14 +4,18 @@ header{
   flex: 1 2 2 auto;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 4px 4px 4px lightgray;
   min-width: 100%;
   position: fixed;
   background-color:rgb(255, 254, 254);
-
+}
+body
+{
+  background-color: #EDEDEE;
 }
 #img-1
-{width: 80px;}
+{width: 80px;
+background-color: transparent;}
 #img-2
 {width: 50px;
 height: 40px;}
@@ -28,9 +32,10 @@ height: 40px;}
  }
 
  /* The dropdown container */
- .dropdown {
-   float: left;
-   overflow: hidden;
+ .dropdown 
+ {
+  float: left;
+  overflow: hidden;
  }
 
  /* Dropdown button */
@@ -55,7 +60,17 @@ height: 40px;}
    margin: 0;
 
  }
+ .dropbtn1{
 
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color:black;
+  background-color: rgb(255, 255, 255);
+  padding: 14px 16px;
+  margin: 0;
+
+}
 
 
 
@@ -94,7 +109,6 @@ height: 40px;}
   display: flex;
   flex-direction: column;
   
-
  }
  /* Style links inside the columns */
  .column a {
@@ -173,7 +187,7 @@ height: 40px;}
 
 /* Add a background color on hover */
 .column1 a:hover {
-  background-color: #ddd;
+  background-color: #DDDADD;
 }
 
 
@@ -219,7 +233,8 @@ height: 40px;}
   align-items: center;
   justify-content: center;
   position: relative;
-  border: 2px black solid;
+  border: 2px #CADDE4 solid;
+  border-radius: 2%;
   transition-duration: 0.2s;
 }
 
@@ -251,8 +266,7 @@ height: 40px;}
 
 
 .search-bar:hover >.search-btn:hover {
-  background: linear-gradient(white,
-  black);
+  background: linear-gradient(#EEE3D0,#E8ECEC);
   transition-duration: 0.5s;
 }
 
