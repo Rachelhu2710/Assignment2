@@ -1,5 +1,5 @@
 
-header{  
+header{
   display: flex;
   flex: 1 2 2 auto;
   justify-content: space-between;
@@ -16,23 +16,23 @@ header{
 {width: 50px;
 height: 40px;}
 
- 
- /* Links inside the navbar */
- .navbar a {
-   float: left;
+
+
+ .column a {
    font-size: 16px;
    color: white;
    text-align: center;
    padding: 14px 16px;
    text-decoration: none;
+   
  }
- 
+
  /* The dropdown container */
  .dropdown {
    float: left;
    overflow: hidden;
  }
- 
+
  /* Dropdown button */
  .dropdown  {
    font-size: 16px;
@@ -52,13 +52,13 @@ height: 40px;}
    color:black;
    background-color: rgb(255, 255, 255);
    padding: 14px 16px;
-   margin: 0; 
+   margin: 0;
 
  }
- 
 
- 
- /* Dropdown content (hidden by default) */
+
+
+
  .dropdown-content {
    display: none;
    position: absolute;
@@ -71,13 +71,13 @@ height: 40px;}
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
    z-index: 1;
  }
- 
+
 
  /* Show the dropdown menu on hover */
  .dropdown:hover > .dropdown-content {
    display: flex;
  }
- 
+
  /* Create three equal columns that floats next to each other */
  .column {
    text-align: center;
@@ -85,29 +85,128 @@ height: 40px;}
    background-color: rgb(255, 255, 255);
    /* height: 100%; */
    color: #000;
+   display: flexbox;
+   flex-direction: row;
+  
  }
- 
+ .dropdown-links
+ {
+  display: flex;
+  flex-direction: column;
+  
+
+ }
  /* Style links inside the columns */
  .column a {
-   float: center;
    color: black;
    padding: 16px;
    text-decoration: none;
-   display: block;
-   text-align: center;
+
  }
- 
+
  /* Add a background color on hover */
  .column a:hover {
    background-color: #ddd;
  }
- 
+
  /* Clear floats after the columns */
  .row:after {
    content: "";
    display: table;
    clear: both;
  }
+
+
+
+
+
+
+
+ .dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 0%;
+  width: 25%;
+  height: 900%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  
+
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown1:hover > .dropdown-content1 {
+  display: flex;
+}
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+  text-align: center;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  height: 10%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  padding: 0px;
+  
+ 
+}
+.dropdown-links
+{
+ display: flex;
+ flex-direction: column;
+ 
+
+}
+/* Style links inside the columns */
+.column1 a {
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+
+}
+
+/* Add a background color on hover */
+.column1 a:hover {
+  background-color: #ddd;
+}
+
+
+
+
+
+
+
+#profile-pic
+{ position: absolute;
+  height: 10%;
+  left: 0%;
+  top: 2%;
+  width: 100%;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -158,7 +257,7 @@ height: 40px;}
 }
 
 .search-bar:hover >.search-btn:active {
- 
+
   color: white;
   transition-duration: 0.1s;
 }
@@ -170,14 +269,14 @@ height: 40px;}
     #54b3d6 50%,
     rgb(0, 0, 0) 50%
   );
-  background-size: 200% 100%;
-  background-position: -100%;
+   background-size: 200% 100%;
+  background-position: -100%; 
   display: inline-block;
   padding: 5px 0;
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
 }
 
 #main-options:before {
@@ -198,7 +297,7 @@ height: 40px;}
 
 #main-options:hover::before {
   width:100%;
-} 
+}
 
 .column a {
   background-image: linear-gradient(
@@ -214,7 +313,7 @@ height: 40px;}
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .column a:before {
@@ -226,7 +325,7 @@ height: 40px;}
   left: 0;
   width: 0;
   height: 3px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .column a:hover {
@@ -235,7 +334,35 @@ height: 40px;}
 
 .column a:hover::before {
   width:100%;
-} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* #search-box{
   margin: 0;
@@ -247,7 +374,7 @@ height: 40px;}
   align-items: center;
  background-color: rgb(0, 0, 0);
  transition-duration: 0.5s;
- 
+
 }
 #search-box:hover
 {
@@ -280,7 +407,7 @@ align-items: center;
 z-index: 1;
 filter: blur(0.5px);
 } */
-/* 
+/*
 .textbox{
 height: 55%;
 position: relative;
@@ -315,7 +442,7 @@ font-family: 'Quicksand', sans-serif;
 
 
 
-/* 
+/*
 .artists-list
 {list-style: none;
    position: absolute;
@@ -362,7 +489,7 @@ color: white;}
    width: 80px;
    right: 0px;
    display: none;
-   
+
 
 }
 #al13
@@ -381,7 +508,7 @@ color: white;}
    color: white;}
 
 
-   
+
 
    #l5:hover > .about-list
    { transition: 0.5s;
@@ -393,16 +520,16 @@ color: white;}
 #shop:hover
 {background-color: black;
 color: white;
-cursor: pointer;}  
+cursor: pointer;}
 #artists:hover
 {background-color: black;
-color: white;cursor: pointer;} 
+color: white;cursor: pointer;}
 #img-1:hover
 {box-shadow:5px 5px 5px black;
-color: white;cursor: pointer;} 
+color: white;cursor: pointer;}
 #shows:hover
 {background-color: black;
-color: white;cursor: pointer;} 
+color: white;cursor: pointer;}
 #about:hover
 {background-color: black;
 color: white;cursor: pointer;} */
