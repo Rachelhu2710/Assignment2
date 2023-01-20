@@ -353,44 +353,101 @@ height: 40px;}
 
 
 #moving-text-box {
-  background: #222222;
+
   height: 5%;
   display: block;
   overflow-x: hidden;
 }
 
 .wrapper {
-  width: 150%;
-  overflow-x: hidden;
-  background-color: #54b3d6;
+   display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+background: linear-gradient(#EEE3D0,#b6e3e3);
 }
 
 .moving-text-box-message {
   font-weight: bold;
-  color: #fbfbfb;
-  animation-name: rightToLeft;
-  animation: rightToLeft 10s linear infinite ;
-  animation-delay:0s;
-}
+  color: rgb(0, 0, 0);
+  white-space: nowrap;
+  animation: rightToLeft 30s linear infinite forwards ;
 
+  /* animation: rightToLeft2 10s linear infinite 5s ; */
+}
+.wrapper:hover .moving-text-box-message{
+animation-play-state: paused;
+}
 
 @keyframes rightToLeft {
-  0% {
-    transform: translateX(100%);
+  0%{
+   transform: translateX(100%);
   }
- 
-  100% {
-    transform: translateX(-100%);
-  }
- 
+ 100%{transform:translateX(-300%) ;}
+}
+/* @keyframes rightToLeft2 {
+   
+  
+   100% {
+     transform: translateX(100%);
+   }
+  
+ }
+  */
+
+
+
+#main-page{
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content:space-around;
+   
+}
+
+#main-page-column-1
+{ 
+   background-color: black;
+   width: 50%;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+}
+#column-1-row-1
+{
+
+   background-color: rgb(235, 173, 173);
+   width: 100%;
+   height: 500px;
+
+
+}
+#column-1-row-2
+{
+
+   background-color: rgb(132, 10, 218);
+   width: 50%;
+   height: 500px;
+
+
 }
 
 
+#main-page-column-2
+{  
+   background-color: rgb(255, 8, 8);
+   width: 50%;
+   height: 500px;
+}
 
-
-
-
-
+#main-page-column-2-shop-button
+{
+   width: 10%;
+   height: 5%;
+   position: absolute;
+   bottom: 20%;
+   right: 17%;
+   border-radius: 10%;
+}
 
 
 
