@@ -1,12 +1,11 @@
 
 header{
   display: flex;
-  flex: 1 2 2 auto;
   justify-content: space-between;
   align-items: center;
   box-shadow: 4px 4px 4px lightgray;
   min-width: 100%;
-  position: fixed;
+  position: relative;
   background-color:rgb(255, 254, 254);
 }
 body
@@ -353,6 +352,38 @@ height: 40px;}
 
 
 
+#moving-text-box {
+  background: #222222;
+  height: 5%;
+  display: block;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 150%;
+  overflow-x: hidden;
+  background-color: #54b3d6;
+}
+
+.moving-text-box-message {
+  font-weight: bold;
+  color: #fbfbfb;
+  animation-name: rightToLeft;
+  animation: rightToLeft 10s linear infinite ;
+  animation-delay:0s;
+}
+
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+ 
+  100% {
+    transform: translateX(-100%);
+  }
+ 
+}
 
 
 
