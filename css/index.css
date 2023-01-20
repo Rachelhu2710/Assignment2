@@ -103,3 +103,44 @@ animation-play-state: paused;
    right: 6%;
    border-radius: 6%;
 }
+
+.slideshow {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+#nct1
+{
+  max-width: 100%;
+}
+#nct2
+{
+  max-width: 52% ;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+#nct3
+{
+  max-width: 60% ;
+}
+.number {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
