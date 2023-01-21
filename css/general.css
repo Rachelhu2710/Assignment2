@@ -3,7 +3,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 4px 4px 4px lightgray;
+  /* box-shadow: 4px 4px 4px lightgray; */
   min-width: 100%;
   position: relative;
   background-color:rgb(255, 254, 254);
