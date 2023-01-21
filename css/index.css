@@ -96,20 +96,23 @@ height: 100%;}
 
 #shop-men
 {
-width: 20%;
-height: 7%;
-top: 10px;
-background-color: black;
-color: white;
-
+  position: absolute;
+  width: 10%;
+  height: 7%;
+  bottom: 2%;
+  left: 35%;
+  background-color: black;
+  color: white;
 }
 #shop-women
 {
-width: 20%;
-height: 7%;
-top: 10px;
-background-color: black;
-color: white;
+  position: absolute;
+  width: 10%;
+  height: 7%;
+  bottom: 2%;
+  left: 5%;
+  background-color: black;
+  color: white;
 }
 
 
