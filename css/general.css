@@ -147,7 +147,10 @@ height: 40px;}
 
 
 /* Show the dropdown menu on hover */
-.dropdown1:hover > .dropdown-content1 {
+.dropdown1:active > .dropdown-content1 {
+  display: flex;
+}
+.dropdown-content1:hover{
   display: flex;
 }
 
