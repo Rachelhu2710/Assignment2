@@ -9,8 +9,8 @@
    display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  /* background: linear-gradient(#8A6626,#EFC8B1); */
-  background: linear-gradient(white,#4de1fb,#92edfb,white);
+  background: linear-gradient(#9fafca,#e6d7d4);
+  /* background: linear-gradient(white,#4de1fb,#92edfb,white); */
 }
 
 .moving-text-box-message {
@@ -97,21 +97,26 @@ height: 100%;}
 #shop-men
 {
   position: absolute;
+  text-align: center;
+  text-decoration: none;
   width: 10%;
-  height: 7%;
+  height: 5%;
   bottom: 2%;
   left: 35%;
-  background-color: black;
+  background-color: burlywood;
   color: white;
 }
 #shop-women
 {
   position: absolute;
+  text-align: center;
+  text-decoration: none;
   width: 10%;
-  height: 7%;
+  height: 5%;
   bottom: 2%;
   left: 5%;
-  background-color: black;
+  border: none;
+  background-color: burlywood;
   color: white;
 }
 

@@ -1,0 +1,115 @@
+.content
+{
+  width: 25%;
+}
+.accesoriesimage
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+} 
+ .container img
+{
+  max-width: 95%;
+} 
+#accesories1
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories1:hover
+{
+  color: lightslategray;
+}
+#accesories2
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories2:hover
+{
+  color: lightslategray;
+}
+#accesories3
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories3:hover
+{
+  color: lightslategrey;
+}
+#accesories4
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories4:hover
+{
+  color: lightslategray;
+}
+#accesories5
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories5:hover
+{
+  color: lightslategray;
+}
+#accesories6
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories6:hover
+{
+  color: lightslategray;
+}
+#accesories7
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories7:hover
+{
+  color: lightslategray;
+}
+#accesories8
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accesories8:hover
+{
+  color: lightslategray;
+}
+@media (max-width: 768px) {
+  .content{
+    width: 50%;
+  }
+}

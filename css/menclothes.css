@@ -2,7 +2,7 @@
 {
   width: 25%;
 }
-.shoesimage
+.clothesimage
 {
   display: flex;
   flex-direction: row;
@@ -12,7 +12,7 @@
 {
   max-width: 95%;
 } 
-#shoes9
+#clothes1
 {
   display: flex;
   flex-wrap: wrap;
@@ -20,11 +20,11 @@
   color: black;
   text-decoration: none;
 }
-#shoes9:hover
+#clothes1:hover
 {
   color: lightslategray;
 }
-#shoes10
+#clothes2
 {
   display: flex;
   flex-wrap: wrap;
@@ -32,11 +32,11 @@
   color: black;
   text-decoration: none;
 }
-#shoes10:hover
+#clothes2:hover
 {
   color: lightslategray;
 }
-#shoes11
+#clothes3
 {
   display: flex;
   flex-wrap: wrap;
@@ -44,11 +44,11 @@
   color: black;
   text-decoration: none;
 }
-#shoes11:hover
+#clothes3:hover
 {
   color: lightslategrey;
 }
-#shoes12
+#clothes4
 {
   display: flex;
   flex-wrap: wrap;
@@ -56,11 +56,11 @@
   color: black;
   text-decoration: none;
 }
-#shoes12:hover
+#clothes4:hover
 {
   color: lightslategray;
 }
-#shoes13
+#clothes5
 {
   display: flex;
   flex-wrap: wrap;
@@ -68,11 +68,11 @@
   color: black;
   text-decoration: none;
 }
-#shoes13:hover
+#clothes5:hover
 {
   color: lightslategray;
 }
-#shoes14
+#clothes6
 {
   display: flex;
   flex-wrap: wrap;
@@ -80,11 +80,11 @@
   color: black;
   text-decoration: none;
 }
-#shoes14:hover
+#clothes6:hover
 {
   color: lightslategray;
 }
-#shoes15
+#clothes7
 {
   display: flex;
   flex-wrap: wrap;
@@ -92,11 +92,11 @@
   color: black;
   text-decoration: none;
 }
-#shoes15:hover
+#clothes7:hover
 {
   color: lightslategray;
 }
-#shoes16
+#clothes8
 {
   display: flex;
   flex-wrap: wrap;
@@ -104,7 +104,7 @@
   color: black;
   text-decoration: none;
 }
-#shoes16:hover
+#clothes8:hover
 {
   color: lightslategray;
 }
