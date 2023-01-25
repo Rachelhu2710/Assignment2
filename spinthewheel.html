@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous">
+    <title>Spin the wheel</title>
+    <link rel="stylesheet" href="css/spinthewheel.css">
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <div class="prizes" style="--i:1;--clr:pink;" ><span>100</span></div>
+            <div class="prizes" style="--i:2;--clr:blue;" ><span>1</span></div>
+            <div class="prizes" style="--i:3;--clr:orange;" ><span>1000</span></div>
+            <div class="prizes" style="--i:4;--clr:red;" ><span>10</span></div>
+            <div class="prizes" style="--i:5;--clr:violet;" ><span>10000</span></div>
+            <div class="prizes" style="--i:6;--clr:green;" ><span>0</span></div>
+            <div class="prizes" style="--i:7;--clr:purple;" ><span>50</span></div>
+            <div class="prizes" style="--i:8;--clr:brown;" ><span>20</span></div>
+        </div>
+    </div>
+   <div id="value"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<!-- <script src="js/spinthewheel.js"></script> -->
+<script>
+    let wheel = $(".wheel");
+    let spinBtn=$(".spinBtn");
+    let x=$("#value");
+    let value = Math.ceil(Math.random()*3600);
+    spinBtn.onclick=function(){
+        wheel.style.transform=`rotate(${value}deg)`
+        value+=Math.ceil(Math.random()*3600)
+        let price=value/10
+
+    
+    }</script>
+</body>
+</html>
