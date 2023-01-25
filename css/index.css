@@ -9,13 +9,13 @@
    display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  background: linear-gradient(#9fafca,#e6d7d4);
+  background: linear-gradient(rgb(255, 255, 255));
   /* background: linear-gradient(white,#4de1fb,#92edfb,white); */
 }
 
 .moving-text-box-message {
   font-weight: bold;
-  color: rgb(5, 50, 69);
+  color: rgb(0, 0, 0);
   white-space: nowrap;
   animation: rightToLeft 30s linear infinite forwards ;
 
@@ -42,11 +42,28 @@ animation-play-state: paused;
   */
 
 
+.slide{
+
+width: 100%;
+height: 700px;
+
+
+
+
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}
+
+
 
 .main-page
 {display: flex;
-position: absolute;
-height: 100%;
+position: relative;
+height: 400px;
 width: 100%;
 background-color: beige;
 overflow-y: hidden;}
@@ -60,7 +77,7 @@ flex-direction: column;}
 
 .column-1-row-1
 {
-  height: 50%;
+  height: 100%;
   width: 100%;
   background-color: antiquewhite;
 }
@@ -80,7 +97,8 @@ height: 100%;}
 {
   height: 50%;
   width: 100%;
-  background-color: rgb(255, 151, 14);
+  position: relative;
+  z-index: 10;
 }
 
 #c1r2-mw-img
@@ -101,10 +119,16 @@ height: 100%;}
   text-decoration: none;
   width: 10%;
   height: 5%;
-  bottom: 2%;
-  left: 35%;
-  background-color: burlywood;
-  color: white;
+  bottom: 9%;
+  left: 20%;
+  background-color: transparent;
+  color: rgb(70, 63, 68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid wheat;
+  font-size: 20px;
+
 }
 #shop-women
 {
@@ -113,14 +137,27 @@ height: 100%;}
   text-decoration: none;
   width: 10%;
   height: 5%;
-  bottom: 2%;
-  left: 5%;
+  bottom: 10%;
+  Right: 20%;
   border: none;
-  background-color: burlywood;
+  background-color: transparent;
+  color: rgb(255, 150, 150);
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid wheat;
+}
+#shop-men:hover
+{
+  background:black;
   color: white;
 }
-
-
+#shop-women:hover
+{
+  background:black;
+  color: wheat;
+}
 .main-page-column-2
 {height: 100%;
 width: 50%;

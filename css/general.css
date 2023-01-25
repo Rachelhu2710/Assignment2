@@ -4,9 +4,11 @@ header{
   justify-content: space-between;
   align-items: center;
   /* box-shadow: 4px 4px 4px lightgray; */
-  min-width: 100%;
+  width: 100%;
   position: relative;
-  background-color:rgb(255, 254, 254);
+  background:linear-gradient(rgb(255, 255, 255) );
+
+ 
 }
 #img-1
 {width: 80px;
@@ -187,6 +189,7 @@ height: 40px;}
 .column1 a:hover {
   /* background-color: #DDDADD; */
   background-color: #e8dcd0;
+  color: bl;
 }
 
 
@@ -231,10 +234,11 @@ height: 40px;}
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position:relative;
   border: 2px #CADDE4 solid;
   border-radius: 2%;
   transition-duration: 0.2s;
+ 
 }
 
 .textbox {
