@@ -117,10 +117,10 @@ class accesorires
   this.id=id
   this.name=name
   this.category=category
-  this.colorspicture=colorspicture
+  this.colorspicture=colorspicture //contain picture for each color of product//
   this.price=price
   this.gender=gender
-  this.sizestock=sizestock
+  this.sizestock=sizestock // contains diff sizes for each color of product//
 
 }
 
@@ -130,14 +130,14 @@ class accesorires
 
 
 
-let a1 = new accesorires(1,"Metal Cat Cap","cap",{black:{link1:null} , blue:{link1:null},turquoise:{link1:null}},25,"M",{black:{S:100,M:100,L:100},blue:{S:100,M:100,L:100},turquoise:{S:100,M:100,L:100}})
-let a2 = new accesorires(2,"PUMA x PALOMO Cap","cap",{navy:{link1:null}},25,"M",{navy:{S:100,M:100,L:100}})
-let a3 = new accesorires(3,"Seuderia Ferrari SPTWR Race Backpack","bag",{black:{link1:null}},55,"M",{black:{S:100,M:100,L:100}})
-let a4 = new accesorires(4,"Gym Training Bottle","bottle",{black:{link1:null}},15,"M",{black:100})
-let a5 = new accesorires(4,"PUMA Shaker Bottle","bottle",{black:{link1:null}},15,"M",{black:100})
-let a6 = new accesorires(5,"PUMA x CHILDHOOD DREAMS Basketball Bucket Hat","hat",{beige:{link1:null}},35,"M",{beige:{S:100,M:100,L:100}})
-let a7 = new accesorires(4,"Originals PUMA Small shoulder Bag","bag",{black:{link1:null}},45,"M",{black:100})
-let a8 = new accesorires(4,"Running Waist Band","band",{black:{link1:null}},15,"M",{black:100})
+let a1 = new accesorires(1,"Metal Cat Cap","cap",{black:{link1:"images/Metal-Cat-Cap-Black.webp"} , blue:{link1:"images/Metal-Cat-Cap-Blue.webp"},green:{link1:"images/Metal-Cat-Cap-Green.webp"}},25,"M",{black:{S:100,M:100,L:100},blue:{S:100,M:100,L:100},green:{S:100,M:100,L:100}})
+let a2 = new accesorires(2,"PUMA x PALOMO Cap","cap",{navy:{link1:"images/PUMA-x-PALOMO-Cap.webp"}},25,"M",{navy:{S:100,M:100,L:100}})
+let a3 = new accesorires(3,"Seuderia Ferrari SPTWR Race Backpack","bag",{black:{link1:"images/Scuderia-Ferrari-SPTWR-Race-Backpack.webp"}},55,"M",{black:{S:100,M:100,L:100}})
+let a4 = new accesorires(4,"Gym Training Bottle","bottle",{black:{link1:"images/Gym-Training-Bottle.webp"}},15,"M",{black:100})
+let a5 = new accesorires(4,"PUMA Shaker Bottle","bottle",{black:{link1:"images/PUMA-Shaker-Bottle.webp"}},15,"M",{black:100})
+let a6 = new accesorires(5,"PUMA x CHILDHOOD DREAMS Basketball Bucket Hat","hat",{beige:{link1:"images/PUMA-x-CHILDHOOD-DREAMS-Basketball-Bucket-Hat.webp"}},35,"M",{beige:{S:100,M:100,L:100}})
+let a7 = new accesorires(4,"Originals PUMA Small shoulder Bag","bag",{black:{link1:"images/Originals-PU-Small-Shoulder-Bag.webp"}},45,"M",{black:100})
+let a8 = new accesorires(4,"Running Waist Band","band",{black:{link1:"images/Running-Waist-Band.webp"}},15,"M",{black:100})
 
 
 let accesoriresarray=[];
