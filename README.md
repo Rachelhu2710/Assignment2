@@ -24,6 +24,7 @@ This is a link to my design wireframe for [phone]() version [web]() version.
 ### Future Features 
 ## Technology used
 - JavaScript
+- Jquery
 - CSS
 - Google Fonts
 - XD
