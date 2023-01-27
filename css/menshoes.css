@@ -108,6 +108,142 @@
 {
   color: lightslategray;
 }
+#item1-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: #007654;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item1-2
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item2-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: #E0CCDE;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item2-2
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item3-1
+{
+  height: 5%;
+  width: 5%;
+  background-color:  #BEBDB4;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item3-2
+{
+  height: 5%;
+  width: 5%;
+  background-color:  #f6e3d6;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item3-3
+{
+  height: 5%;
+  width: 5%;
+  background-color: #007654;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item4-1
+{
+  height: 5%;
+  width: 5%;
+  background-color:  #cac8c4;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item4-2
+{
+  height: 5%;
+  width: 5%;
+  background-color:  #007654;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item5-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: #28aee4;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item5-2
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item6-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item7-1
+{
+  height: 5%;
+  width: 5%;
+  background-color:#d5d5d8 ;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item7-2
+{
+  height: 5%;
+  width: 5%;
+  background-color:  black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item7-3
+{
+  height: 5%;
+  width: 5%;
+  background-color: #B76E79;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item8-1
+{
+  height: 5%;
+  width: 5%;
+  background-color:black ;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item8-2
+{
+  height: 5%;
+  width: 5%;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  display: inline-block; 
+}
 @media (max-width: 768px) {
   .content{
     width: 50%;
