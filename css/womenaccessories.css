@@ -1,0 +1,219 @@
+.contentaccessories
+{
+  width: 25%;
+}
+.accessoriesimage
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+} 
+ .container img
+{
+  max-width: 95%;
+}  
+#accessories1
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories1:hover
+{
+  color: lightslategray;
+}
+#accessories2
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories2:hover
+{
+  color: lightslategray;
+}
+#accessories3
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories3:hover
+{
+  color: lightslategrey;
+}
+#accessories4
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories4:hover
+{
+  color: lightslategray;
+}
+#accessories5
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories5:hover
+{
+  color: lightslategray;
+}
+#accessories6
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories6:hover
+{
+  color: lightslategray;
+}
+#accessories7
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories7:hover
+{
+  color: lightslategray;
+}
+#accessories8
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+}
+#accessories8:hover
+{
+  color: lightslategray;
+}
+#item1-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item1-2
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item1-3
+{
+  height: 5%;
+  width: 5%;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item2-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item2-2
+{
+  height: 5%;
+  width: 5%;
+  background-color: #cb484c;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item2-3
+{
+  height: 5%;
+  width: 5%;
+  background-color: #e39a97;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item3-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: #e39a97;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item3-2
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item4-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item5-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item6-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item7-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: #FFFBF0;
+  border-radius: 50%;
+  display: inline-block; 
+}
+#item8-1
+{
+  height: 5%;
+  width: 5%;
+  background-color: #FFFBF0;
+  border-radius: 50%;
+  display: inline-block; 
+}
+@media (max-width: 768px) {
+  .content{
+    width: 50%;
+  }
+}

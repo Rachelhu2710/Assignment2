@@ -9,7 +9,6 @@ function includeHTML()
         {
             a = z[i].cloneNode(false)
             file = z[i].getAttribute("include")
-            console.log(file)
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function()
             {
