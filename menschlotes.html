@@ -16,163 +16,50 @@
     <title>HomePage</title>
 </head>
 <body style="margin: 0;">
-  <header>
-
-    <div class="dropdown1">
-      <button  id="main-options" class="dropbtn1"> USER
-      </button>
-      <div class="dropdown-content1">
-
-        <div class="column1">
-          <div class="dropdown-links">
-            <ion-icon id="profile-pic" name="person-circle-outline"></ion-icon>
-          </div>
-        </div>
-
-
-          <div class="column1">
-            <div class="drop-down-user-links" >
-            <div class="dropdown-links">
-              <a href="#">Profile setting</a>
-            </div>
-            </div>
-          </div>
-
-
-          <div class="column1">
-            <div class="drop-down-user-links" >
-            <div class="dropdown-links">
-              <a href="#">Rewards</a>
-            </div>
-            </div>
-          </div>
-
-
-
-          <div class="column1">
-            <div class="dropdown-links">
-            <div class="drop-down-user-links" >
-              <a href="#">Bag</a>
-            </div>
-            </div>
-          </div>
-
-
-
-
-          <div class="column1">
-            <div class="dropdown-links">
-            <div class="drop-down-user-links" >
-              <a href="#">Wallet</a>
-            </div>
-            </div>
-          </div>
-
-
-          
-          <div class="column1">
-            <div class="dropdown-links">
-            <div class="drop-down-user-links" >
-              <a href="#">Logout</a>
-            </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="dropdown">
-        <button  id="main-options" class="dropbtn"> Shop
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <div class="column">
-              <h3>Men</h3>
-              <div class="dropdown-links">
-              <a href="menshoes.html">Shoes</a>
-              <a href="menschlotes.html">Clothes</a>
-              <a href="mensaccesories.html">Accessories</a>
-              </div>
-            </div>
-            <div class="column">
-              <div class="dropdown-links">
-              <h3>Women</h3>
-              <a href="#">Shoes</a>
-              <a href="#">Clothes</a>
-              <a href="#">Accessories</a>
-              </div>
-            </div>
-            <div class="column">
-              <h3>Kids</h3>
-              <div class="dropdown-links">
-              <a href="#">Shoes</a>
-              <a href="#">Clothes</a>
-              <a href="#">Accessories</a>
-              </div>
-            </div>
-          
-        </div>
-      </div>
-      <div id="header-colum-2"><a href="index.html" id="logo-1"><img id="img-1" src="images/PUMA-GIF.gif" alt="logo"></a></div>
-      
-      <div class="search-bar">
-        <input type="text" class="textbox" placeholder="search"/>
-        <ion-icon class="search-btn" name="search-outline"></ion-icon>
-        
-      </div>
-    
-   
-      <div style="display: flex;align-items: center;">
-      
-      <div id="header-column-4">
-        
-        <ion-icon id="img-2"  alt="cart" name="cart-outline"></ion-icon>
-      </div>
-     </div>
-    </header> 
+  <div include="header.html"></div>
       <main class="container"> 
         <div class = "clothesimage">
-            <div class = "content" data-id=1>
+            <div class = "contentclothes" data-id=1>
               <img id='item1' src="" alt="PUMA-x-MARKET-Graphic-Tee-Men">
               <a onclick="item1()" id ="clothes1" href="#">PUMA x MARKET Graphic Tee Men</a>
               <span id="item1-1" data-id=1 data-uid=1 onmouseover="hoveritem(this);" ></span>
               <span id="item1-2"  data-id=1 data-uid=2 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = "content" data-id=2>
+            <div class = "contentclothes" data-id=2>
               <img id='item2' src="" alt="Fandom-Shorts-Men">
-
                 <a onclick="item2()" id ="clothes2" href="#">Fandom Shorts Men</a>
                 <span id="item2-1"  data-id=2 data-uid=1 onmouseover="hoveritem(this);"></span>
                 <span id="item2-2"  data-id=2 data-uid=2 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = "content" data-id=3>
+            <div class = "contentclothes" data-id=3>
               <img src="" alt="Classics-Straight-Sweatpants-Men">
               <a onclick="item3()" id ="clothes3" href="#">Classics Straight Sweatpants Men</a>
               <span data-id=3 id="item3-1"  data-uid=1></span>
             </div>
-            <div class = "content" data-id=4>
+            <div class = "contentclothes" data-id=4>
               <img id='item4' src="" alt="Classics-Small-Logo-Tee-Men">
               <a onclick="item4()" id ="clothes4" href="#">Classics Small Logo Tee Men</a>
               <span id="item4-1"  data-id=4 data-uid=1 onmouseover="hoveritem(this);"></span>
               <span id="item4-2"  data-id=4 data-uid=2 onmouseover="hoveritem(this);"></span>
             </div>
-            <div class = "content" data-id=5>
+            <div class = "contentclothes" data-id=5>
                 <img id='item5'src="" alt="Logo-Short-Sleeve-Men">
                 <a onclick="item5()" id ="clothes5" href="#">Logo Short Sleeve Men</a>
                 <span id="item5-1"  data-id=5 data-uid=1 onmouseover="hoveritem(this);"></span>
                 <span id="item5-2"  data-id=5 data-uid=2 onmouseover="hoveritem(this);"></span>
             </div>
-            <div class = "content" data-id=6>
+            <div class = "contentclothes" data-id=6>
                 <img src="" alt="T7-Printed-Track-Jacket-Men">
                 <a onclick="item6()" id ="clothes6" href="#">T7 Printed Track Jacket Men</a>
                 <span id="item6-1"  data-id=6 data-uid=1></span>
             </div>
-            <div class = "content" data-id=7>
+            <div class = "contentclothes" data-id=7>
                 <img id='item7' src="" alt="Classics-Relaxed-Crewneck-Sweatshirt-Men">
                 <a onclick="item7()" id ="clothes7" href="#">Classics Relaxed Crewneck Sweatshirt Men</a>
                 <span id="item7-1"  data-id=7 data-uid=1 onmouseover="hoveritem(this);"></span>
                 <span id="item7-2"  data-id=7 data-uid=2 onmouseover="hoveritem(this);"></span>
             </div>
-            <div class = "content" data-id=8>
+            <div class = "contentclothes" data-id=8>
                 <img id='item8'src="" alt="Classics-Relaxed-Hoodie-Men">
                 <a onclick="item8()" id ="clothes8" href="#">Classics Relaxed Hoodie Men</a>
                 <span id="item8-1"  data-id=8 data-uid=1 onmouseover="hoveritem(this);"></span>
@@ -180,7 +67,7 @@
             </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <script src="js/header.js"></script>
     <script src="js/mensproducts.js"></script>
 </body>
 </html>

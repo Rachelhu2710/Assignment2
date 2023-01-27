@@ -29,7 +29,7 @@ shoearray.push(s1,s2,s3,s4,s5,s6,s7,s8);
 // $(".content img").attr("src",s1.picture.Link1)
 // console.log($(".content").data("id"))
 
-const content =document.querySelectorAll(".content")
+const content =document.querySelectorAll(".contentshoes")
 console.log(content)
 content.forEach(element  => {
  console.log(element)
@@ -88,7 +88,7 @@ clothesarray.push(c1,c2,c3,c4,c5,c6,c7,c8)
 
 
 
-var clothing =document.querySelectorAll(".content")
+var clothing =document.querySelectorAll(".contentchlothes")
 
 clothing.forEach(element  => {
 
