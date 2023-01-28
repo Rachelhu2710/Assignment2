@@ -244,3 +244,151 @@ function hoveritemw3a2()
 {
   document.getElementById("item3").src ="images/Result-Backpack-black.webp";
 }
+function hoveritemk1s1()
+{
+  document.getElementById("item1").src = "images/PUMA-x-SMILEYWORLD-Caven-Sneakers-Kids-black.webp";
+}
+function hoveritemk1s2()
+{
+  document.getElementById("item1").src ="images/PUMA-x-SMILEYWORLD-Caven-Sneakers-Kids-pink.webp";
+}
+function hoveritemk2s1()
+{
+  document.getElementById("item2").src = "images/Flyer-Flex-Block-Youth-Trainers-blue.webp";
+}
+function hoveritemk2s2()
+{
+  document.getElementById("item2").src ="images/Flyer-Flex-Block-Youth-Trainers-pink.webp";
+}
+function hoveritemk4s1()
+{
+  document.getElementById("item4").src = "images/Popcat-20-Youth-Sandals-black.webp";
+}
+function hoveritemk4s2()
+{
+  document.getElementById("item4").src ="images/Popcat-20-Youth-Sandals-white.webp";
+}
+function hoveritemk5s1()
+{
+  document.getElementById("item5").src = "images/All-Day-Active-Alternative-Closure-Sneakers-Kids-pink.webp";
+}
+function hoveritemk5s2()
+{
+  document.getElementById("item5").src ="images/All-Day-Active-Alternative-Closure-Sneakers-Kids-grey.webp";
+}
+function hoveritemk6s1()
+{
+  document.getElementById("item6").src = "images/Carina-L-Youth-Trainers-pink.webp";
+}
+function hoveritemk6s2()
+{
+  document.getElementById("item6").src ="images/Carina-L-Youth-Trainers-white.webp";
+}
+function hoveritemk7s1()
+{
+  document.getElementById("item7").src = "images/Courtflex-V2-Babies'-Trainers-white.webp";
+}
+function hoveritemk7s2()
+{
+  document.getElementById("item7").src ="images/Courtflex-V2-Babies'-Trainers-black.webp";
+}
+function hoveritemk8s1()
+{
+  document.getElementById("item8").src = "images/Popcat-20-Kids'-Sandals-pink.webp";
+}
+function hoveritemk8s2()
+{
+  document.getElementById("item8").src ="images/Popcat-20-Kids'-Sandals-white.webp";
+}
+function hoveritemk8s3()
+{
+  document.getElementById("item8").src ="images/Popcat-20-Kids'-Sandals-black.webp";
+}
+function hoveritemk1c1()
+{
+  document.getElementById("item1").src = "images/Active-Sports-Shorts-Youth-blue.webp";
+}
+function hoveritemk1c2()
+{
+  document.getElementById("item1").src ="images/Active-Sports-Shorts-Youth-black.webp";
+}
+function hoveritemk2c1()
+{
+  document.getElementById("item2").src = "images/PUMA-x-SMILEYWORLD-Minicat-Jogger-Set-Babies-black.webp";
+}
+function hoveritemk2c2()
+{
+  document.getElementById("item2").src ="images/PUMA-x-SMILEYWORLD-Minicat-Jogger-Set-Babies-pink.webp";
+}
+function hoveritemk3c1()
+{
+  document.getElementById("item3").src = "images/PUMA-x-SMILEYWORLD-T7-Track-Jacket-Kids-pink.webp";
+}
+function hoveritemk3c2()
+{
+  document.getElementById("item3").src ="images/PUMA-x-SMILEYWORLD-T7-Track-Jacket-Kids-black.webp";
+}
+function hoveritemk4c1()
+{
+  document.getElementById("item4").src = "images/PUMA-x-POKÉMON-Hoodie-Youth-blue.webp";
+}
+function hoveritemk4c2()
+{
+  document.getElementById("item4").src ="images/PUMA-x-POKÉMON-Hoodie-Youth-black.webp";
+}
+function hoveritemk5c1()
+{
+  document.getElementById("item5").src = "images/PUMA-x-POKÉMON-Sweatpants-Youth-black.webp";
+}
+function hoveritemk5c2()
+{
+  document.getElementById("item5").src ="images/PUMA-x-POKÉMON-Sweatpants-Youth-blue.webp";
+}
+function hoveritemk6c1()
+{
+  document.getElementById("item6").src = "images/PUMA-x-SMILEYWORLD-Tee-Kids-pink.webp";
+}
+function hoveritemk6c2()
+{
+  document.getElementById("item6").src ="images/PUMA-x-SMILEYWORLD-Tee-Kids-yellow.webp";
+}
+function hoveritemk6c3()
+{
+  document.getElementById("item6").src ="images/PUMA-x-SMILEYWORLD-Tee-Kids-black.webp";
+}
+function hoveritemk7c1()
+{
+  document.getElementById("item7").src = "images/PUMA-x-SMILEYWORLD-Knot-Tee-Kids-yellow.webp";
+}
+function hoveritemk7c2()
+{
+  document.getElementById("item7").src ="images/PUMA-x-SMILEYWORLD-Knot-Tee-Kids-black.webp";
+}
+function hoveritemk7c3()
+{
+  document.getElementById("item7").src ="images/PUMA-x-SMILEYWORLD-Knot-Tee-Kids-pink.webp";
+}
+function hoveritemk4a1()
+{
+  document.getElementById("item4").src = "images/Small-World-Pinch-Panel-Cap-Kids-blue.webp";
+}
+function hoveritemk4a2()
+{
+  document.getElementById("item4").src ="images/Small-World-Pinch-Panel-Cap-Kids-pink.webp";
+}
+function hoveritemk6a1()
+{
+  document.getElementById("item6").src = "images/Essentials-No-pink.webp";
+}
+function hoveritemk6a2()
+{
+  document.getElementById("item6").src ="images/Essentials-No-black.webp";
+}
+function hoveritemk8a1()
+{
+  document.getElementById("item8").src = "images/Kids'-1-Pack-Quarter-Socks-black.webp";
+}
+function hoveritemk8a2()
+{
+  document.getElementById("item8").src ="images/Kids'-1-Pack-Quarter-Socks-pink.webp";
+}
