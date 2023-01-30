@@ -1,10 +1,31 @@
-div
+/* div
 {
     float: left;
 }
 main
 {
+    float: right;
   font-size: 16px;
+} */
+.image
+{
+    width: 100vw;
+}
+
+img,.text
+{
+    display: inline-block; 
+    float:left;
+}
+
+.text
+{
+    width:45vw;
+}
+
+img
+{
+    width:45vw;
 }
 .back
 {
@@ -16,11 +37,11 @@ main
 {
     color: cadetblue;
 }
-img
+/* img
 {
-    max-width: 90%;
-}
-.checkout
+    max-width: 50%;
+} */
+/* .checkout
 {
     color: black;
     text-decoration: none;
@@ -28,4 +49,4 @@ img
 .checkout:hover
 {
     color: cornflowerblue;
-}
+} */

@@ -15,7 +15,7 @@ class shoes{
 }
 
 
-let s1=new shoes(1,"NCT Sneakers","shoes",{white:{link1:"images/NCT_Sneakers.webp",link2:"images/Slipstream-Sneakers-black.webp"},black:{link1:"images/Slipstream-Sneakers-black.webp",link2:"images/NCT_Sneakers.webp"},Green:{link1:null}},130,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
+let s1=new shoes(1,"NCT Sneakers","shoes",{white:{link1:"images/NCT_Sneakers.webp",link2:"images/Slipstream-Sneakers-black.webp"},black:{link1:"images/Slipstream-Sneakers-black.webp",link2:"images/NCT_Sneakers.webp"},Green:{link1:null}},159,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
 let s2=new shoes(2,"Flyer Flex Running Shoes","shoes",{white:{link1:"images/Flyer_Flex_Running_Shoes.webp"},red:{link1:null},Green:{link1:null}},130,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
 let s3=new shoes(3,"Slipstream Lo Trainers","shoes",{white:{link1:"images/Slipstream-Lo-Trainers.webp"},red:{link1:null},Green:{link1:null}},110,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
 let s4=new shoes(4,"CA Pro Suede FS Sneakers","shoes",{white:{link1:"images/CA-Pro-Suede-FS-Sneakers.webp"},red:{link1:null},Green:{link1:null}},160,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})

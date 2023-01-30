@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="css/menclothes.css" rel="stylesheet" type="text/css"/>
+    <link href="css/menclothes.css" rel="stylesheet" type="text/css" />
     <link href="css/general.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Lobster&family=Quicksand&family=Trispace&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Lobster&family=Quicksand&family=Trispace&display=swap" rel="stylesheet"/>
     <title>Men Clothes</title>
-</head>
-<body style="margin: 0;">
-  <div include="header.html"></div>
-      <main class="container"> 
-        <div class = "clothesimage">
-            <div class = "contentclothes" data-id=1>
-              <img id='item1' src="" alt="PUMA-x-MARKET-Graphic-Tee-Men">
-              <a onclick="item1()" id ="clothes1" href="#">PUMA x MARKET Graphic Tee Men</a>
-              <span id="item1-1" data-id=1 data-uid=1 onmouseover="hoveritem1(this);" ></span>
-              <span id="item1-2"  data-id=1 data-uid=2 onmouseover="hoveritem1(this);" ></span>
-            </div>
-            <div class = "contentclothes" data-id=2>
-              <img id='item2' src="" alt="Fandom-Shorts-Men">
-                <a onclick="item2()" id ="clothes2" href="#">Fandom Shorts Men</a>
-                <span id="item2-1"  data-id=2 data-uid=1 onmouseover="hoveritem1(this);"></span>
-                <span id="item2-2"  data-id=2 data-uid=2 onmouseover="hoveritem1(this);" ></span>
-            </div>
-            <div class = "contentclothes" data-id=3>
-              <img src="" alt="Classics-Straight-Sweatpants-Men">
-              <a onclick="item3()" id ="clothes3" href="#">Classics Straight Sweatpants Men</a>
-              <span data-id=3 id="item3-1"  data-uid=1></span>
-            </div>
-            <div class = "contentclothes" data-id=4>
-              <img id='item4' src="" alt="Classics-Small-Logo-Tee-Men">
-              <a onclick="item4()" id ="clothes4" href="#">Classics Small Logo Tee Men</a>
-              <span id="item4-1"  data-id=4 data-uid=1 onmouseover="hoveritem1(this);"></span>
-              <span id="item4-2"  data-id=4 data-uid=2 onmouseover="hoveritem1(this);"></span>
-            </div>
-            <div class = "contentclothes" data-id=5>
-                <img id='item5'src="" alt="Logo-Short-Sleeve-Men">
-                <a onclick="item5()" id ="clothes5" href="#">Logo Short Sleeve Men</a>
-                <span id="item5-1"  data-id=5 data-uid=1 onmouseover="hoveritem1(this);"></span>
-                <span id="item5-2"  data-id=5 data-uid=2 onmouseover="hoveritem1(this);"></span>
-            </div>
-            <div class = "contentclothes" data-id=6>
-                <img src="" alt="T7-Printed-Track-Jacket-Men">
-                <a onclick="item6()" id ="clothes6" href="#">T7 Printed Track Jacket Men</a>
-                <span id="item6-1"  data-id=6 data-uid=1></span>
-            </div>
-            <div class = "contentclothes" data-id=7>
-                <img id='item7' src="" alt="Classics-Relaxed-Crewneck-Sweatshirt-Men">
-                <a onclick="item7()" id ="clothes7" href="#">Classics Relaxed Crewneck Sweatshirt Men</a>
-                <span id="item7-1"  data-id=7 data-uid=1 onmouseover="hoveritem1(this);"></span>
-                <span id="item7-2"  data-id=7 data-uid=2 onmouseover="hoveritem1(this);"></span>
-            </div>
-            <div class = "contentclothes" data-id=8>
-                <img id='item8'src="" alt="Classics-Relaxed-Hoodie-Men">
-                <a onclick="item8()" id ="clothes8" href="#">Classics Relaxed Hoodie Men</a>
-                <span id="item8-1"  data-id=8 data-uid=1 onmouseover="hoveritem1(this);"></span>
-                <span id="item8-2"  data-id=8 data-uid=2 onmouseover="hoveritem1(this);"></span>
-            </div>
+  </head>
+  <body>
+    <div id="nav"></div>
+    <main class="container">
+      <div class="clothesimage">
+        <div class="contentclothes" data-id="1">
+          <img id="item1" src="" alt="PUMA-x-MARKET-Graphic-Tee-Men" />
+          <a onclick="item1()" id="clothes1" href="#">PUMA x MARKET Graphic Tee Men</a>
+          <span id="item1-1" data-id="1" data-uid="1" onmouseover="hoveritem1(this);"></span>
+          <span id="item1-2" data-id="1" data-uid="2" onmouseover="hoveritem1(this);"></span>
+        </div>
+        <div class="contentclothes" data-id="2">
+          <img id="item2" src="" alt="Fandom-Shorts-Men" />
+          <a onclick="item2()" id="clothes2" href="#">Fandom Shorts Men</a>
+          <span id="item2-1" data-id="2" data-uid="1" onmouseover="hoveritem1(this);"></span>
+          <span id="item2-2" data-id="2" data-uid="2" onmouseover="hoveritem1(this);"></span>
+        </div>
+        <div class="contentclothes" data-id="3">
+          <img src="" alt="Classics-Straight-Sweatpants-Men" />
+          <a onclick="item3()" id="clothes3" href="#">Classics Straight Sweatpants Men</a>
+          <span data-id="3" id="item3-1" data-uid="1"></span>
+        </div>
+        <div class="contentclothes" data-id="4">
+          <img id="item4" src="" alt="Classics-Small-Logo-Tee-Men" />
+          <a onclick="item4()" id="clothes4" href="#">Classics Small Logo Tee Men</a>
+          <span id="item4-1" data-id="4" data-uid="1" onmouseover="hoveritem1(this);"></span>
+          <span id="item4-2" data-id="4" data-uid="2" onmouseover="hoveritem1(this);"></span>
+        </div>
+        <div class="contentclothes" data-id="5">
+          <img id="item5" src="" alt="Logo-Short-Sleeve-Men" />
+          <a onclick="item5()" id="clothes5" href="#">Logo Short Sleeve Men</a>
+          <span id="item5-1" data-id="5" data-uid="1" onmouseover="hoveritem1(this);"></span>
+          <span id="item5-2" data-id="5" data-uid="2" onmouseover="hoveritem1(this);"></span>
+        </div>
+        <div class="contentclothes" data-id="6">
+          <img src="" alt="T7-Printed-Track-Jacket-Men" />
+          <a onclick="item6()" id="clothes6" href="#">T7 Printed Track Jacket Men</a>
+          <span id="item6-1" data-id="6" data-uid="1"></span>
+        </div>
+        <div class="contentclothes" data-id="7">
+          <img id="item7" src="" alt="Classics-Relaxed-Crewneck-Sweatshirt-Men"/>
+          <a onclick="item7()" id="clothes7" href="#">Classics Relaxed Crewneck Sweatshirt Men</a>
+          <span id="item7-1" data-id="7" data-uid="1" onmouseover="hoveritem1(this);"></span>
+          <span id="item7-2" data-id="7" data-uid="2" onmouseover="hoveritem1(this);"></span>
+        </div>
+        <div class="contentclothes" data-id="8">
+          <img id="item8" src="" alt="Classics-Relaxed-Hoodie-Men" />
+          <a onclick="item8()" id="clothes8" href="#">Classics Relaxed Hoodie Men</a>
+          <span id="item8-1" data-id="8" data-uid="1" onmouseover="hoveritem1(this);"></span>
+          <span id="item8-2" data-id="8" data-uid="2" onmouseover="hoveritem1(this);"></span>
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/header.js"></script>
     <script src="js/mensproducts.js"></script>
-</body>
+  </body>
 </html>
