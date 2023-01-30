@@ -109,8 +109,8 @@
 
 
 
-let wheel = $(".wheel");
-let spinBtn=$(".spinBtn");
+let wheel =document.querySelectorAll('wheel') ;
+let spinBtn=document.querySelectorAll('spinBtn');
 let value = Math.ceil(Math.random()*3600);
 spinBtn.onclick=function(){
     wheel.style.transform=`rotate(${value}deg)`
