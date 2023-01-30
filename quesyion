@@ -1,0 +1,23 @@
+// how to link navigation bar from another html file? 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+<!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+
+
+
+<!--DELIMITER-->Source: https://stackoverflow.com/questions/31954089
+
+
+<!--DELIMITER-->
