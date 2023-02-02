@@ -16,12 +16,12 @@ class shoes{
 
 
 let s1=new shoes(1,"NCT Sneakers","shoes",{white:{link1:"images/NCT_Sneakers.webp",link2:"images/Slipstream-Sneakers-black.webp"},black:{link1:"images/Slipstream-Sneakers-black.webp",link2:"images/NCT_Sneakers.webp"},Green:{link1:null}},159,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
-let s2=new shoes(2,"Flyer Flex Running Shoes","shoes",{white:{link1:"images/Flyer_Flex_Running_Shoes.webp"},red:{link1:null},Green:{link1:null}},130,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
-let s3=new shoes(3,"Slipstream Lo Trainers","shoes",{white:{link1:"images/Slipstream-Lo-Trainers.webp"},red:{link1:null},Green:{link1:null}},110,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
-let s4=new shoes(4,"CA Pro Suede FS Sneakers","shoes",{white:{link1:"images/CA-Pro-Suede-FS-Sneakers.webp"},red:{link1:null},Green:{link1:null}},160,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
+let s2=new shoes(2,"Flyer Flex Running Shoes","shoes",{white:{link1:"images/Flyer_Flex_Running_Shoes.webp"},red:{link1:null},Green:{link1:null}},89,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
+let s3=new shoes(3,"Slipstream Lo Trainers","shoes",{white:{link1:"images/Slipstream-Lo-Trainers.webp"},red:{link1:null},Green:{link1:null}},149,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
+let s4=new shoes(4,"CA Pro Suede FS Sneakers","shoes",{white:{link1:"images/CA-Pro-Suede-FS-Sneakers.webp"},red:{link1:null},Green:{link1:null}},169,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
 let s5=new shoes(5,"Extent Nitro Europa Sneakers","shoes",{white:{link1:"images/Extent-Nitro-Europa-Sneakers-blue.webp"},red:{link1:null},Green:{link1:null}},209,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
-let s6=new shoes(6,"Leadcat FTR Comfort Sandals","slides",{white:{link1:"images/Leadcat-FTR-Comfort-Sandals.webp"},red:{link1:null},Green:{link1:null}},120,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
-let s7=new shoes(7,"Anzarun Lite Trainers","shoes",{white:{link1:"images/Anzarun-Lite-Trainers.webp"},red:{link1:null},Green:{link1:null}},170,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
+let s6=new shoes(6,"Leadcat FTR Comfort Sandals","slides",{white:{link1:"images/Leadcat-FTR-Comfort-Sandals.webp"},red:{link1:null},Green:{link1:null}},65,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
+let s7=new shoes(7,"Anzarun Lite Trainers","shoes",{white:{link1:"images/Anzarun-Lite-Trainers.webp"},red:{link1:null},Green:{link1:null}},109,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
 let s8=new shoes(8,"Leadcat 2","shoes",{white:{link1:"images/Leadcat-2.webp"},red:{link1:null},Green:{link1:null}},170,"M",{black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100},color3:null})
 const shoearray=[];
 shoearray.push(s1,s2,s3,s4,s5,s6,s7,s8);
