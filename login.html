@@ -4,21 +4,213 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="css/login.css" rel="stylesheet" type="text/css"/>
-    <link href="css/general.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Lobster&family=Quicksand&family=Trispace&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <title>Login</title>
-</head>
-<body>
-    <div id="nav"></div> 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="js/header.js"></script>
+    <link rel="stylesheet" href="Assignment2\css\login.css">
+    <title>HomePage</title>
+
+
+  </head>
+  <body>
+  <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+  </div>
+  <form>
+      
+    <div id="login-logos">
+      <img src="Assignment2\images\PUMA-logo-11.jpg" id="puma-logo" alt="puma logo">
+     </div>
+      <label for="username">Username</label>
+      <input type="text" placeholder="Email or Phone" id="username">
+  
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password">
+  
+      <button>Log In</button>
+      <div id="sign-up">
+        Not a Member? <a href="signup.html">JOIN US</a>
+       </div>
+    
+
+  </form>
+  
+
+
+
+
+
+
+
+   
+         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
-</html>
+</html> 
+ 
+
+
+
+
+
+
+<!-- 
+
+      <div class="dropdown1">
+        <button  id="main-options" class="dropbtn1"> USER
+        </button>
+        <div class="dropdown-content1">
+            
+          <div class="sign-up" >
+            <a href="signup.html" id="my-acc" >My Account</a>
+            <a href="signup.html" id="fav">Favorites</a>
+            <a href="login.html" id="sb-1" >LOG IN</a>
+            <div id="sb-2"> No account yet ? <a href="signup.html">Register here</a> </div>
+          </div>
+          <div class="column1">
+            <div class="dropdown-links">
+              <ion-icon id="profile-pic" name="person-circle-outline"></ion-icon>
+            </div>
+          </div>
+
+
+            <div class="column1">
+              <div class="drop-down-user-links" >
+              <div class="dropdown-links">
+                <a href="#">Profile setting</a>
+              </div>
+              </div>
+            </div>
+
+
+            <div class="column1">
+              <div class="drop-down-user-links" >
+              <div class="dropdown-links">
+                <a href="#">Rewards</a>
+              </div>
+              </div>
+            </div>
+
+
+
+            <div class="column1">
+              <div class="dropdown-links">
+              <div class="drop-down-user-links" >
+                <a href="#">Bag</a>
+              </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="column1">
+              <div class="dropdown-links">
+              <div class="drop-down-user-links" >
+                <a href="#">Wallet</a>
+              </div>
+              </div>
+            </div>
+
+
+            
+            <div class="column1">
+              <div class="dropdown-links">
+              <div class="drop-down-user-links" >
+                <a href="#">Logout</a>
+              </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+        
+        <div class="dropdown">
+          <button  id="main-options" class="dropbtn"> Shop
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <div class="column">
+                <h3>Men</h3>
+                <div class="dropdown-links">
+                <a href="menshoes.html">Shoes</a>
+                <a href="menschlotes.html">Clothes</a>
+                <a href="mensaccesories.html">Accessories</a>
+                </div>
+              </div>
+              <div class="column">
+                <div class="dropdown-links">
+                <h3>Women</h3>
+                <a href="#">Shoes</a>
+                <a href="#">Clothes</a>
+                <a href="#">Accessories</a>
+                </div>
+              </div>
+              <div class="column">
+                <h3>Kids</h3>
+                <div class="dropdown-links">
+                <a href="#">Shoes</a>
+                <a href="#">Clothes</a>
+                <a href="#">Accessories</a>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+        <div id="header-colum-2"><a href="ASSIGNMENT2/index.html" id="logo-1"><img id="img-1" src="ASSIGNMENT2/images/PUMA-GIF.gif" alt="logo"></a></div>
+        
+        <div class="search-bar">
+          <input type="text" class="textbox" placeholder="search"/>
+          <ion-icon class="search-btn" name="search-outline"></ion-icon>
+          
+        </div>
+      
+     
+        <div style="display: flex;align-items: center;">
+        
+        <div id="header-column-4">
+          
+          <ion-icon id="img-2"  alt="cart" name="cart-outline"></ion-icon>
+        </div>
+       </div>
+      </header> 
+       
+   <div class="login-page">
+
+
+   <div id="login-box" >
+
+ 
+   <div id="details" >
+   <div id="username">
+    <input type="text" name="" id="log-in-user" placeholder="Email Address">
+   </div>
+   <div  id="password">
+     <input type="text" name="" id="log-in-password" placeholder="Password">
+   </div>
+   
+   <div id="terms">By loggin in , you agree to Puma's <span>Privacy Policy</span> and <span>Terms of use</span> </div>
+   </div>
+
+<div id="sign-in-button">
+   <button>
+    Sign In
+   </button>
+  
+  </div>
+
+
+   </div>
+
+
+  </div> --> 
