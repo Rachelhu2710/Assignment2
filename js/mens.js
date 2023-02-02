@@ -15,6 +15,8 @@ let links =
   {idname: "item7-1",link:"images/Anzarun-Lite-Trainers.webp",cat:"shoes"},
   {idname: "item7-2",link:"images/Anzarun-Lite-Trainers-black.webp",cat:"shoes"},
   {idname: "item7-3",link:"images/Anzarun-Lite-Trainers-pink.webp",cat:"shoes"},
+  {idname: "item8-1",link:"images/Leadcat-2.webp",cat:"shoes"},
+  {idname: "item8-2",link:"images/Leadcat-2-white.webp",cat:"shoes"},
 ]
 const buttons = document.getElementsByTagName("a");
 const buttonPressed = e => {  
