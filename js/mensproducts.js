@@ -30,7 +30,6 @@ shoearray.push(s1,s2,s3,s4,s5,s6,s7,s8);
 // console.log($(".content").data("id"))
 
 const content =document.querySelectorAll(".contentshoes")
-console.log(content)
 content.forEach(element  => {
  console.log(element)
      
@@ -190,8 +189,7 @@ function hoveritem(e)
 
   
 
-    
+  
 
     
-}
- 
+} 
