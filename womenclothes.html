@@ -12,61 +12,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Lobster&family=Quicksand&family=Trispace&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Women Chlothes</title>
 </head>
 <body>
     <div id="nav"></div> 
     <main class="container">
         <div class = "clothesimage">
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes'  data-id="1">
                 <img id="item1" src="images/PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women-black.webp" alt="PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women">
-                <a onclick="item1()" id ="clothes1" href="#">PUMA x KOCHÉ Cropped Short Sleeve Tee Women</a>
-                <span id="item1-1" onmouseover="hoveritemw1c1(this);" ></span>
-                <span id="item1-2" onmouseover="hoveritemw1c2(this);" ></span>
-                <span id="item1-3" onmouseover="hoveritemw1c3(this);" ></span>
+                <a onclick="item1()" id ="clothes1" href="#"></a>
+                <span id="item1-1" data-id="1" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item1-2"data-id="1" data-uid=1 onmouseover="hoveritem(this);" ></span>
+                <span id="item1-3" data-id="1" data-uid=2 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes' data-id="2">
                 <img id="item2" src="images/PUMA-x-VOGUE-Leggings-Women-blue.webp" alt="PUMA-x-VOGUE-Leggings-Women">
-                <a onclick="item2()" id ="clothes2" href="#">PUMA x VOGUE Leggings Women</a>
-                <span id="item2-1" onmouseover="hoveritemw2c1(this);" ></span>
-                <span id="item2-2" onmouseover="hoveritemw2c2(this);" ></span>
+                <a onclick="item2()" id ="clothes2" href="#"></a>
+                <span id="item2-1" data-id="2" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item2-2" data-id="2" data-uid=1 onmouseover="hoveritem(this);" ></span>
             </div> 
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes' data-id="3">
                 <img id="item3" src="images/Studio-Ultrabare-Strappy-Training-Bra-Women-blue.webp" alt="Studio-Ultrabare-Strappy-Training-Bra-Women">
-                <a onclick="item3()" id ="clothes3" href="#">Studio Ultrabare Strappy Training Bra Women</a>
-                <span id="item3-1" onmouseover="hoveritemw3c1(this);" ></span>
-                <span id="item3-2" onmouseover="hoveritemw3c2(this);" ></span>
-                <span id="item3-3" onmouseover="hoveritemw3c3(this);" ></span>
+                <a onclick="item3()" id ="clothes3" href="#"></a>
+                <span id="item3-1" data-id="3" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item3-2" data-id="3" data-uid=1 onmouseover="hoveritem(this);" ></span>
+                <span id="item3-3" data-id="3" data-uid=2 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes'  data-id="4">
                 <img id="item4" src="images/PUMA-x-AMI-Tee-blue.webp" alt="PUMA-x-AMI-Tee"> 
-                <a onclick="item4()" id ="clothes4" href="#">PUMA x AMI Tee</a>
-                <span id="item4-1" onmouseover="hoveritemw4c1(this);" ></span>
-                <span id="item4-2" onmouseover="hoveritemw4c2(this);" ></span>
+                <a onclick="item4()" id ="clothes4" href="#"></a>
+                <span id="item4-1"  data-id="4" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item4-2" data-id="4" data-uid=1 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes'  data-id="5">
                 <img id="item5" src="images/PUMA-x-AMI-Hoodie-orange.webp" alt="PUMA-x-AMI-Hoodie">
-                <a onclick="item5()" id = "clothes5" href="#">PUMA x AMI Hoodie</a>
-                <span id="item5-1" onmouseover="hoveritemw5c1(this);" ></span>
-                <span id="item5-2" onmouseover="hoveritemw5c2(this);" ></span>
+                <a onclick="item5()" id = "clothes5" href="#"></a>
+                <span id="item5-1" data-id="5" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item5-2" data-id="5" data-uid=1 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes'  data-id="6">
                 <img id="item6" src="images/PUMA-x-AMI-Half-Zip-Sweatshirt-blue.webp" alt="PUMA-x-AMI-Half-Zip-Sweatshirt">
-                <a onclick="item6()" id = "clothes6" href="#">PUMA x AMI Half Zip Sweatshirt</a>
-                <span id="item6-1" onmouseover="hoveritemw6c1(this);" ></span>
-                <span id="item6-2" onmouseover="hoveritemw6c2(this);" ></span>
+                <a onclick="item6()" id = "clothes6" href="#"></a>
+                <span id="item6-1" data-id="6" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item6-2" data-id="6" data-uid=1 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes' data-id="7">
                 <img id="item7" src="images/T7-Synthetic-Mini-Skirt-Women-black.webp" alt="T7-Synthetic-Mini-Skirt-Women">
-                <a onclick="item7()" id = "clothes7" href="#">T7 Synthetic Mini Skirt Women</a>
-                <span id="item7-1" onmouseover="hoveritemw7c1(this);" ></span>
-                <span id="item7-2" onmouseover="hoveritemw7c2(this);" ></span>
+                <a onclick="item7()" id = "clothes7" href="#"></a>
+                <span id="item7-1" data-id="7" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item7-2" data-id="7" data-uid=1 onmouseover="hoveritem(this);" ></span>
             </div>
-            <div class = 'contentclothes'>
+            <div class = 'contentclothes' data-id="8">
                 <img id="item8" src="images/Elastic-3-Women's-Training-Shorts-black.webp" alt="Elastic-3-Women">
-                <a onclick="item8()" id = "clothes8" href="#">Elastic 3 Women</a>
-                <span id="item8-1" onmouseover="hoveritemw8c1(this);" ></span>
-                <span id="item8-2" onmouseover="hoveritemw8c2(this);" ></span>
+                <a onclick="item8()" id = "clothes8" href="#"></a>
+                <span id="item8-1" data-id="8" data-uid=0 onmouseover="hoveritem(this);" ></span>
+                <span id="item8-2" data-id="8" data-uid=1 onmouseover="hoveritem(this);" ></span>
             </div>
         </div>
     </main>
@@ -74,6 +75,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/hover.js"></script>
+   
+    <script src="js/womens-clothes.js"></script>
 </body>
 </html>
