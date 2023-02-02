@@ -28,7 +28,7 @@
       #23a2f6
     );
     left: -100px;
-    top: -120px;
+    top: -200px;
     }
     .shape:last-child{
     background: linear-gradient(
@@ -37,7 +37,7 @@
       #f09819
     );
     right: -100px;
-    bottom: -120px;
+    bottom: -200px;
     }
     form{
     height: 100%;
@@ -84,7 +84,8 @@
     }
   
     #sign-up-button {
-   
+    position: absolute;
+    bottom: 7%;
     width: 70%;
     background-color:black;
     color: #ffffff;
@@ -94,7 +95,7 @@
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
     transform: translateX(20%);
     }
     #sign-up-button:hover{
@@ -121,55 +122,62 @@
         text-align: center;
         padding-top: 1%;
     }
-    #sign-up
-    {
-        padding: 5%;
-        text-align: center;
-    
-    }
-    #sign-up a{
-        text-decoration: none;
-        color: #1845ad;
-        opacity: 50%;
-    }
-    #sign-up a:hover
-    {
-        opacity: 100%;
-    }
+   
+ 
     
 
     /* inputs */
 
 
     #gender 
-    {
+    { 
         padding: 7%;
+        
     }
     #gender :first-child{
         position: absolute;
         width: 40%;
         height: 10%;
         right: 7%;
+        opacity: 100;
         background-color: transparent;
         color: black;
-        border: 2px solid beige;
+        border: 2px solid rgb(0, 0, 0);
+        transition: 0.5s;
     }
     #gender :nth-child(2){
         position: absolute;
         left: 7%;
         width: 40%;
         height: 10%;
+        opacity: 100;
         background-color: transparent;
-        color: black;
-        border: 2px solid beige;
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
+        transition: 0.5s;
     }
 
-
+    #gender button:hover{
+        background-color: #ffa9a9;
+        opacity: 70%;
+        color: black;
+    }
 
 
 
     #log-in
     {
         text-align: center;
-        padding-top: 4%;
+        width: 100%;
+        position: absolute;
+        bottom: 2%;
+    }
+    #log-in a{
+        text-decoration: none;
+        color: #1845ad;
+        opacity: 50%;
+    }
+    #log-in a:hover
+    {
+        opacity: 100%;
     }
