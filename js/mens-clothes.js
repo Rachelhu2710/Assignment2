@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 class clothes{
-    constructor(id,name,category,colorspicture,price,gender,sizestock,color)
+    constructor(id,name,category,colorspicture,price,gender,sizestock,color,description)
     {   this.id=id
         this.name=name
         this.category=category
@@ -13,6 +13,7 @@ class clothes{
         this.gender=gender
         this.sizestock=sizestock
         this.color=color
+        this.description=description
        
     }
 }
@@ -51,7 +52,7 @@ clothing.forEach(element  => {
     { let c=el.colorspicture[`${el.color[0]}`].link1
     //   console.log(c)
       element.children[0].setAttribute("src",c)
-      element.children[1].innerHTML=el.name
+      element.children[1].innerHTML=el.name+" $"+el.price
    
     }
 
@@ -62,14 +63,55 @@ clothing.forEach(element  => {
 
     
 });
+if (document.title=="Mens clothes 1") {
+  // console.log("hi")
+  let id =localStorage.getItem('id')
+  let uid =localStorage.getItem('uid')
+  // console.log(id)
+  // console.log(uid)
+  // console.log(shoesarray[0])
+  clothesarray.forEach(element => {
+    if (id==element.id) {
+  
+      // console.log("hi")
+    let image = document.getElementById("img1");
+    let color=element.color[uid]
+    image.setAttribute("src",element.colorspicture[color].link1)
+    let tilte1=document.getElementById("title")
+    tilte1.innerHTML=`<h1>${element.name}</h1>`
+    let cat=document.getElementById("cat")
+    if (element.gender=='M') {
+      gender="Mens"
+      cat.innerHTML=`<h3>${gender} ${element.category}</h3>`
+    }
+    else if (element.gender=='W') {
+      gender="Womens"
+      cat.innerHTML=`${gender} ${element.category}`
+    }
 
+    let price = document.getElementById("price")
+    price.innerHTML=`$${element.price}`
+    let sizes=document.getElementById("size")
+    
+    for (const key in element.sizestock[color]) {
 
+    sizes.innerHTML+=`<div id="sizes" data-size=${key}><button>${key}</button></div>`
+   
 
+    }
+    console.log(element.description)
+    let description=document.getElementById("description")
+    description.innerHTML=element.description
+    $('button').on('click',function (e){
+      e.preventDefault();
+    $(this).css('background-color', 'grey');
+    })
+    }
+    
 
-
-
-
-
+  });
+  
+}
 
 
 });
@@ -126,3 +168,14 @@ function hoveritem(e)
 } 
 
 
+function redirect(e)
+  {
+
+  let id = e.parentElement.getAttribute('data-id')
+  let uid =e.parentElement.getAttribute('data-uidma')
+ 
+  localStorage.setItem('id',id)
+  localStorage.setItem('uid',uid)
+
+
+  }

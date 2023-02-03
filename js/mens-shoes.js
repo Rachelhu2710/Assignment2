@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 
 let s1=new shoes(1,"NCT Sneakers","shoes",{Green:{link1:"images/NCT_Sneakers.webp"},Black:{link1:"images/Slipstream-Sneakers-black.webp"}},159,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100},Green:{11:100,10:100,9:100,8:100,7:100,6:100}},["Green","Black"]," A high-flying, slam-dunking, statement-making basketball sneaker. Now it’s joined by the Slipstream – a rework of the original that brings an all-new energy to the game while staying true to the OG’s sporting roots.")
-let s2=new shoes(2,"Flyer Flex Running Shoes","shoes",{White:{link1:"images/Flyer_Flex_Running_Shoes.webp"},Black:{link1:"images/Flyer-Flex-Running-Shoes-black.webp"}},89,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100},white:{11:100,10:100,9:100,8:100,7:100,6:100}},["White","Black"],"Building on the wildly successful Flyer Runner platform, the Flyer Flex brings a whole new style and bold new silhouette. There are flex grooves running the full length of the tooling, as well as rubber coverage in the heel and toe to give you durability and traction. Engineered for runners, designed to turn heads, these are likely to become your go to shoes whenever you're out on a run.")
+let s2=new shoes(2,"Flyer Flex Running Shoes","shoes",{White:{link1:"images/Flyer_Flex_Running_Shoes.webp"},Black:{link1:"images/Flyer-Flex-Running-Shoes-black.webp"}},89,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100},White:{11:100,10:100,9:100,8:100,7:100,6:100}},["White","Black"],"Building on the wildly successful Flyer Runner platform, the Flyer Flex brings a whole new style and bold new silhouette. There are flex grooves running the full length of the tooling, as well as rubber coverage in the heel and toe to give you durability and traction. Engineered for runners, designed to turn heads, these are likely to become your go to shoes whenever you're out on a run.")
 
 let s3=new shoes(3,"Slipstream Lo Trainers","shoes",{Brown:{link1:"images/Slipstream-Lo-Trainers.webp"},Pink:{link1:"images/Slipstream-Lo-Trainers-pink.webp"},Green:{link1:"images/Slipstream-Lo-Trainers-green.webp"}},149,"M",{Brown:{11:100,10:100,9:100,8:100,7:100,6:100},Pink:{11:100,10:100,9:100,8:100,7:100,6:100},Green:{11:100,10:100,9:100,8:100,7:100,6:100}},["Brown","Pink","Green"],"Released as a competitive basketball shoe in 1987 when sneaker culture was kicking off, the Slipstream Lo was then reissued in the 2000s and gained a reputation as the “The Beast” thanks to its crazy colourways. These iconic kicks have been reimagined and updated for the sneaker fanatics of today, while staying true to their basketball heritage. Embrace this classic shoe and celebrate the modern twists added by its varied leather textures and moulded TPU eyestay.")
 let s4=new shoes(4,"CA Pro Suede FS Sneakers","shoes",{Brown:{link1:"images/CA-Pro-Suede-FS-Sneakers.webp"},Green:{link1:"images/CA-Pro-Suede-FS-Sneakers-green.webp"}},169,"M",{Brown:{11:100,10:100,9:100,8:100,7:100,6:100},Green:{11:100,10:100,9:100,8:100,7:100,6:100}},["Brown","Green"],"Our CA Pro takes inspiration from the original California we released back in the ‘80s. It has a look that’s both classic and modern, featuring a perforated toe – just like the OG – statement panelling, and the famous PUMA Formstrip. On this pair, the clean-cut leather upper has a flash of coloured suede across the Formstrip that gives a nod to our sporting heritage.")
@@ -49,9 +49,9 @@ shoes1.forEach(element  => {
 
     if(element.getAttribute("data-id")==el.id)
     { let c=el.colorspicture[`${el.color[0]}`].link1
-    //   console.log(c)
+      // console.log(c)
       element.children[0].setAttribute("src",c)
-      element.children[1].innerHTML=el.name
+      element.children[1].innerHTML=el.name+" $"+el.price
    
     }
 
@@ -79,13 +79,15 @@ if (document.title=="Mens shoes 1") {
       // console.log("hi")
     let image = document.getElementById("img1");
     let color=element.color[uid]
+    console.log(uid)
+    console.log(element.colorspicture.link1)
     image.setAttribute("src",element.colorspicture[color].link1)
     let tilte1=document.getElementById("title")
-    tilte1.innerHTML=element.name
+    tilte1.innerHTML=`<h1>${element.name}</h1>`
     let cat=document.getElementById("cat")
     if (element.gender=='M') {
       gender="Mens"
-      cat.innerHTML=`${gender} ${element.category}`
+      cat.innerHTML=`<h3>${gender} ${element.category}</h3>`
     }
     else if (element.gender=='W') {
       gender="Womens"
@@ -98,14 +100,19 @@ if (document.title=="Mens shoes 1") {
     
     for (const key in element.sizestock[color]) {
 
-    sizes.innerHTML+=`<div id="sizes" data-size=${key}>${key}</div>`
+    sizes.innerHTML+=`<div id="sizes" data-size=${key}><button>${key}</button></div>`
    
 
     }
     console.log(element.description)
     let description=document.getElementById("description")
     description.innerHTML=element.description
+    $('button').on('click',function (e){
+      e.preventDefault();
+    $(this).css('background-color', 'grey');
+    })
     }
+    
 
   });
   
@@ -167,7 +174,6 @@ function hoveritem(e)
 
 // let product =  document.querySelector("")
 
-
   function redirect(e)
   {
 
@@ -180,4 +186,6 @@ function hoveritem(e)
 
   }
 
-    
+  
+  
+
