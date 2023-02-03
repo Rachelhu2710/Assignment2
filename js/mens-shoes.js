@@ -1,7 +1,6 @@
 var shoesarray=[]
 $(document).ready(function() {
-
-class shoes{
+  class shoes{
     constructor(id,name,category,colorspicture,price,gender,sizestock,color,description)
     {   this.id=id
         this.name=name
@@ -31,17 +30,13 @@ let s8=new shoes(8,"Leadcat 2","shoes",{Black:{link1:"images/Leadcat-2.webp"},Wh
 
 shoesarray.push(s1,s2,s3,s4,s5,s6,s7,s8);
 
-// $(".content img").attr("src",s1.picture.Link1)
-// console.log($(".content").data("id"))
-let test=["a","b","ab","c"]
-test.forEach(element => {
-  if (element.startsWith("a")) {
-    console.log(element)
-  }
-  
-});
 
-localStorage.setItem("s1",JSON.stringify(s1))
+// for (let index = 1; index < 9;index++){
+//   shoesarray.push(JSON.parse(localStorage.getItem(`ms${index}`)))
+  
+// }
+
+
 
 
 var shoes1 =document.querySelectorAll(".contentshoes")
@@ -104,12 +99,12 @@ if (document.title=="Mens shoes 1") {
     for (const key in element.sizestock[color]) {
 
     sizes.innerHTML+=`<div id="sizes" data-size=${key}>${key}</div>`
-    console.log(element.sizestock[color][key])
-    element.sizestock[color][key]-=1
+   
 
-    console.log(element.sizestock[color][key])
     }
-  
+    console.log(element.description)
+    let description=document.getElementById("description")
+    description.innerHTML=element.description
     }
 
   });

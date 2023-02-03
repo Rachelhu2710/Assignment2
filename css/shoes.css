@@ -44,6 +44,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: blueviolet;
+    
 }
 #sizes
 {   height: 20%;
@@ -56,6 +57,11 @@
     
     
    
+}
+#description
+{
+    position: absolute;
+    bottom: 10%;
 }
 /* .image
 {
