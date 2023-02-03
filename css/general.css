@@ -420,6 +420,41 @@ color: black;}
   width:100%;
 }
 
+/* cart */
+
+.cart
+{
+  background-color:rgb(196, 255, 20);
+  border-radius: 4px;
+  position: relative;
+  margin-right: 5%;
+}
+.cart-amt
+{
+  font-size: 24px;
+  background-color: red;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  width: 50%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* #search-box{
   margin: 0;
