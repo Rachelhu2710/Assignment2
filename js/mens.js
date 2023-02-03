@@ -17,6 +17,15 @@ let links =
   {idname: "item7-3",link:"images/Anzarun-Lite-Trainers-pink.webp",cat:"shoes"},
   {idname: "item8-1",link:"images/Leadcat-2.webp",cat:"shoes"},
   {idname: "item8-2",link:"images/Leadcat-2-white.webp",cat:"shoes"},
+  {idname: "item1-1",link:"images/PUMA-x-MARKET-Graphic-Tee-Men-white.webp",cat:"clothes"},
+  {idname: "item1-2",link:"images/PUMA-x-MARKET-Graphic-Tee-Men-black.webp",cat:"clothes"},
+  {idname: "item2-1",link:"images/Fandom-Shorts-Men-Black.webp",cat:"clothes"},
+  {idname: "item2-2",link:"images/Fandom-Shorts-Men-Lavender.webp",cat:"clothes"},
+  {idname: "item3-1",link:"images/Classics-Straight-Sweatpants-Men.webp",cat:"clothes"},
+  {idname: "item4-1",link:"images/Classics-Small-Logo-Tee-Men-blue.webp",cat:"clothes"},
+  {idname: "item4-2",link:"images/Classics-Small-Logo-Tee-Men-black.webp",cat:"clothes"},
+  {idname: "item5-1",link:"images/Logo-Short-Sleeve-Men's-Running-Tee-grape.webp",cat:"clothes"},
+  {idname: "item5-2",link:"images/Logo-Short-Sleeve-Men's-Running-Tee-red.webp",cat:"clothes"},
 ]
 const buttons = document.getElementsByTagName("a");
 const buttonPressed = e => {  
