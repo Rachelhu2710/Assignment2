@@ -11,7 +11,7 @@ The reason why we wanted to design this website is so to attract more people to 
 - I would want to have ways to earn more points rather than earning points through the total amount i purchase
 - I would want to know the contact information
 - I would want to have games to earn points or vouchers
-This is a link to my design wireframe for [phone]() version [web]() version.
+This is a link to my design wireframe for [phone](https://xd.adobe.com/view/d615c9f1-acc1-4469-af95-917a07be64ee-8346/) version [web](https://xd.adobe.com/view/bc38a07d-7886-4a8b-b5f8-c2103906b0a0-e96b/) version.
 
 ## Features
 ### Existing Features
@@ -24,7 +24,6 @@ This is a link to my design wireframe for [phone]() version [web]() version.
 ### Future Features 
 ## Technology used
 - JavaScript
-- Jquery
 - CSS
 - Google Fonts
 - XD
