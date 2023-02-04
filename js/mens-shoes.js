@@ -136,8 +136,8 @@ function hoveritem(e)
 
     if(id==el.id)
     { 
-      console.log(el.color.length)
-      if (el.color.length>1) {
+      // console.log(el.color.length)
+     
        
          
        
@@ -146,12 +146,12 @@ function hoveritem(e)
         
           item.setAttribute("src",x)
           item.parentElement.dataset.uidma=uid
-        //   console.log(item.parentElement)
+          // console.log(item.parentElement)
 
         
         
         
-      }
+    
      
    
     }
