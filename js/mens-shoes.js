@@ -137,13 +137,8 @@ function hoveritem(e)
 
     if(id==el.id)
     { 
-<<<<<<< HEAD
       console.log(el.color.length)
       // if (el.color.length>1) {
-=======
-      // console.log(el.color.length)
-     
->>>>>>> 0958957d4cb4ccab4604f2dae341828e584b31ea
        
          
        
@@ -157,11 +152,7 @@ function hoveritem(e)
         
         
         
-<<<<<<< HEAD
       // }
-=======
-    
->>>>>>> 0958957d4cb4ccab4604f2dae341828e584b31ea
      
    
     }
