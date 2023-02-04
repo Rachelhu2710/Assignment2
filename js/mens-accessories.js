@@ -58,11 +58,6 @@ accessories1.forEach(element  => {
 
     
 });
-
-
-
-
-});
 if (document.title=="Mens accessories 1") {
   // console.log("hi")
   let id =localStorage.getItem('id')
@@ -113,6 +108,10 @@ if (document.title=="Mens accessories 1") {
   });
   
 }
+
+
+
+});
 
 
 

@@ -62,16 +62,30 @@ button:hover
 #addtobag
 {
     position: absolute;
-    bottom: 25%;
+    text-decoration: none;
+    color: black;
+    bottom: 35%;
     padding: 3% 20%;
     background-color: #99AAC6;
     border: 3px solid #9FAFCA;
 }
+#addtobag:hover
+{
+    background-color: #657183;
+}
 #description
 {
     position: absolute;
-    bottom: 35%;
+    bottom: 19%;
 }
+#heart
+{
+    position: absolute;
+    width: 8%;
+    left: 60%;
+    bottom: 35.5%;
+}
+
 .back
 {
     color: black;

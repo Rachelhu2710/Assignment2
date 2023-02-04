@@ -76,11 +76,11 @@ if (document.title=="Mens shoes 1") {
    
     if (id==element.id) {
   
-      // console.log("hi")
+    // console.log("hi")
     let image = document.getElementById("img1");
     let color=element.color[uid]
-    console.log(uid)
-    console.log(element.colorspicture.link1)
+    // console.log(element.color[0])
+    // console.log(element.colorspicture.link1)
     image.setAttribute("src",element.colorspicture[color].link1)
     let tilte1=document.getElementById("title")
     tilte1.innerHTML=`<h1>${element.name}</h1>`
@@ -100,7 +100,7 @@ if (document.title=="Mens shoes 1") {
     
     for (const key in element.sizestock[color]) {
 
-    sizes.innerHTML+=`<div id="sizes" data-size=${key}><button>${key}</button></div>`
+    sizes.innerHTML+=`<div id="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
    
 
     }
@@ -136,6 +136,7 @@ function hoveritem(e)
 
     if(id==el.id)
     { 
+      console.log(el.color.length)
       if (el.color.length>1) {
        
          
@@ -147,13 +148,6 @@ function hoveritem(e)
           item.parentElement.dataset.uidma=uid
         //   console.log(item.parentElement)
 
-         
-        
- 
-         
-
-
-    
         
         
         
@@ -179,11 +173,18 @@ function hoveritem(e)
 
   let id = e.parentElement.getAttribute('data-id')
   let uid =e.parentElement.getAttribute('data-uidma')
- 
   localStorage.setItem('id',id)
   localStorage.setItem('uid',uid)
+  }
 
-
+  function checkout(e)
+  {
+    if(document.getElementById('sizes').clicked == true)
+    {
+      console.log(document.getElementById("addtobag"))
+    }
+    // let size = e.parentElement.getAttribute('data-size')
+    // localStorage.setItem("size",size)
   }
 
   
