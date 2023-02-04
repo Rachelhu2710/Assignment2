@@ -20,7 +20,7 @@ $(document).ready(function(){
         let jsondata = {
           "Username": name,
           "Email": email,
-        //   "gender": gender,
+          "gender": gender,
           "password": password,
           "country":country
         //   "Student Age": StudentAge,
@@ -44,13 +44,13 @@ $(document).ready(function(){
         },
         "processData": false,
         "data": JSON.stringify(jsondata),
-        "beforeSend": function(){
+        // "beforeSend": function(){
           //@TODO use loading bar instead
           //disable our button or show loading bar
         //   $("#sub,").prop( "disabled", true);
         //   //clear our form using the form id and triggering it's reset feature
         //   $("#add-contact-form").trigger("reset");
-        }
+        // }
       }
 
       $.ajax(settings).done(function (response) {
