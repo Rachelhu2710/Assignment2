@@ -91,7 +91,7 @@ if (document.title=="Mens accessories 1") {
     
     for (const key in element.sizestock[color]) {
 
-      sizes.innerHTML+=`<div id="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
+      sizes.innerHTML+=`<div class="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
    
 
     }
@@ -178,11 +178,13 @@ function redirect(e)
   }
   function checkout(e)
   {
-    document.querySelector('#sizes').addEventListener('click', function()
-    { 
-      let cart=document.getElementById("cart")
-      cart.innerHTML+= "<a href='checkout.html' id ='addtobag'>Add To Bag</a> "
-      let size = e.parentElement.getAttribute('data-size')
-      localStorage.setItem("size",size)
+    let sizeButtons = document.querySelectorAll('.sizes');
+    sizeButtons.forEach(button => {
+      button.addEventListener('click', function() { 
+        let cart = document.getElementById("cart")
+        cart.innerHTML += `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
+        let size = e.parentElement.getAttribute('data-size')
+        localStorage.setItem("size", size)
+      });
     });
   }
