@@ -177,17 +177,17 @@ function hoveritem(e)
   localStorage.setItem('id',id)
   localStorage.setItem('uid',uid)
   }
-
+  
   function checkout(e)
   {
-    if(document.getElementById('sizes').clicked == true)
-    {
-      console.log(document.getElementById("addtobag"))
-    }
-    // let size = e.parentElement.getAttribute('data-size')
-    // localStorage.setItem("size",size)
+    document.querySelector('#sizes').addEventListener('click', function()
+    { 
+      let cart=document.getElementById("cart")
+      cart.innerHTML+= "<a href='checkout.html' id ='addtobag'>Add To Bag</a> "
+      let size = e.parentElement.getAttribute('data-size')
+      localStorage.setItem("size",size)
+    });
   }
-
   
   
 

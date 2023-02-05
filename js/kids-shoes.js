@@ -175,10 +175,11 @@ function redirect(e)
 
   function checkout(e)
   {
-    if(document.getElementById('sizes').clicked == true)
-    {
+    document.querySelector('#sizes').addEventListener('click', function()
+    { 
+      let cart=document.getElementById("cart")
+      cart.innerHTML+= "<a href='checkout.html' id ='addtobag'>Add To Bag</a> "
       let size = e.parentElement.getAttribute('data-size')
-    }
-    let size = e.parentElement.getAttribute('data-size')
-    localStorage.setItem("size",size)
+      localStorage.setItem("size",size)
+    });
   }
