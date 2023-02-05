@@ -98,11 +98,9 @@ if (document.title=="Mens shoes 1") {
     price.innerHTML=`$${element.price}`
     let sizes=document.getElementById("size")
     
-    for (const key in element.sizestock[color]) {
-
-    sizes.innerHTML+=`<div id="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
-   
-
+    for (const key in element.sizestock[color]) 
+    {
+      sizes.innerHTML+=`<div id="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
     }
     console.log(element.description)
     let description=document.getElementById("description")
@@ -110,6 +108,7 @@ if (document.title=="Mens shoes 1") {
     $('button').on('click',function (e){
       e.preventDefault();
     $(this).css('background-color', 'grey');
+    
     })
     }
     
@@ -169,25 +168,22 @@ function hoveritem(e)
 
 // let product =  document.querySelector("")
 
-  function redirect(e)
-  {
+function redirect(e)
+{
+let id = e.parentElement.getAttribute('data-id')
+let uid =e.parentElement.getAttribute('data-uidma')
+localStorage.setItem('id',id)
+localStorage.setItem('uid',uid)
+}
 
-  let id = e.parentElement.getAttribute('data-id')
-  let uid =e.parentElement.getAttribute('data-uidma')
-  localStorage.setItem('id',id)
-  localStorage.setItem('uid',uid)
-  }
-  
-  function checkout(e)
+function checkout(e)
   {
     document.querySelector('#sizes').addEventListener('click', function()
     { 
       let cart=document.getElementById("cart")
-      cart.innerHTML+= "<a href='checkout.html' id ='addtobag'>Add To Bag</a> "
+      cart.innerHTML+= `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
       let size = e.parentElement.getAttribute('data-size')
       localStorage.setItem("size",size)
     });
   }
-  
-  
-
+ 
