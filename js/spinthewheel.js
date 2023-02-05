@@ -109,14 +109,23 @@
 
 
 
-let wheel =document.querySelectorAll('wheel') ;
-let spinBtn=document.querySelectorAll('spinBtn');
-let value = Math.ceil(Math.random()*3600);
-spinBtn.onclick=function(){
-    wheel.style.transform=`rotate(${value}deg)`
-    value+=Math.ceil(Math.random()*3600)
-    // let price=value/10
+// let wheel =document.querySelectorAll('wheel') ;
+// let spinBtn=document.querySelectorAll('spinBtn');
+// let value = Math.ceil(Math.random()*3600);
+// spinBtn.onclick=function(){
+//     wheel.style.transform=`rotate(${value}deg)`
+//     value+=Math.ceil(Math.random()*3600)
+// //     // let price=value/10
 
 
     
-}
+//  }
+let wheels = document.querySelectorAll('.wheel');
+let spinBtn = document.querySelectorAll('.spinBtn')[0];
+
+spinBtn.addEventListener('click', function() {
+    for (let i = 0; i < wheels.length; i++) {
+        let value = Math.ceil(Math.random() * 3600);
+        wheels[i].style.transform = `rotate(${value}deg)`;
+    }
+});
