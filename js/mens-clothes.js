@@ -49,8 +49,9 @@ clothing.forEach(element  => {
 
 
     if(element.getAttribute("data-id")==el.id)
-    { let c=el.colorspicture[`${el.color[0]}`].link1
-    //   console.log(c)
+    { 
+      let c=el.colorspicture[`${el.color[0]}`].link1
+      // console.log(c)
       element.children[0].setAttribute("src",c)
       element.children[1].innerHTML=el.name+" $"+el.price
    
@@ -94,8 +95,8 @@ if (document.title=="Mens clothes 1") {
     let sizes=document.getElementById("size")
     
     for (const key in element.sizestock[color]) {
-
-    sizes.innerHTML+=`<div id="sizes" data-size=${key}><button>${key}</button></div>`
+      
+      sizes.innerHTML+=`<div class="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
    
 
     }
@@ -179,3 +180,16 @@ function redirect(e)
 
 
   }
+  
+  function checkout(e)
+{
+  let sizeButtons = document.querySelectorAll('.sizes');
+  sizeButtons.forEach(button => {
+    button.addEventListener('click', function() { 
+      let cart = document.getElementById("cart")
+      cart.innerHTML += `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
+      let size = e.parentElement.getAttribute('data-size')
+      localStorage.setItem("size", size)
+    });
+  });
+}

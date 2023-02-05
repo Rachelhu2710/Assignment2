@@ -25,7 +25,7 @@ let s4=new shoes(4,"CA Pro Suede FS Sneakers","shoes",{Brown:{link1:"images/CA-P
 let s5=new shoes(5,"Extent Nitro Europa Sneakers","shoes",{Blue:{link1:"images/Extent-Nitro-Europa-Sneakers-blue.webp"},Black:{link1:"images/Extent-Nitro-Europa-Sneakers-black.webp"}},209,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100},Blue:{11:100,10:100,9:100,8:100,7:100,6:100}},["Blue","Black"]," Our interpretation of where tech meets fashion and performance meets design, the Extent Nitro features a full-length, lightweight nitrogen-injected midsole that’s encapsulated by a heel stabilizing foam to create an aesthetical and technical balance. In the Europa iteration, the two-layered mesh upper contains a mix of suede and textile overlays and is designed and constructed around the idea of caging, thanks to a hidden supporting structure that holds up the lightweight fabric.")
 
 let s6=new shoes(6,"Leadcat FTR Comfort Sandals","slides",{Black:{link1:"images/Leadcat-FTR-Comfort-Sandals.webp"}},65,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100}},["Black"],"Stay a step ahead of the pack in superior comfort with our Leadcat FTR Comfort Sandals, an iconic PUMA silhouette with innovative accents including a CMEVA midsole and moulded footbed for the uncompromising street style fan.")
-let s7=new shoes(7,"Anzarun Lite Trainers","shoes",{White:{link1:"images/Anzarun-Lite-Trainers.webp"},Black:{link1:"images/Anzarun-Lite-Trainers-pink.webp"},Pink:{link1:"images/Anzarun-Lite-Trainers-black.webp"}},109,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100},White:{11:100,10:100,9:100,8:100,7:100,6:100},Pink:{11:100,10:100,9:100,8:100,7:100,6:100}},["Black","White","Pink"],"The freshest look for any occasion, the Anzarun Lite Trainers are PUMA's most refined shoe yet. Featuring the breezy Anzarun DNA mesh upper, a cushy SoftFoam+ sockliner and discreet PUMA branding throughout, you're sure to look great, wherever the day takes you.")
+let s7=new shoes(7,"Anzarun Lite Trainers","shoes",{White:{link1:"images/Anzarun-Lite-Trainers.webp"},Black:{link1:"images/Anzarun-Lite-Trainers-black.webp"},Pink:{link1:"images/Anzarun-Lite-Trainers-pink.webp"}},109,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100},White:{11:100,10:100,9:100,8:100,7:100,6:100},Pink:{11:100,10:100,9:100,8:100,7:100,6:100}},["White","Black","Pink"],"The freshest look for any occasion, the Anzarun Lite Trainers are PUMA's most refined shoe yet. Featuring the breezy Anzarun DNA mesh upper, a cushy SoftFoam+ sockliner and discreet PUMA branding throughout, you're sure to look great, wherever the day takes you.")
 let s8=new shoes(8,"Leadcat 2","shoes",{Black:{link1:"images/Leadcat-2.webp"},White:{link1:"images/Leadcat-2-white.webp"}},75,"M",{Black:{11:100,10:100,9:100,8:100,7:100,6:100},White:{11:100,10:100,9:100,8:100,7:100,6:100}},["Black","White"]," You've never been a follower of fashion – you've always been a leader. And with these eye-catching Leadcat sandals, that tradition continues. With an ultra plush footbed and a premium suede strap, these are sandals expressly designed for those who never compromise.")
 
 shoesarray.push(s1,s2,s3,s4,s5,s6,s7,s8);
@@ -98,11 +98,9 @@ if (document.title=="Mens shoes 1") {
     price.innerHTML=`$${element.price}`
     let sizes=document.getElementById("size")
     
-    for (const key in element.sizestock[color]) {
-
-    sizes.innerHTML+=`<div id="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
-   
-
+    for (const key in element.sizestock[color]) 
+    {
+      sizes.innerHTML+=`<div class="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
     }
     console.log(element.description)
     let description=document.getElementById("description")
@@ -110,6 +108,7 @@ if (document.title=="Mens shoes 1") {
     $('button').on('click',function (e){
       e.preventDefault();
     $(this).css('background-color', 'grey');
+    
     })
     }
     
@@ -127,6 +126,7 @@ function hoveritem(e)
     let id =e.getAttribute("data-id")
     let uid =e.getAttribute("data-uid")
     let item =document.getElementById(`item${id}`)
+    console.log(uid)
 
 
 
@@ -136,8 +136,8 @@ function hoveritem(e)
 
     if(id==el.id)
     { 
-      // console.log(el.color.length)
-     
+      console.log(el.color.length)
+      // if (el.color.length>1) {
        
          
        
@@ -151,7 +151,7 @@ function hoveritem(e)
         
         
         
-    
+      // }
      
    
     }
@@ -168,25 +168,26 @@ function hoveritem(e)
 
 // let product =  document.querySelector("")
 
-  function redirect(e)
-  {
+function redirect(e)
+{
+let id = e.parentElement.getAttribute('data-id')
+let uid =e.parentElement.getAttribute('data-uidma')
+localStorage.setItem('id',id)
+localStorage.setItem('uid',uid)
+}
 
-  let id = e.parentElement.getAttribute('data-id')
-  let uid =e.parentElement.getAttribute('data-uidma')
-  localStorage.setItem('id',id)
-  localStorage.setItem('uid',uid)
-  }
+function checkout(e)
+{
+  let sizeButtons = document.querySelectorAll('.sizes');
+  sizeButtons.forEach(button => {
+    button.addEventListener('click', function() { 
+      let cart = document.getElementById("cart")
+      cart.innerHTML += `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
+      let size = e.parentElement.getAttribute('data-size')
+      localStorage.setItem("size", size)
+    });
+  });
+}
 
-  function checkout(e)
-  {
-    if(document.getElementById('sizes').clicked == true)
-    {
-      console.log(document.getElementById("addtobag"))
-    }
-    // let size = e.parentElement.getAttribute('data-size')
-    // localStorage.setItem("size",size)
-  }
 
-  
-  
 
