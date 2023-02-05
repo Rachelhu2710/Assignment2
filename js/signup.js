@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const APIKEY="5c718b9a967170be88fcfa453973712da3233";
+    const APIKEY="63df8e643bc6b255ed0c46a6";
    
 
 
@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
         e.preventDefault();
-        let email = $("#email").val();
+        let email = $("#Email").val();
         let password = $("#password").val();
         let name = $("#FN").val()+" "+$("#LN").val();
         // let dob = $("#DOB").val();
@@ -20,7 +20,7 @@ $(document).ready(function(){
         let jsondata = {
           "Username": name,
           "Email": email,
-        //   "gender": gender,
+          "gender": "Male",
           "password": password,
           "country":country
         //   "Student Age": StudentAge,
@@ -41,16 +41,18 @@ $(document).ready(function(){
           "content-type": "application/json",
           "x-apikey": APIKEY,
           "cache-control": "no-cache"
-        },
+          
+        }
+        ,
         "processData": false,
         "data": JSON.stringify(jsondata),
-        "beforeSend": function(){
-          //@TODO use loading bar instead
-          //disable our button or show loading bar
-        //   $("#sub,").prop( "disabled", true);
-        //   //clear our form using the form id and triggering it's reset feature
-        //   $("#add-contact-form").trigger("reset");
-        }
+        // "beforeSend": function(){
+        //   //@TODO use loading bar instead
+        //   //disable our button or show loading bar
+        // //   $("#sub,").prop( "disabled", true);
+        // //   //clear our form using the form id and triggering it's reset feature
+        // //   $("#add-contact-form").trigger("reset");
+        // }
       }
 
       $.ajax(settings).done(function (response) {
