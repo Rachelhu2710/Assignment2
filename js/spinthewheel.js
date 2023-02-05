@@ -120,8 +120,8 @@
 
     
 //  }
-let wheels = document.querySelectorAll('.wheel');
-let spinBtn = document.querySelectorAll('.spinBtn')[0];
+let wheels = document.querySelector('.wheel');
+let spinBtn = document.querySelector('.spinBtn');
 
 spinBtn.addEventListener('click', function() {
     for (let i = 0; i < wheels.length; i++) {
