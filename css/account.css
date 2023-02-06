@@ -1,0 +1,10 @@
+#right
+{  
+    float: left;
+}
+
+#left
+{  
+    float: right;
+    padding-right: 5%;
+}
