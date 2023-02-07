@@ -92,9 +92,8 @@ height: 40px;}
  /* Create three equal columns that floats next to each other */
  .column {
    text-align: center;
-   width: 33.3%;
+   width: 50%;
    background-color: rgb(255, 255, 255);
-   /* height: 100%; */
    color: #000;
    display: flexbox;
    flex-direction: row;
