@@ -21,9 +21,9 @@
               <a href="login.html" id="sb-1" >LOG IN</a>
               <div id="sb-2"> No account yet ? <a href="signup.html">Register here</a> </div>
             </div>
-          </div> 
+          </div>
         </div>
-    
+
           <div class="dropdown">
             <button  id="main-options" class="dropbtn"> Shop
               <i class="fa fa-caret-down"></i>
@@ -47,19 +47,41 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+
         <div id="header-colum-2"><a href="index.html" id="logo-1"><img id="img-1" src="images/PUMA-GIF.gif" alt="logo"></a></div>
         <div class="search-bar">
           <input type="text" class="textbox" placeholder="search"/>
           <ion-icon class="search-btn" name="search-outline"></ion-icon>
         </div>
-        <div class="cart" style="display: flex;align-items: center;"> 
-          <div id="header-column-4" class="cart">  
+
+        <div class="cart" class="openbtn" onclick="openNav()" style="display: flex;align-items: center;">
+          <div id="header-column-4" class="cart">
+
           <ion-icon id="img-2"  alt="cart" name="cart-outline"></ion-icon>
           <div class="cart-amt">0</div>
-        </div>
+
+
+
       </div>
-    </header> 
+    </header>
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <p>CART</p>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a> -->
+    </div>
+
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "20%";
+    }
+
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }</script>
 </body>
 </html>

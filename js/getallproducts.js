@@ -32,6 +32,35 @@ const APIKEY="63df8e643bc6b255ed0c46a6";
 
   
        }
+       else if(response[i]["productcode"]=="mc")
+       {
+        // accesoriesarray.push(response[i])
+        localStorage.setItem(`mc${response[i]["id"]}`,JSON.stringify(response[i]))
+
+  
+       }
+       else if(response[i]["productcode"]=="wa")
+       {
+        // accesoriesarray.push(response[i])
+        localStorage.setItem(`wa${response[i]["id"]}`,JSON.stringify(response[i]))
+
+  
+       }
+       else if(response[i]["productcode"]=="wc")
+       {
+        // accesoriesarray.push(response[i])
+        localStorage.setItem(`wc${response[i]["id"]}`,JSON.stringify(response[i]))
+
+  
+       }
+       else if(response[i]["productcode"]=="ws")
+       {
+        // accesoriesarray.push(response[i])
+        localStorage.setItem(`ws${response[i]["id"]}`,JSON.stringify(response[i]))
+
+  
+       }
+      
       
    
 

@@ -1,45 +1,38 @@
 
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    } */
-    body{
-    background-color: #ffffff;
-    }
-    .background{
-    width: 40%;
-    height: 70%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
     
-    }
-    .background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-    }
-    .shape:first-child{
-    background: linear-gradient(
-      #1845ad,
-      #23a2f6
-    );
-    left: -100px;
-    top: -200px;
-    }
-    .shape:last-child{
-    background: linear-gradient(
-      to right,
-      #ff512f,
-      #f09819
-    );
-    right: -100px;
-    bottom: -200px;
-    }
+    
+    
+    
     form{
+
+     height: 90%;
+     width: 30%;
+     position: absolute;
+     left: 35%;
+     top: 15%;
+     backdrop-filter: blur(10px);
+     border: 2px solid rgba(255,255,255,0.1);
+     box-shadow: 0 0 40px rgba(8,7,16,0.6);
+     justify-content: space-around;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     border-radius: 4%;
+     
+
+
+
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /* form{
     height: 100%;
     width: 40%;
     background-color: rgba(255, 255, 255, 0.13);
@@ -52,7 +45,7 @@
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 10px;
-    }
+    } */
     form *{
     font-family: 'Poppins',sans-serif;
     color: #010101;
@@ -71,21 +64,22 @@
     input,select{
     display: block;
     height: 50px;
-    width: 100%;
+    width: 80%;
     background-color: rgba(0, 0, 0, 0.07);
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
     font-size: 14px;
     font-weight: 300;
+  
     }
+    #Email,#password,#FN,#LN,#DOB,#country{
+        margin-top:2%;}
     ::placeholder{
     color: #000000;
     }
   
     #sign-up-button {
-    position: absolute;
-    bottom: 7%;
     width: 70%;
     background-color:black;
     color: #ffffff;
@@ -98,6 +92,10 @@
     transition: 0.3s;
     transform: translateX(20%);
     }
+    #button-box{
+        width: 100%;
+        
+    }
     #sign-up-button:hover{
         opacity: 50%;
         
@@ -107,10 +105,7 @@
     {
         background:linear-gradient(red ,blue);
     }
-    #login-logos
-    {
-      transform: translateX(45%);
-    }
+   
     
     #puma-logo
     {
@@ -132,12 +127,14 @@
     #gender 
     { 
         padding: 7%;
-        
+        position: relative;
+        width: 100%;
+        margin-bottom: 10%;
     }
     #gender :first-child{
         position: absolute;
         width: 40%;
-        height: 10%;
+        height: 100%;
         right: 7%;
         opacity: 100;
         background-color: transparent;
@@ -149,7 +146,7 @@
         position: absolute;
         left: 7%;
         width: 40%;
-        height: 10%;
+        height: 100%;
         opacity: 100;
         background-color: transparent;
         color: rgb(0, 0, 0);
@@ -169,8 +166,8 @@
     {
         text-align: center;
         width: 100%;
-        position: absolute;
-        bottom: 0%;
+        margin-top: 2%;
+      
     }
     #log-in a{
         text-decoration: none;

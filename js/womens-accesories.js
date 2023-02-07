@@ -1,35 +1,10 @@
 let accesoriesarray=[];
-$(document).ready(function(){
+for (let index = 1; index < 9;index++){
+  accesoriesarray.push(JSON.parse(localStorage.getItem(`wa${index}`)))
+  
+}
 
-    class accesorires
-    { constructor(id,name,category,colorspicture,price,gender,sizestock,color,description)
-    {
-      this.id=id
-      this.name=name
-      this.category=category
-      this.colorspicture=colorspicture //contain picture for each color of product//
-      this.price=price
-      this.gender=gender
-      this.sizestock=sizestock // contains diff sizes for each color of product//
-      this.color=color
-      this.description=description
-    } 
-    }
-    
-    
-    
-    let a1 = new accesorires(1,"Puma High Cut Footie","socks",{White:{link1:"images/PUMA-Unisex-High-Cut-Footie-white.webp"} , Black:{link1:"images/PUMA-Unisex-High-Cut-Footie-black.webp"},Grey:{link1:"images/PUMA-Unisex-High-Cut-Footie-grey.webp"}},6.90,"W",{White:{S:100,M:100,L:100},Black:{S:100,M:100,L:100},Grey:{S:100,M:100,L:100}},["White","Black","Grey"],"The high-cut unisex footies from PUMA are ideal for sneakers. The high-cut gives you the security they will stay in place, but be invisible socks. Get all the performance from PUMA quality socks without any of the show.")
-    let a2 = new accesorires(2,"Training Bottle","bottle",{Black:{link1:"images/Training-Bottle-black.webp"} , Red:{link1:"images/Training-Bottle-red.webp"},Pink:{link1:"images/Training-Bottle-pink.webp"}},25,"W",{Black:{S:100,M:100,L:100},Red:{S:100,M:100,L:100},Pink:{S:100,M:100,L:100}},["Black","Red","Pink"],"Stay hydrated when you're on the go with the Core Training Bottle. Sleek lines, a sport cap and bold PUMA branding will have quenching your thirst in style.")
-    let a3 = new accesorires(3,"Result Backpack","bag",{Pink:{link1:"images/Result-Backpack-pink.webp"} , Black:{link1:"images/Result-Backpack-black.webp"}},75,"W",{Pink:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Pink","Black"],"Too cool for school: This stunning functional backpack is the perfect practical piece for heading back to work or the classroom this autumn. With plenty of secure and sturdy pockets and compartments for all your essentials, you'll be fully prepared what's ahead.")   
-    let a4 = new accesorires(4,"Phase Packable Shopper","bag",{Black:{link1:"images/PUMA-Phase-Packable-Shopper.webp"}},25,"W",{Black:{S:100,M:100,L:100}},["Black"],"Form meets function for the perfect packable. From big to small and back again, this convertible favourite packs a punch with bold PUMA branding and simple details. Grab it on your way to the shops or take it along as the perfect holiday basic.")
-    let a5 = new accesorires(5,"Yoga Training Mat","mat",{Black:{link1:"images/Yoga-Training-Mat.webp"} },75,"W",{Black:{S:100,M:100,L:100}},["Black"],"Create a safe space for practice whenever and wherever you are with our on-the-go yoga training mat. Plush and supportive for joints, supremely comfortable all round, and featuring dual texturing patterns for enhanced traction with straps for convenient carry and bold PUMA branding, you'll bring centred sophistication both to and from the studio.")
-    let a6 = new accesorires(6,"Core Seasonal Round Case Bag","bag",{Black:{link1:"images/Women's-Core-Seasonal-Round-Case-Bag.webp"} },29,"W",{Black:{S:100,M:100,L:100}},["Black"],"Practical and trendy, this Women's Core Seasonal Round Case Bag provides a functional silhouette in a lightweight sporty material, making it the perfect companion for every occassion.")
-    let a7 = new accesorires(7,"Core Base Women's Backpack","bag",{Pink:{link1:"images/Core-Base-Women's-Backpack.webp"}},45,"W",{Pink:{S:100,M:100,L:100}},["Pink"],"This sweet backpack is a great grab-and-go option for a day around town. Featuring two zip compartments, adjustable PUMA-branded shoulder straps and chic metallic PUMA Wordmark branding on the front, this pack will surely become your go-to fave.")
-    let a8 = new accesorires(8,"Core Base Women's Shopper","bag",{Pink:{link1:"images/Core-Base-Women's-Shopper.webp"}},30,"W",{Pink:{S:100,M:100,L:100}},["Pink"],"This sweet backpack is a great grab-and-go option for a day around town. ")
-
-   
-    accesoriesarray.push(a1,a2,a3,a4,a5,a6,a7,a8)
-    
+  
     var accessories1 =document.querySelectorAll(".contentaccessories")
 
     accessories1.forEach(element  => {
@@ -99,8 +74,7 @@ $(document).ready(function(){
     }
     
     
-    });
-function hoveritem(e)
+  function hoveritem(e)
   { 
     
     let id =e.getAttribute("data-id")
@@ -113,12 +87,12 @@ function hoveritem(e)
       // console.log(el)
       if(id==el.id)
       { 
-        if (el.color.length>1) {
+      
           var x=el.colorspicture[`${el.color[uid]}`].link1
           item.setAttribute("src",x)
           item.parentElement.dataset.uidma=uid
           //   console.log(item.parentElement)
-        }
+        
      
    
     }
@@ -154,3 +128,117 @@ function redirect(e)
       });
     });
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class accesorires
+// { constructor(productcode,id,name,category,colorspicture,price,gender,sizestock,color,description)
+// { this.productcode=productcode
+//   this.id=id
+//   this.name=name
+//   this.category=category
+//   this.colorspicture=colorspicture //contain picture for each color of product//
+//   this.price=price
+//   this.gender=gender
+//   this.sizestock=sizestock // contains diff sizes for each color of product//
+//   this.color=color
+//   this.description=description
+// } 
+// }
+
+
+
+// let a1 = new accesorires("wa",1,"Puma High Cut Footie","socks",{White:{link1:"images/PUMA-Unisex-High-Cut-Footie-white.webp"} , Black:{link1:"images/PUMA-Unisex-High-Cut-Footie-black.webp"},Grey:{link1:"images/PUMA-Unisex-High-Cut-Footie-grey.webp"}},6.90,"W",{White:{S:100,M:100,L:100},Black:{S:100,M:100,L:100},Grey:{S:100,M:100,L:100}},["White","Black","Grey"],"The high-cut unisex footies from PUMA are ideal for sneakers. The high-cut gives you the security they will stay in place, but be invisible socks. Get all the performance from PUMA quality socks without any of the show.")
+// let a2 = new accesorires("wa",2,"Training Bottle","bottle",{Black:{link1:"images/Training-Bottle-black.webp"} , Red:{link1:"images/Training-Bottle-red.webp"},Pink:{link1:"images/Training-Bottle-pink.webp"}},25,"W",{Black:{S:100,M:100,L:100},Red:{S:100,M:100,L:100},Pink:{S:100,M:100,L:100}},["Black","Red","Pink"],"Stay hydrated when you're on the go with the Core Training Bottle. Sleek lines, a sport cap and bold PUMA branding will have quenching your thirst in style.")
+// let a3 = new accesorires("wa",3,"Result Backpack","bag",{Pink:{link1:"images/Result-Backpack-pink.webp"} , Black:{link1:"images/Result-Backpack-black.webp"}},75,"W",{Pink:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Pink","Black"],"Too cool for school: This stunning functional backpack is the perfect practical piece for heading back to work or the classroom this autumn. With plenty of secure and sturdy pockets and compartments for all your essentials, you'll be fully prepared what's ahead.")   
+// let a4 = new accesorires("wa",4,"Phase Packable Shopper","bag",{Black:{link1:"images/PUMA-Phase-Packable-Shopper.webp"}},25,"W",{Black:{S:100,M:100,L:100}},["Black"],"Form meets function for the perfect packable. From big to small and back again, this convertible favourite packs a punch with bold PUMA branding and simple details. Grab it on your way to the shops or take it along as the perfect holiday basic.")
+// let a5 = new accesorires("wa",5,"Yoga Training Mat","mat",{Black:{link1:"images/Yoga-Training-Mat.webp"} },75,"W",{Black:{S:100,M:100,L:100}},["Black"],"Create a safe space for practice whenever and wherever you are with our on-the-go yoga training mat. Plush and supportive for joints, supremely comfortable all round, and featuring dual texturing patterns for enhanced traction with straps for convenient carry and bold PUMA branding, you'll bring centred sophistication both to and from the studio.")
+// let a6 = new accesorires("wa",6,"Core Seasonal Round Case Bag","bag",{Black:{link1:"images/Women's-Core-Seasonal-Round-Case-Bag.webp"} },29,"W",{Black:{S:100,M:100,L:100}},["Black"],"Practical and trendy, this Women's Core Seasonal Round Case Bag provides a functional silhouette in a lightweight sporty material, making it the perfect companion for every occassion.")
+// let a7 = new accesorires("wa",7,"Core Base Women's Backpack","bag",{Pink:{link1:"images/Core-Base-Women's-Backpack.webp"}},45,"W",{Pink:{S:100,M:100,L:100}},["Pink"],"This sweet backpack is a great grab-and-go option for a day around town. Featuring two zip compartments, adjustable PUMA-branded shoulder straps and chic metallic PUMA Wordmark branding on the front, this pack will surely become your go-to fave.")
+// let a8 = new accesorires("wa",8,"Core Base Women's Shopper","bag",{Pink:{link1:"images/Core-Base-Women's-Shopper.webp"}},30,"W",{Pink:{S:100,M:100,L:100}},["Pink"],"This sweet backpack is a great grab-and-go option for a day around town. ")
+
+
+// accesoriesarray.push(a1,a2,a3,a4,a5,a6,a7,a8)
+
+
+
+
+
+
+// const APIKEY="63df8e643bc6b255ed0c46a6";
+
+// accesoriesarray.forEach(element => {
+
+
+
+// //[STEP 3]: get form values when user clicks on send
+// //Adapted from restdb api
+// let jsondata = {
+//   "productcode":element.productcode ,
+//   "id":element.id,
+//   "name":element.name,
+//   "category":element.category,
+//   "colorspicture":element.colorspicture,
+//   "price":element.price,
+//   "gender":element.gender,
+//   "sizestock":element.sizestock,
+//   "color":element.color,
+//   "description":element.description
+  
+// }   
+
+
+
+
+
+// let settings = {
+// "async": true,
+// "crossDomain": true,
+// "url": "https://assignment-7a34.restdb.io/rest/products",
+// "method": "POST", //[cher] we will use post to send info
+// "headers": {
+//   "content-type": "application/json",
+//   "x-apikey": APIKEY,
+//   "cache-control": "no-cache"
+  
+// }
+// ,
+// "processData": false,
+// "data": JSON.stringify(jsondata),
+// // "beforeSend": function(){
+// //   //@TODO use loading bar instead
+// //   //disable our button or show loading bar
+// // //   $("#sub,").prop( "disabled", true);
+// // //   //clear our form using the form id and triggering it's reset feature
+// // //   $("#add-contact-form").trigger("reset");
+// // }
+// }
+
+// $.ajax(settings).done(function (response) {
+// console.log(response);
+
+// // $("#contact-submit").prop( "disabled", false);
+
+// // //@TODO update frontend UI 
+// // $("#add-update-msg").show().fadeOut(3000);
+
+// // //update our table 
+// // getContacts();
+// });
+
+
+
+// });
+
+// })

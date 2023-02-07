@@ -42,7 +42,7 @@ if (document.title=="Mens shoes 1") {
   // console.log(id)
   // console.log(uid)
   // console.log(shoesarray[0])
-  console.log(shoesarray)
+  // console.log(shoesarray)
   shoesarray.forEach(element => {
    
     if (id==element.id) {
@@ -51,7 +51,7 @@ if (document.title=="Mens shoes 1") {
     let image = document.getElementById("img1");
     let color=element.color[uid]
     // console.log(element.color[0])
-    // console.log(element.colorspicture.link1)
+    // console.log(element.colorspicture[color].link1)
     image.setAttribute("src",element.colorspicture[color].link1)
     let tilte1=document.getElementById("title")
     tilte1.innerHTML=`<h1>${element.name}</h1>`
@@ -109,8 +109,6 @@ function hoveritem(e)
     { 
       // console.log(el.color.length)
       // if (el.color.length>1) {
-       
-         
        
         var x=el.colorspicture[`${el.color[uid]}`].link1
        

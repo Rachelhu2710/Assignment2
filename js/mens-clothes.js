@@ -1,43 +1,9 @@
 var clothesarray=[]
-$(document).ready(function() {
 
-
-
-class clothes{
-    constructor(id,name,category,colorspicture,price,gender,sizestock,color,description)
-    {   this.id=id
-        this.name=name
-        this.category=category
-        this.colorspicture=colorspicture
-        this.price=price
-        this.gender=gender
-        this.sizestock=sizestock
-        this.color=color
-        this.description=description
-       
-    }
+for (let index = 1; index < 9;index++){
+  clothesarray.push(JSON.parse(localStorage.getItem(`mc${index}`)))
+  
 }
-
-
-
-
-let c1 =new clothes(1,"PUMA x MARKET Graphic Tee","t-shirt",{White:{link1:"images/PUMA-x-MARKET-Graphic-Tee-Men-white.webp",link2:"images/PUMA-x-MARKET-Graphic-Tee-Men-white-back.webp"},Black:{link1:"images/PUMA-x-MARKET-Graphic-Tee-Men-black.webp",link2:"images/PUMA-x-MARKET-Graphic-Tee-Men-black-back.webp"}},35,"M",{White:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["White","Black"],"PUMA x MARKET combines East and West coast sensibilities, fusing laid-back style with innovation. Want to go big on print? What’s bigger than the great outdoors? We’ve given this tee a nature-inspired rubber graphic and relaxed fit combination that’s sure to inspire alfresco adventures")
-let c2 =new clothes(2,"Fandom Shorts","shorts",{Black:{link1:"images/Fandom-Shorts-Men-Black.webp",link2:"images/Fandom-Shorts-Men-Black-back.webp"},Lavender:{link1:"images/Fandom-Shorts-Men-Lavender.webp",link2:"images/Fandom-Shorts-Men-Lavender-Back.webp"}},30,"M",{Black:{S:100,M:100,L:100},Lavender:{S:100,M:100,L:100}},["Black","Lavender"],"Stand out from the crowd in these Fandom Shorts. They feature a host of pockets for your most important items, along with chenille branding on the leg.")
-let c3 =new clothes(3,"Classics Straigt Sweatpants","sweatpants",{Brown:{link1:"images/Classics-Straight-Sweatpants-Men.webp",link2:null}},30,"M",{Brown:{S:100,M:100,L:100}},["Brown"],"Our Classics collection is filled with no-frills items, like these sweatpants – including an open cuff and pintuck details.")
-let c4 =new clothes(4,"Classics Small Logo Tee","t-shirt",{Blue:{link1:"images/Classics-Small-Logo-Tee-Men-Blue.webp",link2:"images/Classics-Small-Logo-Tee-Men-black.webp"},Black:{link1:"images/Classics-Small-Logo-Tee-Men-black.webp",link2:"images/Classics-Small-Logo-Tee-Men-Blue.webp"}},25,"M",{Blue:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Blue","Black"]," Our Classics collection is PUMA at its ost pared back. So, rep a simple style that pairs with just about anything in this logo tee.")
-let c5 =new clothes(5,"Logo Short Sleeve Men","t-shirt",{Brown:{link1:"images/Logo-Short-Sleeve-Men's-Running-Tee-grape.webp",link2:"images/Logo-Short-Sleeve-Men's-Running-Tee-red.webp"},Red:{link1:"images/Logo-Short-Sleeve-Men's-Running-Tee-red.webp",link2:"images/Logo-Short-Sleeve-Men's-Running-Tee-grape.webp"}},35,"M",{Brown:{S:100,M:100,L:100},Red:{S:100,M:100,L:100}},["Brown","Red"],"Keep yourself at the front of the pack with the fashion and function of our Running collection, the latest in running technology that's perfect for uncompromising athletes, no matter if you're a casual jogger or aspiring Olympian. Our Logo Short Sleeve Tee was designed to provide runners with the perfect base layer. Featuring a stylish graphic at the chest, it's equipped with dryCELL technology to enhance comfort and 360-degree reflectivity to boost safety in low light conditions.")
-let c6 =new clothes(6,"T7 Printed Track Jacket Men","jacket",{Black:{link1:"images/T7-Printed-Track-Jacket-Men.webp",link2:null}},85,"M",{Black:{S:100,M:100,L:100}},["Black"],"A PUMA original, the T7 track-inspired collection made a name for itself with 7cm signature stripes and quickly became as popular on city streets as it was on the training grounds. Hidden away in our archives, the suit has been faithfully replicated, and is just as iconic today as it was back then. With sleeve striping and a sleek fit, this sporty jacket will have you bringing the classics back in style.")
-let c7 =new clothes(7,"Classics Relaxed Crewneck Sweatshirt","sweatshirt",{Blue:{link1:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Blue.webp" ,link2:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Green.webp"},Green:{link1:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Green.webp",link2:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Blue.webp"}},75,"M",{Blue:{S:100,M:100,L:100},Green:{S:100,M:100,L:100}},["Blue","Green"],"Our Classics collection is filled with no-frills items – like this relaxed crewneck sweatshirt.")
-let c8 =new clothes(8,"Classics Relaxed Hoodie ","hoodie",{Beige:{link1:"images/Classics-Relaxed-Hoodie-Men-Grey.webp" ,link2:"images/Classics-Relaxed-Hoodie-Men-Black.webp"},Black:{link1:"images/Classics-Relaxed-Hoodie-Men-Black.webp",link2:"images/Classics-Relaxed-Hoodie-Men-Grey.webp"}},75,"M",{Beige:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Beige","Black"],"Our Classics collection is filled with no-frills items, like this relaxed hoodie – perfect for wearing to training or the couch.")
-
-
-
-clothesarray.push(c1,c2,c3,c4,c5,c6,c7,c8)
-
-// clothesarray.forEach(element => {
-//     console.log(element)
-// });
-
 
 
 var clothing =document.querySelectorAll(".contentclothes")
@@ -77,6 +43,7 @@ if (document.title=="Mens clothes 1") {
       // console.log("hi")
     let image = document.getElementById("img1");
     let color=element.color[uid]
+    console.log(element.colorspicture[color])
     image.setAttribute("src",element.colorspicture[color].link1)
     let tilte1=document.getElementById("title")
     tilte1.innerHTML=`<h1>${element.name}</h1>`
@@ -115,7 +82,7 @@ if (document.title=="Mens clothes 1") {
 }
 
 
-});
+
 
 
 function hoveritem(e)
@@ -133,10 +100,7 @@ function hoveritem(e)
 
     if(id==el.id)
     { 
-      if (el.color.length>1) {
-       
-         
-       
+
         var x=el.colorspicture[`${el.color[uid]}`].link1
        
         
@@ -144,18 +108,6 @@ function hoveritem(e)
           item.parentElement.dataset.uidma=uid
           console.log(item.parentElement)
 
-         
-        
- 
-         
-
-
-    
-        
-        
-        
-      }
-     
    
     }
 
@@ -193,3 +145,129 @@ function redirect(e)
     });
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class clothes{
+//   constructor(productcode,id,name,category,colorspicture,price,gender,sizestock,color,description)
+//   {   this.productcode=productcode  
+//       this.id=id
+//       this.name=name
+//       this.category=category
+//       this.colorspicture=colorspicture
+//       this.price=price
+//       this.gender=gender
+//       this.sizestock=sizestock
+//       this.color=color
+//       this.description=description
+     
+//   }
+// }
+
+
+
+
+// let c1 =new clothes("mc",1,"PUMA x MARKET Graphic Tee","t-shirt",{White:{link1:"images/PUMA-x-MARKET-Graphic-Tee-Men-white.webp",link2:"images/PUMA-x-MARKET-Graphic-Tee-Men-white-back.webp"},Black:{link1:"images/PUMA-x-MARKET-Graphic-Tee-Men-black.webp",link2:"images/PUMA-x-MARKET-Graphic-Tee-Men-black-back.webp"}},35,"M",{White:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["White","Black"],"PUMA x MARKET combines East and West coast sensibilities, fusing laid-back style with innovation. Want to go big on print? What’s bigger than the great outdoors? We’ve given this tee a nature-inspired rubber graphic and relaxed fit combination that’s sure to inspire alfresco adventures")
+// let c2 =new clothes("mc",2,"Fandom Shorts","shorts",{Black:{link1:"images/Fandom-Shorts-Men-Black.webp",link2:"images/Fandom-Shorts-Men-Black-back.webp"},Lavender:{link1:"images/Fandom-Shorts-Men-Lavender.webp",link2:"images/Fandom-Shorts-Men-Lavender-Back.webp"}},30,"M",{Black:{S:100,M:100,L:100},Lavender:{S:100,M:100,L:100}},["Black","Lavender"],"Stand out from the crowd in these Fandom Shorts. They feature a host of pockets for your most important items, along with chenille branding on the leg.")
+// let c3 =new clothes("mc",3,"Classics Straigt Sweatpants","sweatpants",{Brown:{link1:"images/Classics-Straight-Sweatpants-Men.webp",link2:null}},30,"M",{Brown:{S:100,M:100,L:100}},["Brown"],"Our Classics collection is filled with no-frills items, like these sweatpants – including an open cuff and pintuck details.")
+// let c4 =new clothes("mc",4,"Classics Small Logo Tee","t-shirt",{Blue:{link1:"images/Classics-Small-Logo-Tee-Men-Blue.webp",link2:"images/Classics-Small-Logo-Tee-Men-black.webp"},Black:{link1:"images/Classics-Small-Logo-Tee-Men-black.webp",link2:"images/Classics-Small-Logo-Tee-Men-Blue.webp"}},25,"M",{Blue:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Blue","Black"]," Our Classics collection is PUMA at its ost pared back. So, rep a simple style that pairs with just about anything in this logo tee.")
+// let c5 =new clothes("mc",5,"Logo Short Sleeve Men","t-shirt",{Brown:{link1:"images/Logo-Short-Sleeve-Men's-Running-Tee-grape.webp",link2:"images/Logo-Short-Sleeve-Men's-Running-Tee-red.webp"},Red:{link1:"images/Logo-Short-Sleeve-Men's-Running-Tee-red.webp",link2:"images/Logo-Short-Sleeve-Men's-Running-Tee-grape.webp"}},35,"M",{Brown:{S:100,M:100,L:100},Red:{S:100,M:100,L:100}},["Brown","Red"],"Keep yourself at the front of the pack with the fashion and function of our Running collection, the latest in running technology that's perfect for uncompromising athletes, no matter if you're a casual jogger or aspiring Olympian. Our Logo Short Sleeve Tee was designed to provide runners with the perfect base layer. Featuring a stylish graphic at the chest, it's equipped with dryCELL technology to enhance comfort and 360-degree reflectivity to boost safety in low light conditions.")
+// let c6 =new clothes("mc",6,"T7 Printed Track Jacket Men","jacket",{Black:{link1:"images/T7-Printed-Track-Jacket-Men.webp",link2:null}},85,"M",{Black:{S:100,M:100,L:100}},["Black"],"A PUMA original, the T7 track-inspired collection made a name for itself with 7cm signature stripes and quickly became as popular on city streets as it was on the training grounds. Hidden away in our archives, the suit has been faithfully replicated, and is just as iconic today as it was back then. With sleeve striping and a sleek fit, this sporty jacket will have you bringing the classics back in style.")
+// let c7 =new clothes("mc",7,"Classics Relaxed Crewneck Sweatshirt","sweatshirt",{Blue:{link1:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Blue.webp" ,link2:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Green.webp"},Green:{link1:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Green.webp",link2:"images/Classics-Relaxed-Crewneck-Sweatshirt-Men-Blue.webp"}},75,"M",{Blue:{S:100,M:100,L:100},Green:{S:100,M:100,L:100}},["Blue","Green"],"Our Classics collection is filled with no-frills items – like this relaxed crewneck sweatshirt.")
+// let c8 =new clothes("mc",8,"Classics Relaxed Hoodie ","hoodie",{Beige:{link1:"images/Classics-Relaxed-Hoodie-Men-Grey.webp" ,link2:"images/Classics-Relaxed-Hoodie-Men-Black.webp"},Black:{link1:"images/Classics-Relaxed-Hoodie-Men-Black.webp",link2:"images/Classics-Relaxed-Hoodie-Men-Grey.webp"}},75,"M",{Beige:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Beige","Black"],"Our Classics collection is filled with no-frills items, like this relaxed hoodie – perfect for wearing to training or the couch.")
+
+
+
+// clothesarray.push(c1,c2,c3,c4,c5,c6,c7,c8)
+
+
+
+
+// const APIKEY="63df8e643bc6b255ed0c46a6";
+
+// clothesarray.forEach(element => {
+
+
+
+// //[STEP 3]: get form values when user clicks on send
+// //Adapted from restdb api
+// let jsondata = {
+//   "productcode":element.productcode ,
+//   "id":element.id,
+//   "name":element.name,
+//   "category":element.category,
+//   "colorspicture":element.colorspicture,
+//   "price":element.price,
+//   "gender":element.gender,
+//   "sizestock":element.sizestock,
+//   "color":element.color,
+//   "description":element.description
+  
+// }   
+
+
+
+
+
+// let settings = {
+// "async": true,
+// "crossDomain": true,
+// "url": "https://assignment-7a34.restdb.io/rest/products",
+// "method": "POST", //[cher] we will use post to send info
+// "headers": {
+//   "content-type": "application/json",
+//   "x-apikey": APIKEY,
+//   "cache-control": "no-cache"
+  
+// }
+// ,
+// "processData": false,
+// "data": JSON.stringify(jsondata),
+// // "beforeSend": function(){
+// //   //@TODO use loading bar instead
+// //   //disable our button or show loading bar
+// // //   $("#sub,").prop( "disabled", true);
+// // //   //clear our form using the form id and triggering it's reset feature
+// // //   $("#add-contact-form").trigger("reset");
+// // }
+// }
+
+// $.ajax(settings).done(function (response) {
+// console.log(response);
+
+// // $("#contact-submit").prop( "disabled", false);
+
+// // //@TODO update frontend UI 
+// // $("#add-update-msg").show().fadeOut(3000);
+
+// // //update our table 
+// // getContacts();
+// });
+
+
+
+// });
+
+
+
+
+

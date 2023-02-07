@@ -1,40 +1,11 @@
 const clothesarray=[];
-$(document).ready(function(){
 
 
 
-
-    class clothes{
-        constructor(id,name,category,colorspicture,price,gender,sizestock,color,description)
-        {   this.id=id
-            this.name=name
-            this.category=category
-            this.colorspicture=colorspicture
-            this.price=price
-            this.gender=gender
-            this.sizestock=sizestock
-            this.color=color
-            this.description=description
-           
-        }
-    }
-    
-    
-    let c1=new clothes(1,"PUMA x KOCHÉ Cropped Short Sleeve Tee","t-shirt",{Black:{link1:"images/PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women-black.webp"},Brown:{link1:"images/PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women-brown.webp"},White:{link1:"images/PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women-white.webp"}},149,"W",{Black:{S:100,M:100,L:100},Brown:{S:100,M:100,L:100},White:{S:100,M:100,L:100}},["Black","Brown","White"],"This one’s for the movers and shakers: the brand new PUMA x KOCHÉ collab is sport-progressive and technical with a fashion edge. Time to mix things up. Shaped for a cropped fit, this tee is perfect for switching up your off-duty style. From the mesh inserts to graphic heat transfers, wear to clash, to match (with other items in the collection) or whatever you want.")
-    let c2=new clothes(2,"PUMA x VOUGE Leggings","leggings",{Blue:{link1:"images/PUMA-x-VOGUE-Leggings-Women-blue.webp"},Grey:{link1:"images/PUMA-x-VOGUE-Leggings-Women-grey.webp"}},109,"W",{Blue:{S:100,M:100,L:100},Grey:{S:100,M:100,L:100}},["Blue","Grey"],"The PUMA x VOGUE collection stands where the gym meets the runway, and these leggings adopt this mantra to the max. Its tight and flexible construction harkens to PUMA’s athletic heritage, while the magazine’s name and jacquard lines deliver a pop of character beyond the playing field.")
-    let c3=new clothes(3,"Studio Ultrabare Strappy Training Bra","bra",{Blue:{link1:"images/Studio-Ultrabare-Strappy-Training-Bra-Women-blue.webp"},Black:{link1:"images/Studio-Ultrabare-Strappy-Training-Bra-Women-black.webp"},Brown:{link1:"images/Studio-Ultrabare-Strappy-Training-Bra-Women-brown.webp"}},65,"W",{Blue:{S:100,M:100,L:100},Black:{S:100,M:100,L:100},Brown:{S:100,M:100,L:100}},["Blue","Black","Brown"],"Grab this training bra before you hit the studio. It offers low-impact support for gentle training sessions, plus PUMA’s Ultrabare fabric gives a feeling of freedom and unrestricted movement. The flattering strappy silhouette’s got you covered in the style stakes too, for an all-round winner.")
-    let c4=new clothes(4,"PUMA x AMI Tee","t-shirt",{Blue:{link1:"images/PUMA-x-AMI-Tee-blue.webp"},Orange:{link1:"images/PUMA-x-AMI-Tee-orange.webp"}},129,"W",{Blue:{S:100,M:100,L:100},Orange:{S:100,M:100,L:100}},["Blue","Orange"],"WE ARE F(AMI)LY. This tee from the second season of PUMA x AMI is guided by the creative vision of the Parisian label, finding the balance between relaxed and refined, amiable and edgy, streetwear and sportswear – just like every item from season one.")
-    let c5=new clothes(5,"PUMA x AMI Hoodie","hoodie",{Orange:{link1:"images/PUMA-x-AMI-Hoodie-orange.webp"},Black:{link1:"images/PUMA-x-AMI-Hoodie-black.webp"}},259,"W",{Orange:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Orange","Black"],"WE ARE F(AMI)LY. This hoodie from the second season of PUMA x AMI is guided by the creative vision of the Parisian label, finding the balance between relaxed and refined, amiable and edgy, streetwear and sportswear – just like every item from season one.")
-    let c6=new clothes(6,"PUMA x AMI Half Zip Sweatshirt","sweatshirt",{Blue:{link1:"images/PUMA-x-AMI-Half-Zip-Sweatshirt-blue.webp"},Purple:{link1:"images/PUMA-x-AMI-Half-Zip-Sweatshirt-purple.webp"}},259,"W",{Blue:{S:100,M:100,L:100},Purple:{S:100,M:100,L:100}},["Blue","Purple"],"WE ARE F(AMI)LY. This half-zip sweatshirt from the second season of PUMA x AMI is guided by the creative vision of the Parisian label, finding the balance between relaxed and refined, amiable and edgy, streetwear and sportswear – just like every item from season one.")
-    let c7=new clothes(7,"T7 Synthetic Mini Skirt","skirt",{Black:{link1:"images/T7-Synthetic-Mini-Skirt-Women-black.webp"},White:{link1:"images/T7-Synthetic-Mini-Skirt-Women-white.webp"}},89,"W",{Black:{S:100,M:100,L:100},White:{S:100,M:100,L:100}},["Black","White"],"Slip into the signature style that started it all with our T7 line, named for its most iconic element – the 7cm racing stripes that catapulted PUMA into fashion stardom. Our T7 mini skirt was designed for the daring, featuring its namesake T7 stripes that scream attitude.")
-    let c8=new clothes(8,"Elastic 3","shorts",{Black:{link1:"images/Elastic-3-Women's-Training-Shorts-black.webp"},Grey:{link1:"images/Elastic-3-Women's-Training-Shorts-grey.webp"}},55,"W",{Black:{S:100,M:100,L:100},Grey:{S:100,M:100,L:100}},["Black","Grey"],"These shorts are an essential addition to your workout wardrobe. A comfy elastic waistband provides a secure fit, while PUMA's moisture-wicking dryCELL technology keeps you dry, even as your training heats up.")
+for (let index = 1; index < 9;index++){
+  clothesarray.push(JSON.parse(localStorage.getItem(`wc${index}`)))
   
-
-
-
-    
-    clothesarray.push(c1,c2,c3,c4,c5,c6,c7,c8);
-
+}
 
 
     var clothing =document.querySelectorAll(".contentclothes")
@@ -112,8 +83,7 @@ $(document).ready(function(){
     }
     
     
-    });
-
+   
 
 
 function hoveritem(e)
@@ -131,9 +101,7 @@ function hoveritem(e)
 
     if(id==el.id)
     { 
-      if (el.color.length>1) {
        
-         
        
         var x=el.colorspicture[`${el.color[uid]}`].link1
        
@@ -142,18 +110,6 @@ function hoveritem(e)
           item.parentElement.dataset.uidma=uid
         //   console.log(item.parentElement)
 
-         
-        
- 
-         
-
-
-    
-        
-        
-        
-      }
-     
    
     }
 
@@ -186,3 +142,125 @@ function redirect(e)
       });
     });
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class clothes{
+//   constructor(productcode,id,name,category,colorspicture,price,gender,sizestock,color,description)
+//   { this.productcode=productcode  
+//     this.id=id
+//       this.name=name
+//       this.category=category
+//       this.colorspicture=colorspicture
+//       this.price=price
+//       this.gender=gender
+//       this.sizestock=sizestock
+//       this.color=color
+//       this.description=description
+     
+//   }
+// }
+
+
+// let c1=new clothes("wc",1,"PUMA x KOCHÉ Cropped Short Sleeve Tee","t-shirt",{Black:{link1:"images/PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women-black.webp"},Brown:{link1:"images/PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women-brown.webp"},White:{link1:"images/PUMA-x-KOCHÉ-Cropped-Short-Sleeve-Tee-Women-white.webp"}},149,"W",{Black:{S:100,M:100,L:100},Brown:{S:100,M:100,L:100},White:{S:100,M:100,L:100}},["Black","Brown","White"],"This one’s for the movers and shakers: the brand new PUMA x KOCHÉ collab is sport-progressive and technical with a fashion edge. Time to mix things up. Shaped for a cropped fit, this tee is perfect for switching up your off-duty style. From the mesh inserts to graphic heat transfers, wear to clash, to match (with other items in the collection) or whatever you want.")
+// let c2=new clothes("wc",2,"PUMA x VOUGE Leggings","leggings",{Blue:{link1:"images/PUMA-x-VOGUE-Leggings-Women-blue.webp"},Grey:{link1:"images/PUMA-x-VOGUE-Leggings-Women-grey.webp"}},109,"W",{Blue:{S:100,M:100,L:100},Grey:{S:100,M:100,L:100}},["Blue","Grey"],"The PUMA x VOGUE collection stands where the gym meets the runway, and these leggings adopt this mantra to the max. Its tight and flexible construction harkens to PUMA’s athletic heritage, while the magazine’s name and jacquard lines deliver a pop of character beyond the playing field.")
+// let c3=new clothes("wc",3,"Studio Ultrabare Strappy Training Bra","bra",{Blue:{link1:"images/Studio-Ultrabare-Strappy-Training-Bra-Women-blue.webp"},Black:{link1:"images/Studio-Ultrabare-Strappy-Training-Bra-Women-black.webp"},Brown:{link1:"images/Studio-Ultrabare-Strappy-Training-Bra-Women-brown.webp"}},65,"W",{Blue:{S:100,M:100,L:100},Black:{S:100,M:100,L:100},Brown:{S:100,M:100,L:100}},["Blue","Black","Brown"],"Grab this training bra before you hit the studio. It offers low-impact support for gentle training sessions, plus PUMA’s Ultrabare fabric gives a feeling of freedom and unrestricted movement. The flattering strappy silhouette’s got you covered in the style stakes too, for an all-round winner.")
+// let c4=new clothes("wc",4,"PUMA x AMI Tee","t-shirt",{Blue:{link1:"images/PUMA-x-AMI-Tee-blue.webp"},Orange:{link1:"images/PUMA-x-AMI-Tee-orange.webp"}},129,"W",{Blue:{S:100,M:100,L:100},Orange:{S:100,M:100,L:100}},["Blue","Orange"],"WE ARE F(AMI)LY. This tee from the second season of PUMA x AMI is guided by the creative vision of the Parisian label, finding the balance between relaxed and refined, amiable and edgy, streetwear and sportswear – just like every item from season one.")
+// let c5=new clothes("wc",5,"PUMA x AMI Hoodie","hoodie",{Orange:{link1:"images/PUMA-x-AMI-Hoodie-orange.webp"},Black:{link1:"images/PUMA-x-AMI-Hoodie-black.webp"}},259,"W",{Orange:{S:100,M:100,L:100},Black:{S:100,M:100,L:100}},["Orange","Black"],"WE ARE F(AMI)LY. This hoodie from the second season of PUMA x AMI is guided by the creative vision of the Parisian label, finding the balance between relaxed and refined, amiable and edgy, streetwear and sportswear – just like every item from season one.")
+// let c6=new clothes("wc",6,"PUMA x AMI Half Zip Sweatshirt","sweatshirt",{Blue:{link1:"images/PUMA-x-AMI-Half-Zip-Sweatshirt-blue.webp"},Purple:{link1:"images/PUMA-x-AMI-Half-Zip-Sweatshirt-purple.webp"}},259,"W",{Blue:{S:100,M:100,L:100},Purple:{S:100,M:100,L:100}},["Blue","Purple"],"WE ARE F(AMI)LY. This half-zip sweatshirt from the second season of PUMA x AMI is guided by the creative vision of the Parisian label, finding the balance between relaxed and refined, amiable and edgy, streetwear and sportswear – just like every item from season one.")
+// let c7=new clothes("wc",7,"T7 Synthetic Mini Skirt","skirt",{Black:{link1:"images/T7-Synthetic-Mini-Skirt-Women-black.webp"},White:{link1:"images/T7-Synthetic-Mini-Skirt-Women-white.webp"}},89,"W",{Black:{S:100,M:100,L:100},White:{S:100,M:100,L:100}},["Black","White"],"Slip into the signature style that started it all with our T7 line, named for its most iconic element – the 7cm racing stripes that catapulted PUMA into fashion stardom. Our T7 mini skirt was designed for the daring, featuring its namesake T7 stripes that scream attitude.")
+// let c8=new clothes("wc",8,"Elastic 3","shorts",{Black:{link1:"images/Elastic-3-Women's-Training-Shorts-black.webp"},Grey:{link1:"images/Elastic-3-Women's-Training-Shorts-grey.webp"}},55,"W",{Black:{S:100,M:100,L:100},Grey:{S:100,M:100,L:100}},["Black","Grey"],"These shorts are an essential addition to your workout wardrobe. A comfy elastic waistband provides a secure fit, while PUMA's moisture-wicking dryCELL technology keeps you dry, even as your training heats up.")
+
+
+
+
+
+// clothesarray.push(c1,c2,c3,c4,c5,c6,c7,c8);
+// const APIKEY="63df8e643bc6b255ed0c46a6";
+
+// clothesarray.forEach(element => {
+
+
+
+// //[STEP 3]: get form values when user clicks on send
+// //Adapted from restdb api
+// let jsondata = {
+// "productcode":element.productcode ,
+// "id":element.id,
+// "name":element.name,
+// "category":element.category,
+// "colorspicture":element.colorspicture,
+// "price":element.price,
+// "gender":element.gender,
+// "sizestock":element.sizestock,
+// "color":element.color,
+// "description":element.description
+
+// }   
+
+
+
+
+
+// let settings = {
+// "async": true,
+// "crossDomain": true,
+// "url": "https://assignment-7a34.restdb.io/rest/products",
+// "method": "POST", //[cher] we will use post to send info
+// "headers": {
+// "content-type": "application/json",
+// "x-apikey": APIKEY,
+// "cache-control": "no-cache"
+
+// }
+// ,
+// "processData": false,
+// "data": JSON.stringify(jsondata),
+// // "beforeSend": function(){
+// //   //@TODO use loading bar instead
+// //   //disable our button or show loading bar
+// // //   $("#sub,").prop( "disabled", true);
+// // //   //clear our form using the form id and triggering it's reset feature
+// // //   $("#add-contact-form").trigger("reset");
+// // }
+// }
+
+// $.ajax(settings).done(function (response) {
+// console.log(response);
+
+// // $("#contact-submit").prop( "disabled", false);
+
+// // //@TODO update frontend UI 
+// // $("#add-update-msg").show().fadeOut(3000);
+
+// // //update our table 
+// // getContacts();
+// });
+
+
+
+// });
+
+
+
+
+
+
+
+// })
