@@ -1,7 +1,34 @@
 $(document).ready(function(){
-    const APIKEY="63df8e643bc6b255ed0c46a6";
-   
 
+
+ console.log(new Date().toISOString().slice(0, 10))
+   $("#DOB").attr("max",new Date().toISOString().slice(0, 10))
+   let female =document.querySelector(".f")
+   let male =document.querySelector(".m")
+
+
+ female.addEventListener("click",(e)=>
+ {
+  e.preventDefault();
+  
+  female.parentElement.dataset.gender=female.getAttribute("value")
+  
+ })
+ male.addEventListener("click",(e)=>
+ {
+  e.preventDefault();
+  male.parentElement.dataset.gender=male.getAttribute("value")
+  
+ })
+
+
+
+
+
+
+ 
+    const APIKEY="63df8e643bc6b255ed0c46a6";
+  
 
     $("#sign-up-button").click(function(e) {
 
@@ -13,16 +40,17 @@ $(document).ready(function(){
         // let dob = $("#DOB").val();
         let country = $("#country").val();
         // let PhoneNumber = $("#PhoneNumber").val();
-        // let gender=$("#gender").val();  
+        let gender=$("#gender").attr("data-gender");  
     
         //[STEP 3]: get form values when user clicks on send
         //Adapted from restdb api
         let jsondata = {
           "Username": name,
           "Email": email,
-          "gender": "Male",
+          "gender": "male",
           "password": password,
-          "country":country
+          "country":country,
+          "gender":gender
         //   "Student Age": StudentAge,
         //   "Phone Number": PhoneNumber   
         }   
@@ -82,3 +110,5 @@ $(document).ready(function(){
 
 
 })
+
+

@@ -3,18 +3,22 @@
     user-select: none;
 }
 
-body{
+/* body{
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-}
+    background-color: aqua;
+    
+} */
 .world
-{
+{   display: flex;
     overflow: hidden;
-    position: relative;
-  
+    position: absolute;
+    top: 30%;
+    /* background-image: url("dimg/dessert.avif"); */
+   
 }
 .score
 {
