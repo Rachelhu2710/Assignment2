@@ -1,0 +1,25 @@
+#right
+{  
+    float: left;
+    padding-left: 1%;
+}
+
+#left
+{  
+    float: right;
+    padding-right: 5%;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+button
+{
+    background-color: #D0C1AA;
+    border: 1px black;
+}
+img
+{
+    width: 10%;
+}
