@@ -120,12 +120,43 @@
 
     
 //  }
-let wheels = document.querySelector('.wheel');
+let wheels = document.querySelectorAll('.wheel');
 let spinBtn = document.querySelector('.spinBtn');
+
+// spinBtn.addEventListener('click', function() {
+//     for (let i = 0; i < wheels.length; i++) {
+//         let value = Math.ceil(Math.random() * 3600);
+//         wheels[i].style.transform = `rotate(${value}deg)`;
+//     }
+// });
 
 spinBtn.addEventListener('click', function() {
     for (let i = 0; i < wheels.length; i++) {
         let value = Math.ceil(Math.random() * 3600);
         wheels[i].style.transform = `rotate(${value}deg)`;
+        wheels[i].addEventListener('transitionend', function() {
+            let prize = getFinalPrize(this);
+            let prizeValue = prize.getAttribute('data-value');
+            console.log(prizeValue)
+            document.getElementById('value').innerHTML = prizeValue;
+        });
     }
 });
+
+function getFinalPrize(wheel) {
+    // get all prizes
+    let prizes = wheel.querySelectorAll('.prizes');
+    // get wheel's transform matrix
+    let matrix = window.getComputedStyle(wheel)
+        .getPropertyValue('transform');
+    // get wheel's rotation angle
+    let angle = parseInt(
+        matrix.split(',')[0].split('(')[1]
+    );
+    // find the prize that's closest to the top of the wheel
+    let closestPrizeIndex = Math.round(
+        (angle % 360) / (360 / prizes.length)
+    );
+    // return the closest prize
+    return prizes[closestPrizeIndex];
+}
