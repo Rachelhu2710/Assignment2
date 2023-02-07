@@ -1,38 +1,13 @@
-var accesoriesarray=[]
-$(document).ready(function() {
+let accesoriesarray=[]
 
-
-  const APIKEY="63df8e643bc6b255ed0c46a6";
-
-  let settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://assignment-7a34.restdb.io/rest/products",
-    "method": "GET", //[cher] we will use GET to retrieve info
-    "headers": {
-      "content-type": "application/json",
-      "x-apikey": APIKEY,
-      "cache-control": "no-cache"
-    },
-  }
-
-  //[STEP 8]: Make our AJAX calls
-  //Once we get the response, we modify our table content by creating the content internally. We run a loop to continously add on data
-  //RESTDb/NoSql always adds in a unique id for each data, we tap on it to have our data and place it into our links 
-  $.ajax(settings).done(function (response) {
-
+for (let index = 1; index < 9;index++){
+  accesoriesarray.push(JSON.parse(localStorage.getItem(`ma${index}`)))
   
-    for (var i = 0; i < response.length ; i++) {
-        
-       if(response[i]["productcode"]=="ma")
-       {
-        accesoriesarray.push(response[i])
+}
+// console.log(accesoriesarray)
 
-       }
-      
-   
 
-    }
+ 
 var accesories1 =document.querySelectorAll(".contentaccesories")
 
 accesories1.forEach(element  => {
@@ -57,18 +32,19 @@ accesoriesarray.forEach(el => {
 
     
 });
-console.log(document.title)
+
+// console.log(document.title)
 
 if (document.title=="Mens accessories 1") {
-  console.log("hi")
   let id =localStorage.getItem('id')
   let uid =localStorage.getItem('uid')
-  console.log(id)
-  console.log(uid)
-  // console.log(shoesarray[0])
-  // console.log(shoesarray)
-  accesoriesarray.forEach(element => {
-   
+  // console.log(id)
+  // console.log(uid)
+
+  console.log(accesoriesarray)
+  // console.log("sup")
+   accesoriesarray.forEach(element => {
+    console.log(element)
     if (id==element.id) {
   
     // console.log("hi")
@@ -111,12 +87,7 @@ if (document.title=="Mens accessories 1") {
   });
 }
 
- })
 
-
-
-
-});
 
 
 
@@ -128,23 +99,22 @@ function hoveritem(e)
     let item =document.getElementById(`item${id}`)
 
 
-  console.log(uid)
+
     
-  accessoriesarray.forEach(el => {
+  accesoriesarray.forEach(el => {
 
-
+    
     if(id==el.id)
     { 
-      if (el.color.length>1) {
-       
-         
+
+    
        
         var x=el.colorspicture[`${el.color[uid]}`].link1
        
         
           item.setAttribute("src",x)
           item.parentElement.dataset.uidma=uid
-        //   console.log(item.parentElement)
+          console.log(item.parentElement)
 
          
         
@@ -156,7 +126,7 @@ function hoveritem(e)
         
         
         
-      }
+
      
    
     }
@@ -175,7 +145,7 @@ function redirect(e)
 
   let id = e.parentElement.getAttribute('data-id')
   let uid =e.parentElement.getAttribute('data-uidma')
- 
+  
   localStorage.setItem('id',id)
   localStorage.setItem('uid',uid)
 

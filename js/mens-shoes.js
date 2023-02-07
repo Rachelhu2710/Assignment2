@@ -1,40 +1,15 @@
-var shoesarray=[]
-$(document).ready(function() {
-////////////////////////////////
+let shoesarray=[]
 
- const APIKEY="63df8e643bc6b255ed0c46a6";
-
-  let settings = {
-    "async": true,
-    "crossDomain": true,
-    "dataType":"jsonp",
-    "url": "https://assignment-7a34.restdb.io/rest/products",
-    "method": "GET", //[cher] we will use GET to retrieve info
-    "headers": {
-      "content-type": "application/json",
-      "x-apikey": APIKEY,
-      "cache-control": "no-cache"
-    },
-  }
-
-  //[STEP 8]: Make our AJAX calls
-  //Once we get the response, we modify our table content by creating the content internally. We run a loop to continously add on data
-  //RESTDb/NoSql always adds in a unique id for each data, we tap on it to have our data and place it into our links 
-  $.ajax(settings).done(function (response) {
-
+for (let index = 1; index < 9;index++){
+  shoesarray.push(JSON.parse(localStorage.getItem(`ms${index}`)))
   
-    for (var i = 0; i < response.length ; i++) {
-        
-       if(response[i]["productcode"]=="ms")
-       {
-        shoesarray.push(response[i])
+}
 
-       }
-      
-   
 
-    }
-    var shoes1 =document.querySelectorAll(".contentshoes")
+// console.log(shoesarray)
+
+var shoes1 =document.querySelectorAll(".contentshoes")
+  
 
 shoes1.forEach(element  => {
   // console.log("hi")
@@ -67,7 +42,7 @@ if (document.title=="Mens shoes 1") {
   // console.log(id)
   // console.log(uid)
   // console.log(shoesarray[0])
-  // console.log(shoesarray)
+  console.log(shoesarray)
   shoesarray.forEach(element => {
    
     if (id==element.id) {
@@ -110,12 +85,7 @@ if (document.title=="Mens shoes 1") {
     
 
   });
-}
-
- })
-
-
-})
+   }
 
 
 
