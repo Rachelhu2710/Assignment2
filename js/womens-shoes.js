@@ -79,7 +79,7 @@ const shoesarray=[];
         
         for (const key in element.sizestock[color]) {
     
-        sizes.innerHTML+=`<div class="sizes" data-size=${key}><button onclick="checkout(this)">${key}</button></div>`
+          sizes.innerHTML+=`<div class="sizes" data-size=${key}><button class="sized" onclick="checkout(this)">${key}</button></div>`
        
     
         }
