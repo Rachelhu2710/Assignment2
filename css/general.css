@@ -1,3 +1,7 @@
+
+body::-webkit-scrollbar {
+  display: none;
+}
 header{
   display: flex;
   justify-content: space-between;
@@ -402,21 +406,31 @@ color: black;}
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #111; /* Black*/
+  background-color: #ffffff; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
   display: flex;
   flex-direction: column;
-  
-}
+  overflow: auto;
 
-/* The sidepanel links */
-.sidepanel a ,.sidepanel p{
-  padding: 8px 8px 8px 32px;
+}
+.sidepanel a {
+
   text-decoration: none;
   font-size: 25px;
-  color: #ffffff;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+  
+  
+}
+/* The sidepanel links */
+.sidepanel p{
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
   display: block;
   transition: 0.3s;
 }
@@ -436,7 +450,22 @@ color: black;}
 }
 
 
+#products{
+  position: absolute;
+  top: 20%;
+}
 
+.product
+{
+  width: 70%;
+  height: 10%;
+  display: flex;
+
+}
+.ip-img{
+  width: 50%;
+  height: 100%;
+}
 
 
 
