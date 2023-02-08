@@ -69,6 +69,7 @@ button:hover
     padding: 3% 20%;
     background-color: #99AAC6;
     border: 3px solid #9FAFCA;
+    cursor: pointer;
 }
 #addtobag:hover
 {

@@ -1,4 +1,5 @@
 // localStorage.clear()
+
 const APIKEY="63df8e643bc6b255ed0c46a6";
 
   let settings = {
@@ -67,6 +68,17 @@ const APIKEY="63df8e643bc6b255ed0c46a6";
     }
     
  })
+
+ window.onload = function () {
+  if (localStorage.getItem("hasCodeRunBefore") === null) {
+     
+   
+      localStorage.setItem("cart",JSON.stringify([]))
+     
+      localStorage.setItem("hasCodeRunBefore", true);
+  }
+}
+
 
 
 

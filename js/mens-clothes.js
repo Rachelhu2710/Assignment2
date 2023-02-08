@@ -1,3 +1,4 @@
+let productscart=[]
 var clothesarray=[]
 
 for (let index = 1; index < 9;index++){

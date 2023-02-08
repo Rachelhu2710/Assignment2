@@ -1,3 +1,4 @@
+let productscart=JSON.parse(localStorage.getItem("cart"))
 let shoesarray=[]
 
 for (let index = 1; index < 9;index++){
@@ -148,17 +149,79 @@ localStorage.setItem('uid',uid)
 
 function checkout(e)
 {
-  let sizeButtons = document.querySelectorAll('.sizes');
-  sizeButtons.forEach(button => {
-    button.addEventListener('click', function() { 
+  
       let cart = document.getElementById("cart")
-      cart.innerHTML += `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
+      cart.innerHTML = `<a  onclick="addtocart()" id ='addtobag'>Add To Bag</a> `
       let size = e.parentElement.getAttribute('data-size')
       localStorage.setItem("size", size)
-    });
-  });
+      // console.log("hello")
+      // console.log(cart.innerHTML)
+ 
+ 
 }
 
+function addtocart(){
+
+
+    let Id = localStorage.getItem("id")
+    let Uid=localStorage.getItem("uid")
+ 
+    shoesarray.forEach(element => {
+    
+      if (element.id==Id) {
+        if (productscart.length>0) { 
+        //  console.log(productscart.length)
+
+          for (let index = 0; index < productscart.length; index++) {
+            
+           let el = productscart[index];
+         
+            if (el.ID==Id && el.UID==Uid && el.Size==localStorage.getItem("size")) {
+              productscart[index].Quantity+=1
+               break
+              
+            }
+            else{
+              let color = element.color[Uid]
+              let image = element.colorspicture[color].link1
+              let name = element.name
+              let size = localStorage.getItem("size")
+              let quantity=0
+              let id = Id
+              let UId=Uid
+              let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity}
+              productscart.push(productobj)
+              // console.log("bye")
+              // break
+            }
+     
+            
+            
+          }
+        }
+         
+      
+       else{
+        let color = element.color[Uid]
+        let image = element.colorspicture[color].link1
+        let name = element.name
+        let size = localStorage.getItem("size")
+        let quantity=0
+        let id = Id
+        let UId=Uid
+        let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity}
+        productscart.push(productobj)
+        // console.log("no")
+        
+       }
+        
+      }
+      
+    });
+    localStorage.setItem("cart",JSON.stringify(productscart))
+    console.log(localStorage.getItem("cart"))
+
+}
 
 
 
