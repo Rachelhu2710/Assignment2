@@ -253,7 +253,7 @@
   display: inline-block; 
 }
 @media (max-width: 768px) {
-  .content{
+  .contentclothes{
     width: 50%;
   }
 }

@@ -245,7 +245,7 @@
   display: inline-block; 
 }
 @media (max-width: 768px) {
-  .content{
+  .contentshoes{
     width: 50%;
   }
 }

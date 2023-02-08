@@ -213,7 +213,7 @@
   display: inline-block; 
 }
 @media (max-width: 768px) {
-  .content{
+  .contentaccessories{
     width: 50%;
   }
 }
