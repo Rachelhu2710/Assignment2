@@ -120,9 +120,9 @@
 
     
 //  }
-let wheels = document.querySelectorAll('.wheel');
-let spinBtn = document.querySelector('.spinBtn');
-let value = Math.ceil(Math.random() * 3600);
+// let wheels = document.querySelectorAll('.wheel');
+// let spinBtn = document.querySelector('.spinBtn');
+// let value = Math.ceil(Math.random() * 3600);
 // spinBtn.addEventListener('click', function() {
 //     for (let i = 0; i < wheels.length; i++) {
 //         value += Math.ceil(Math.random() * 3600);
@@ -168,21 +168,87 @@ let value = Math.ceil(Math.random() * 3600);
 // }
 
 
+// spinBtn.addEventListener('click', function() {
+//     for (let i = 0; i < wheels.length; i++) {
+//         value += Math.ceil(Math.random() * 3600);
+//         wheels[i].style.transform = `rotate(${value}deg)`;
+//         let desiredPrize = getFinalPrize(wheels[i], 'prize_1');
+//         console.log(desiredPrize);
+//     }
+// });
+
+// function getFinalPrize(wheel, prizeId) {
+//     // get all prizes
+//     let prizes = wheel.querySelectorAll('.prizes');
+
+//     // find the prize with the specified data-id
+//     let desiredPrize = Array.from(prizes).find(prize => prize.getAttribute('data-id') === prizeId);
+
+//     return desiredPrize;
+// }
+
+let wheels = document.querySelectorAll('.wheel');
+let spinBtn = document.querySelector('.spinBtn');
+let value = Math.ceil(Math.random() * 3600);
+let a = 1;
 spinBtn.addEventListener('click', function() {
+    turn = value
     for (let i = 0; i < wheels.length; i++) {
-        value += Math.ceil(Math.random() * 3600);
-        wheels[i].style.transform = `rotate(${value}deg)`;
-        let desiredPrize = getFinalPrize(wheels[i], 'prize_1');
-        console.log(desiredPrize);
+        wheels[i].style.transform = "rotate("+turn +"deg)";
+        wheels[i].style.transition = "transform 11s ease-in-out";
     }
-});
 
-function getFinalPrize(wheel, prizeId) {
-    // get all prizes
-    let prizes = wheel.querySelectorAll('.prizes');
+// countselect = 360-(((value/360)-Math.floor(value/360))360)
+wheels[0].addEventListener("transitionend", function() {
+    count = value
+    while (count>360)
+    {
+        count -=360
+    }
+    countselect= 360 - count 
+    console.log(count);
+    if (countselect<=45)
+    {
+        var prize=document.getElementById("1");
 
-    // find the prize with the specified data-id
-    let desiredPrize = Array.from(prizes).find(prize => prize.getAttribute('data-id') === prizeId);
-
-    return desiredPrize;
-}
+    }
+    else if (countselect<=90)
+    {
+        var prize=document.getElementById("2");
+    }
+    else if (countselect<=135)
+    {
+        var prize=document.getElementById("3");
+    }
+    else if (countselect<=180)
+    {
+        var prize=document.getElementById("4");
+    }
+    else if (countselect<=225)
+    {
+        var prize=document.getElementById("5");
+    }
+    else if (countselect<=270)
+    {
+        var prize=document.getElementById("6");
+    }
+    else if (countselect<=315)
+    {
+        var prize=document.getElementById("7");
+    }
+    else if (countselect<=360)
+    {
+        var prize=document.getElementById("8");
+    }
+    rotate = Math.ceil(Math.random()*3600)
+    value +=rotate;
+    // to display the won value 
+    let voucher = prize.querySelector('span').innerHTML
+    console.log(voucher)
+    localStorage.setItem("prize"+a,voucher)
+    // element.querySelector('span').innerHTML
+    alert(voucher)
+    a+=1
+    })
+})
+// alert(element.querySelector('span').innerHTML)
