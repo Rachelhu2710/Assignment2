@@ -66,7 +66,7 @@ $(function() {
   });
  });
 }
-
+let isloggedin = localStorage.setItem("isloggedin",false)
 
 function openNav() {
   document.getElementById("mySidepanel").style.width = "20%";
@@ -79,20 +79,36 @@ function closeNav() {
 
 
 
-let drpbutton= document.querySelector(".dropdown1")
-drpbutton.addEventListener("click",function(){
+function openNav1(){
 
   let isloggedin = localStorage.getItem("isloggedin")
-  
-  if(isloggedin){
+  // console.log(isloggedin)
+  if(isloggedin=="true"){
 
     document.querySelector(".dropdown-content2").style.display="flex"
+ 
   
     
   }
   else{
     document.querySelector(".dropdown-content1").style.display="flex"
+ 
     }
 
-  })
+  }
+
+
+
+
+  function closeNav1(e) {
+    e.parentElement.style.display="none"
+    // document.getElementById().style.display = "0";
+  }
+  
+
+
+
+
+
+
 

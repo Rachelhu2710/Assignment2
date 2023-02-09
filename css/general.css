@@ -99,7 +99,7 @@ height: 40px;}
  /* Create three equal columns that floats next to each other */
  .column {
    text-align: center;
-   width: 33.3%;
+   width: 50%;
    background-color: rgb(255, 255, 255);
    /* height: 100%; */
    color: #000;
@@ -137,8 +137,8 @@ height: 40px;}
 
 
 
-
-
+/* 
+user dropdown 2 */
 
 .dropdown-content2 {
   display: none;
@@ -165,6 +165,8 @@ height: 40px;}
 #profile-pic{
   width: 50%;
   height:5%;
+  top: 5%;
+  position: absolute;
 }
 #profile-pic1{
   width: 100%;
@@ -291,22 +293,29 @@ top: 75%;
 
 
 
-
-
-
-/* Show the dropdown menu on hover */
-/* .dropdown1:hover > .dropdown-content1 {
-  display: flex;
+.closebtn1{
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  color: black;
+  height: 20px;
 }
-.dropdown-content1:hover{
-  display: flex;
-} */
+.closebtn1:hover{
+  color: red;
+}
+
+
+
+
+
+/* 
+user dropdown 1 */
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color:#f6f7f2;
+  backdrop-filter: blur(80px);
   top: 70%;
-  width: 25%;
+  width: 15%;
   height: 300%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -315,13 +324,10 @@ top: 75%;
 
 }
 
-.sign-up
+#sign-up
 {
-  position: absolute;
   width: 100%;
   height: 100%;
-  /* top: 20%;
-  left: 10%; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -330,17 +336,45 @@ top: 75%;
 
 }
 
+
 #my-acc
 { position: absolute;
   text-decoration: none;
   color: black;
- top: 10%;
+ top: 20%;
+ --h: 1.2em;   
+ line-height: var(--h);
+ color: #0000;
+ text-shadow: 
+   0 calc(-1*var(--_t, 0em)) #000, 
+   0 calc(var(--h) - var(--_t, 0em)) #1095c1;
+ overflow: hidden;
+ transition: .3s;
 }
+#my-acc:hover {
+  text-shadow: 
+    0 calc(-1 * var(--h)) #000, 
+    0 0 #1095c1;}
+
+
 #fav
 {text-decoration: none;
 color: black;
 position: absolute;
-top: 30%;}
+top: 40%;
+--h: 1.2em;   
+ line-height: var(--h);
+ color: #0000;
+ text-shadow: 
+   0 calc(-1*var(--_t, 0em)) #000, 
+   0 calc(var(--h) - var(--_t, 0em)) #1095c1;
+ overflow: hidden;
+ transition: .3s;}
+
+ #fav:hover {
+  text-shadow: 
+    0 calc(-1 * var(--h)) #000, 
+    0 0 #1095c1;}
 #sb-1
 {
   display: flex;
@@ -352,13 +386,25 @@ top: 30%;}
   text-decoration: none;
   color: black;
   position: absolute;
-  top: 50%;
+  top: 60%;
+  --h: 1.2em;   
+ line-height: var(--h);
+ color: #0000;
+ text-shadow: 
+   0 calc(-1*var(--_t, 0em)) #000, 
+   0 calc(var(--h) - var(--_t, 0em)) #1095c1;
+ overflow: hidden;
+ transition: .3s;
   
 
 
 
 
 }
+#sb-1:hover {
+  text-shadow: 
+    0 calc(-1 * var(--h)) #000, 
+    0 0 #1095c1;}
 #sb-2
 { 
  
@@ -366,13 +412,54 @@ top: 30%;}
   width: 100%;
   height: 10%;
   text-align: center;
-  top: 70%;
+  top: 80%;
 
 
 
 
 }
-#sb-2 a
+
+
+#sb-2 a {
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    rgb(0, 0, 0) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+#sb-2 a:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+#sb-2 a:hover {
+ background-position: 0;
+}
+
+#sb-2 a:hover::before {
+  width:100%;
+}
+
+
+
+/* #sb-2 a
 {
 
 
@@ -380,10 +467,30 @@ top: 30%;}
   text-decoration: none;
   border-bottom: 1px solid rgb(27, 237, 27);
 
+} */
+
+.closebtn2{
+ position: absolute;
+  right: 0;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 200%;
+  cursor: pointer;
+  
+}
+
+.closebtn2:hover{
+  color: red;
 }
 
 
 
+
+
+
+
+
+/* searchbar */
 .search-bar {
   margin:0;
   padding:0;
