@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 
  
-    const APIKEY="63df8e643bc6b255ed0c46a6";
+    const APIKEY="63e3eb01478852088da67ee5	";
   
 
     $("#sign-up-button").click(function(e) {
@@ -110,7 +110,7 @@ $(document).ready(function(){
     let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://assignment-7a34.restdb.io/rest/userinfo",
+        "url": "https://dbasg2-7182.restdb.io/rest/userinfo",
         "method": "POST", //[cher] we will use post to send info
         "headers": {
           "content-type": "application/json",

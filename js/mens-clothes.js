@@ -164,7 +164,7 @@ function redirect(e)
 
 
 
-
+// var clothesarray=[]
 
 
 
@@ -203,7 +203,7 @@ function redirect(e)
 
 
 
-// const APIKEY="63df8e643bc6b255ed0c46a6";
+// const APIKEY="63e3eb01478852088da67ee5";
 
 // clothesarray.forEach(element => {
 
@@ -232,7 +232,7 @@ function redirect(e)
 // let settings = {
 // "async": true,
 // "crossDomain": true,
-// "url": "https://assignment-7a34.restdb.io/rest/products",
+// "url": "https://dbasg2-7182.restdb.io/rest/products",
 // "method": "POST", //[cher] we will use post to send info
 // "headers": {
 //   "content-type": "application/json",

@@ -8,19 +8,23 @@ cart.forEach(product => {
   let name = product.Name
   let size = product.Size
   let quantity=product.Quantity
-  let price=product.price
+  let price=product.Price
   // let id = ID
   // let UId=UID
-  products.innerHTML+=`<div class="product"> <img class="ip-img"  src="${image}" alt="p-img">
-
-<div class="pd"> 
-${name}\n
-Price:$${price}\n
-Color:${color}\n
-Size:${size}\n
+  products.innerHTML+=`<div class="product">
+  <img class="ip-img"  src="${image}" alt="p-img">
+<div id="info">
+<p id="name">${name}</p>
+<p id="price">Price:$${price}</p>
+<p id="color">Color:${color}</p>
+<p id="size5">Size:${size}</p>
+</div>
+</div>
+<div id="i-d-b">
 <button class="i-button">+</button>
-<button class="i-button">-</button>
 <input type="number" class="number-box" value="${quantity}" min="1" max="5"/>
+<button class="i-button">-</button>
+
 </div>  
   
   </div>`
@@ -62,3 +66,33 @@ $(function() {
   });
  });
 }
+
+
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "20%";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";}
+
+
+
+
+let drpbutton= document.querySelector(".dropdown1")
+drpbutton.addEventListener("click",function(){
+
+  let isloggedin = localStorage.getItem("isloggedin")
+  
+  if(isloggedin){
+
+    document.querySelector(".dropdown-content2").style.display="flex"
+  
+    
+  }
+  else{
+    document.querySelector(".dropdown-content1").style.display="flex"
+    }
+
+  })
+
