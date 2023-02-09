@@ -192,7 +192,7 @@ let spinBtn = document.querySelector('.spinBtn');
 let value = Math.ceil(Math.random() * 3600);
 let a = 1;
 spinBtn.addEventListener('click', function() {
-    turn = value
+    turn = value+22.5
     for (let i = 0; i < wheels.length; i++) {
         wheels[i].style.transform = "rotate("+turn +"deg)";
         wheels[i].style.transition = "transform 11s ease-in-out";

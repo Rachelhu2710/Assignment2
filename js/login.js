@@ -1,3 +1,40 @@
+let users=[]
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+
+const APIKEY="63df8e643bc6b255ed0c46a6";
+
+
+  let settings1 = {
+    "async": true,
+    "crossDomain": true,
+    "async":false,
+    "url":"https://assignment-7a34.restdb.io/rest/userinfo",
+    "method": "GET", 
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": APIKEY,
+      "cache-control": "no-cache"
+    },
+  }
+ 
+   $.ajax(settings1).done(async function (response) {
+    response.forEach(element => {
+        users.push(element)
+        localStorage.setItem("users",JSON.stringify(users))
+
+        
+    });
+    await sleep(2000)
+    
+
+   })
+
+
+
+
 
 $("#log-in-button").click(function(e) {
 
@@ -36,14 +73,16 @@ $("#log-in-button").click(function(e) {
     console.log(users)
     for (let index = 0; index < users.length; index++) {
     let element = users[index];
-   
+   console.log(element)
     let username = element.Email
     let password=   element.password
     if(username==myusername && password==mypassword)
-    {
-        console.log("hello")
+    { console.log("hello")
+      localStorage.setItem("isloggedin", true);
     }
-    
+    // else{
+
+    // }
 }
 
     

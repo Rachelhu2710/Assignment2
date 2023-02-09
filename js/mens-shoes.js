@@ -6,6 +6,7 @@ for (let index = 1; index < 9;index++){
   shoesarray.push(JSON.parse(localStorage.getItem(`ms${index}`)))
   
 }
+// console.log(shoesarray)
 
 
 // console.log(shoesarray)
@@ -19,7 +20,7 @@ shoes1.forEach(element  => {
      
  shoesarray.forEach(el => {
 
-// console.log("s")
+
     if(element.getAttribute("data-id")==el.id)
     { let c=el.colorspicture[`${el.color[0]}`].link1
       // console.log(c)
@@ -146,6 +147,7 @@ let id = e.parentElement.getAttribute('data-id')
 let uid =e.parentElement.getAttribute('data-uidma')
 localStorage.setItem('id',id)
 localStorage.setItem('uid',uid)
+localStorage.setItem('productcode',"ms")
 }
 
 function checkout(e)
@@ -166,10 +168,11 @@ function addtocart(){
 
     let Id = localStorage.getItem("id")
     let Uid=localStorage.getItem("uid")
+    let PC=localStorage.getItem("productcode")
  
     shoesarray.forEach(element => {
     
-      if (element.id==Id) {
+      if (element.id==Id && PC=="ms") {
 
 
         if (productscart.length>0) { 
@@ -196,7 +199,9 @@ function addtocart(){
             let id = Id
             let UId=Uid
             let price=element.price
-            let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price}
+            let Productcode=PC
+            let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:Productcode}
+            console.log(productobj)
             productscart.push(productobj)
 
           }
@@ -213,9 +218,11 @@ function addtocart(){
         let id = Id
         let UId=Uid
         let price=element.price
-        let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price}
+        let ProductCode=PC
+        let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:ProductCode}
+        console.log(productobj)
         productscart.push(productobj)
-        // console.log("no")
+        console.log("no")
         
        }
         

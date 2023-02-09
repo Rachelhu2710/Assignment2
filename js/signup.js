@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
-
- console.log(new Date().toISOString().slice(0, 10))
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+//  console.log(new Date().toISOString().slice(0, 10))
    $("#DOB").attr("max",new Date().toISOString().slice(0, 10))
    let female =document.querySelector(".f")
    let male =document.querySelector(".m")
@@ -27,7 +29,7 @@ $(document).ready(function(){
 
 
  
-    const APIKEY="63e3eb01478852088da67ee5	";
+    const APIKEY="63df8e643bc6b255ed0c46a6";
   
 
     $("#sign-up-button").click(function(e) {
@@ -103,14 +105,14 @@ $(document).ready(function(){
         }   
     
     
-      console.log(jsondata)
+      // console.log(jsondata)
  
     
 
     let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://dbasg2-7182.restdb.io/rest/userinfo",
+        "url": "https://assignment-7a34.restdb.io/rest/userinfo",
         "method": "POST", //[cher] we will use post to send info
         "headers": {
           "content-type": "application/json",
@@ -130,8 +132,9 @@ $(document).ready(function(){
         // }
       }
 
-      $.ajax(settings).done(function (response) {
+      $.ajax(settings).done( async function (response) {
         console.log(response);
+        await sleep(2000)
         
         // $("#contact-submit").prop( "disabled", false);
         

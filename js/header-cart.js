@@ -1,7 +1,7 @@
 let products=document.querySelector("#products")
 let cart=JSON.parse(localStorage.getItem("cart"))
 // console.log(document.querySelector("#products"))
-if(cart.length>0){
+
 cart.forEach(product => {
   let color = product.Color
   let image = product.Image
@@ -9,37 +9,75 @@ cart.forEach(product => {
   let size = product.Size
   let quantity=product.Quantity
   let price=product.Price
-  // let id = ID
-  // let UId=UID
-  products.innerHTML+=`<div class="product">
-  <img class="ip-img"  src="${image}" alt="p-img">
-<div id="info">
-<p id="name">${name}</p>
-<p id="price">Price:$${price}</p>
-<p id="color">Color:${color}</p>
-<p id="size5">Size:${size}</p>
-</div>
-</div>
-<div id="i-d-b">
-<button class="i-button">+</button>
-<input type="number" class="number-box" value="${quantity}" min="1" max="5"/>
-<button class="i-button">-</button>
+  let id = product.ID
+  let UId=product.UID
+  let pc=product.PRODUCTCODE
 
-</div>  
+  products.innerHTML+=
+  `<div class="product" data-id="${id}" data-pc="${pc}" data-size="${size}" data-quantity="${quantity}" data-price="${price}"  data-uid="${UId}">
   
-  </div>`
+      <img class="ip-img"   src="${image}" alt="p-img">
+      <div id="encloser">
+      <div id="info">
+      <p id="name">${name}</p>
+      <p id="price">Price:$${price}</p>
+      <p id="color">Color:${color}</p>
+      <p id="size5">Size:${size}</p>
+      <p id="total-price">  Total price : $${price*quantity}</p>
+     </div>     
+ 
+      <div id="i-d-b">
+        <button class="i-button">+</button>
+        <input type="number" class="number-box" value="${quantity}" min="1" max="5"/>
+        <button class="i-button">-</button>
+      </div>
+    </div>
+ </div>  
+  
+ `
   
 });
+
+
 $(function() {
+ 
   $(".i-button").on("click", function() {
     var $button = $(this);
     var $parent = $button.parent(); 
-    console.log($parent)
+    // console.log($parent)
     var oldValue = $parent.find('.number-box').val();
  
     if ($button.text() == "+") {
+  
         if(oldValue<5){
        var newVal = parseFloat(oldValue) + 1;
+       let re=$button.parent().parent().parent()
+       let id=re.attr("data-id")
+       let uid=re.attr("data-uid")
+       let PC = re.attr("data-pc")
+       let Size = re.attr("data-size")
+      //  let Price = re.attr("data-price")
+      //  let info=$button.parent().parent()
+      //  let currentprice=info.children().first().children().last()
+      //  console.log(currentprice)
+      // currentprice.innerHTML=`Total price : $${Price*newVal}`
+
+       for (let index = 0; index < cart.length; index++) {
+        const object = cart[index];
+        let thisid=object.ID
+        let thisuid=object.UID
+        let thisproductcode=object.PRODUCTCODE
+        let thissize=object.Size
+      
+        if(id==thisid && uid==thisuid && PC==thisproductcode && Size==thissize){
+          cart[index].Quantity=newVal
+           localStorage.setItem("cart",JSON.stringify(cart))
+           location.reload();
+           
+         }
+         
+       }
+       
         }
         else{
              newVal = 5;
@@ -51,22 +89,72 @@ $(function() {
         // Don't allow decrementing below zero
        if (oldValue > 1) {
          var newVal = parseFloat(oldValue) - 1;
+         let re=$button.parent().parent().parent()
+         console.log(re)
+      
+         let id=re.attr("data-id")
+         let uid=re.attr("data-uid")
+         let PC = re.attr("data-pc")
+         let Size = re.attr("data-size")
+
+         for (let index = 0; index < cart.length; index++) {
+          const object = cart[index];
+          
+          
+          let thisid=object.ID
+          let thisuid=object.UID
+          let thisproductcode=object.PRODUCTCODE
+          let thissize=object.Size
+        
+          if(id==thisid && uid==thisuid && PC==thisproductcode && Size==thissize){
+            cart[index].Quantity=newVal
+             localStorage.setItem("cart",JSON.stringify(cart))
+             location.reload();
+           }
+           
+         }
          } 
          
-         else if(oldValue==0)
-         {
+         else {
+         let re=$button.parent().parent().parent()
+         let id=re.attr("data-id")
+         let uid=re.attr("data-uid")
+         let PC = re.attr("data-pc")
+         let Size = re.attr("data-size")
+         re.remove()
+      
+       for (let index = 0; index < cart.length; index++) {
+        const object = cart[index];
         
+        
+        let thisid=object.ID
+        let thisuid=object.UID
+        let thisproductcode=object.PRODUCTCODE
+        let thissize=object.Size
+      
+        if(id==thisid && uid==thisuid && PC==thisproductcode && Size==thissize){
+          
+           cart.splice(index,1)
+           localStorage.setItem("cart",JSON.stringify(cart))
+         location.reload();
+           if(cart.length<=0)
+         { 
+          localStorage.setItem("cart",JSON.stringify([]))
+         }
          }
          
-         else {
-         newVal = 1;
        }
        }
-     $parent.find('.number-box').val(newVal);
-  });
+    
+  }
+  $parent.find('.number-box').val(newVal);
  });
-}
-let isloggedin = localStorage.setItem("isloggedin",false)
+
+ });
+
+
+
+
 
 function openNav() {
   document.getElementById("mySidepanel").style.width = "20%";

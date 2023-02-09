@@ -1,5 +1,6 @@
-let productscart=[]
-var clothesarray=[]
+let productscart=JSON.parse(localStorage.getItem("cart"))
+let clothesarray=[]
+
 
 for (let index = 1; index < 9;index++){
   clothesarray.push(JSON.parse(localStorage.getItem(`mc${index}`)))
@@ -107,7 +108,7 @@ function hoveritem(e)
         
           item.setAttribute("src",x)
           item.parentElement.dataset.uidma=uid
-          console.log(item.parentElement)
+          // console.log(item.parentElement)
 
    
     }
@@ -130,22 +131,95 @@ function redirect(e)
  
   localStorage.setItem('id',id)
   localStorage.setItem('uid',uid)
+  localStorage.setItem('productcode',"mc")
 
 
   }
   
   function checkout(e)
-{
-  let sizeButtons = document.querySelectorAll('.sizes');
-  sizeButtons.forEach(button => {
-    button.addEventListener('click', function() { 
-      let cart = document.getElementById("cart")
-      cart.innerHTML += `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
-      let size = e.parentElement.getAttribute('data-size')
-      localStorage.setItem("size", size)
+  {
+    
+        let cart = document.getElementById("cart")
+        cart.innerHTML = `<a  onclick="addtocart()" id ='addtobag'>Add To Bag</a> `
+        let size = e.parentElement.getAttribute('data-size')
+        localStorage.setItem("size", size)
+        // console.log("hello")
+        // console.log(cart.innerHTML)
+   
+   
+  }
+
+
+  function addtocart(){
+
+
+    let Id = localStorage.getItem("id")
+    let Uid=localStorage.getItem("uid")
+    let PC=localStorage.getItem("productcode")
+ 
+    clothesarray.forEach(element => {
+    console.log(element)
+      if (element.id==Id && PC=="mc") {
+
+
+        if (productscart.length>0) { 
+          let incart=true;
+          for (let index = 0; index < productscart.length; index++) {
+            
+           let el = productscart[index];
+         
+            if (el.ID==Id && el.UID==Uid && el.Size==localStorage.getItem("size")) {
+              productscart[index].Quantity+=1
+              incart=false
+               break
+              
+            }
+            
+          }
+          if(incart)
+          {
+            let color = element.color[Uid]
+            let image = element.colorspicture[color].link1
+            let name = element.name
+            let size = localStorage.getItem("size")
+            let quantity=1
+            let id = Id
+            let UId=Uid
+            let price=element.price
+            let Productcode=PC
+            let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:Productcode}
+            productscart.push(productobj)
+
+          }
+        
+        }
+         
+      
+       else{
+        let color = element.color[Uid]
+        let image = element.colorspicture[color].link1
+        let name = element.name
+        let size = localStorage.getItem("size")
+        let quantity=1
+        let id = Id
+        let UId=Uid
+        let price=element.price
+            let Productcode=PC
+            let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:Productcode}
+        productscart.push(productobj)
+        // console.log("no")
+        
+       }
+        
+      }
+      
     });
-  });
+    localStorage.setItem("cart",JSON.stringify(productscart))
+    console.log(localStorage.getItem("cart"))
+    window.location.reload();
+
 }
+
 
 
 
