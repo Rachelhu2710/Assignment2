@@ -17,6 +17,7 @@ wheels.addEventListener("transitionend", function() {
     }
     countselect= 360 - values 
     console.log(values);
+    // extract prize
     if (countselect<=45)
     {
         var prize=document.getElementById("1");
