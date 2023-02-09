@@ -27,9 +27,9 @@ cart.forEach(product => {
      </div>     
  
       <div id="i-d-b">
-        <button class="i-button">+</button>
+        <button id="add-btn" class="i-button">+</button>
         <input type="number" class="number-box" value="${quantity}" min="1" max="5"/>
-        <button class="i-button">-</button>
+        <button id="minus-btn" class="i-button">-</button>
       </div>
     </div>
  </div>  

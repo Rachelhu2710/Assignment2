@@ -1,3 +1,4 @@
+let productscart=JSON.parse(localStorage.getItem("cart"))
 let accesoriesarray=[]
 
 for (let index = 1; index < 9;index++){
@@ -33,25 +34,15 @@ accesoriesarray.forEach(el => {
     
 });
 
-// console.log(document.title)
-
 if (document.title=="Mens accessories 1") {
   let id =localStorage.getItem('id')
   let uid =localStorage.getItem('uid')
-  // console.log(id)
-  // console.log(uid)
-
-  console.log(accesoriesarray)
-  // console.log("sup")
    accesoriesarray.forEach(element => {
     console.log(element)
     if (id==element.id) {
-  
-    // console.log("hi")
     let image = document.getElementById("img1");
     let color=element.color[uid]
-    // console.log(element.color[0])
-    // console.log(element.colorspicture.link1)
+
     image.setAttribute("src",element.colorspicture[color].link1)
     let tilte1=document.getElementById("title")
     tilte1.innerHTML=`<h1>${element.name}</h1>`
@@ -73,7 +64,6 @@ if (document.title=="Mens accessories 1") {
     {
       sizes.innerHTML+=`<div class="sizes" data-size=${key}><button class="sized" onclick="checkout(this)">${key}</button></div>`
     }
-    // console.log(element.description)
     let description=document.getElementById("description")
     description.innerHTML=element.description
     $('button').on('click',function (e){
@@ -114,7 +104,7 @@ function hoveritem(e)
         
           item.setAttribute("src",x)
           item.parentElement.dataset.uidma=uid
-          console.log(item.parentElement)
+          // console.log(item.parentElement)
 
          
         
@@ -148,21 +138,105 @@ function redirect(e)
   
   localStorage.setItem('id',id)
   localStorage.setItem('uid',uid)
+  localStorage.setItem('productcode',"ma")
 
 
   }
   function checkout(e)
   {
-    let sizeButtons = document.querySelectorAll('.sizes');
-    sizeButtons.forEach(button => {
-      button.addEventListener('click', function() { 
-        let cart = document.getElementById("cart")
-        cart.innerHTML += `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
-        let size = e.parentElement.getAttribute('data-size')
-        localStorage.setItem("size", size)
-      });
-    });
+       let cart = document.getElementById("cart")
+      cart.innerHTML = `<a  onclick="addtocart()" id ='addtobag'>Add To Bag</a> `
+      let size = e.parentElement.getAttribute('data-size')
+      localStorage.setItem("size", size)
+      // console.log("hello")
+      // console.log(cart.innerHTML)
   }
+
+
+function addtocart(){
+
+
+    let Id = localStorage.getItem("id")
+    let Uid=localStorage.getItem("uid")
+    let PC=localStorage.getItem("productcode")
+ 
+    accesoriesarray.forEach(element => {
+    
+      if (element.id==Id && PC=="ma") {
+
+
+        if (productscart.length>0) { 
+          let incart=true;
+          for (let index = 0; index < productscart.length; index++) {
+            
+           let el = productscart[index];
+         
+            if (el.ID==Id && el.UID==Uid && el.Size==localStorage.getItem("size")) {
+              productscart[index].Quantity+=1
+              incart=false
+               break
+              
+            }
+            
+          }
+          if(incart)
+          {
+            let color = element.color[Uid]
+            let image = element.colorspicture[color].link1
+            let name = element.name
+            let size = localStorage.getItem("size")
+            let quantity=1
+            let id = Id
+            let UId=Uid
+            let price=element.price
+            let Productcode=PC
+            let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:Productcode}
+            productscart.push(productobj)
+
+          }
+        
+        }
+         
+      
+       else{
+        let color = element.color[Uid]
+        let image = element.colorspicture[color].link1
+        let name = element.name
+        let size = localStorage.getItem("size")
+        let quantity=1
+        let id = Id
+        let UId=Uid
+        let price=element.price
+        let ProductCode=PC
+        let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:ProductCode}
+        console.log(productobj)
+        productscart.push(productobj)
+        console.log("no")
+        
+       }
+        
+      }
+      
+    });
+    localStorage.setItem("cart",JSON.stringify(productscart))
+    console.log(localStorage.getItem("cart"))
+    window.location.reload();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

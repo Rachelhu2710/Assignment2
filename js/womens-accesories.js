@@ -1,3 +1,4 @@
+let productscart=JSON.parse(localStorage.getItem("cart"))
 let accesoriesarray=[];
 for (let index = 1; index < 9;index++){
   accesoriesarray.push(JSON.parse(localStorage.getItem(`wa${index}`)))
@@ -114,20 +115,95 @@ function redirect(e)
   let uid =e.parentElement.getAttribute('data-uidma')
   localStorage.setItem('id',id)
   localStorage.setItem('uid',uid)
+    localStorage.setItem('productcode',"wa")
   }
 
   function checkout(e)
   {
-    let sizeButtons = document.querySelectorAll('.sizes');
-    sizeButtons.forEach(button => {
-      button.addEventListener('click', function() { 
-        let cart = document.getElementById("cart")
-        cart.innerHTML += `<a href='checkout.html' id ='addtobag'>Add To Bag</a> `
-        let size = e.parentElement.getAttribute('data-size')
-        localStorage.setItem("size", size)
-      });
-    });
+      let cart = document.getElementById("cart")
+      cart.innerHTML = `<a  onclick="addtocart()" id ='addtobag'>Add To Bag</a> `
+      let size = e.parentElement.getAttribute('data-size')
+      localStorage.setItem("size", size)
+      // console.log("hello")
+      // console.log(cart.innerHTML)
   }
+
+
+
+function addtocart(){
+
+
+    let Id = localStorage.getItem("id")
+    let Uid=localStorage.getItem("uid")
+    let PC=localStorage.getItem("productcode")
+ 
+    accesoriesarray.forEach(element => {
+    
+      if (element.id==Id && PC=="wa") {
+
+
+        if (productscart.length>0) { 
+          let incart=true;
+          for (let index = 0; index < productscart.length; index++) {
+            
+           let el = productscart[index];
+         
+            if (el.ID==Id && el.UID==Uid && el.Size==localStorage.getItem("size")) {
+              productscart[index].Quantity+=1
+              incart=false
+               break
+              
+            }
+            
+          }
+          if(incart)
+          {
+            let color = element.color[Uid]
+            let image = element.colorspicture[color].link1
+            let name = element.name
+            let size = localStorage.getItem("size")
+            let quantity=1
+            let id = Id
+            let UId=Uid
+            let price=element.price
+            let Productcode=PC
+            let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:Productcode}
+            productscart.push(productobj)
+
+          }
+        
+        }
+         
+      
+       else{
+        let color = element.color[Uid]
+        let image = element.colorspicture[color].link1
+        let name = element.name
+        let size = localStorage.getItem("size")
+        let quantity=1
+        let id = Id
+        let UId=Uid
+        let price=element.price
+        let ProductCode=PC
+        let productobj={ID:id,UID:UId,Name:name,Size:size,Color:color,Image:image,Quantity:quantity,Price:price,PRODUCTCODE:ProductCode}
+        console.log(productobj)
+        productscart.push(productobj)
+        
+        
+       }
+        
+      }
+      
+    });
+    localStorage.setItem("cart",JSON.stringify(productscart))
+    console.log(localStorage.getItem("cart"))
+    window.location.reload();
+
+}
+
+
+
+
 
 
 
