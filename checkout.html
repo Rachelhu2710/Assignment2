@@ -26,11 +26,26 @@
             <label>Email: </label>
             <input id="email" type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
         </p>
+        <p>
+            <Label>Address:</Label>
+            <input id="add" type="text" placeholder="Address" pattern="[A-Za-z0-9\s,.'-]+" required>
+        </p>
+        <p>
+            <Label>Payment Method:</Label>
+            <input class="payment" type="radio" name="payment" value="paynow" required> Paynow
+            <input class="payment" type="radio" name="payment" value="Credit/Debit Card" required> Credit/Debit Card
+            <input class="payment" type="radio" name="payment" value="paylah" required> PayLah
+            <input class="payment" type="radio" name="payment" value="banktransfer" required> Bank Transfer
+        </p>
         <input class="submit" type="submit" onclick="validate()">
     </form>
     <div id = "display">
        <h2><u>Receipt</u> </h2>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="header.html"></script>
     <script src="js/order.js"></script>
 </body>
 </html>
