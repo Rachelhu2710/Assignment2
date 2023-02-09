@@ -32,11 +32,38 @@ This is a link to my design wireframe for [phone](https://xd.adobe.com/view/d615
 1. Women, men, kids shoes, chlothing and accessories 
     1. All products are able to click in
     2. When on laptop each row has 4 product
-    3. 
+    3. When on mobile each row has 2 product
     4. Had issues trying to create the colours at the bottom of the page
+    5. Had issues trying to link the colour to their repective image when hover over
 2. Individual Product Page
-    1. 
+    1.  
 3. User Profile bar
     1. 
 ## Credits
-## Acknowledgement
+### Content
+- Information of shoes was copied from [puma website](https://sg.puma.com/)
+### Media
+- [Puma Video](https://www.youtube.com/watch?v=_GP-0JX5VO0)
+- [Puma AMI](https://prcdn.freetls.fastly.net/release_image/10697/98/10697-98-c99fe539d92951f090a5608b6fa8b2de-3900x2600.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1950&height=1350&fit=bounds)
+- [NCT](https://images.puma.com/image/upload/q_auto,f_auto,w_1440/regional/~regional~SEA~others~KOP~Collections~PUMA_NCT127_SS23_1440x500.png/fmt/jpg/fmt/png)
+- [Cart Icon](https://cdn-icons-png.flaticon.com/128/872/872243.png)
+- [Search Icon](https://cdn-icons-png.flaticon.com/128/54/54481.png)
+- [PUMA GIF](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.affirmativeactionprograms.org%2Fgif-puma-adidas-k.html&psig=AOvVaw2XRFm00P8_9NDDgJe17aTN&ust=1670142389517000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMjgz7CD3fsCFQAAAAAdAAAAABAj)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/388549/03/fnd/SEA/fmt/png/Slipstream-Sneakers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/388549/01/fnd/SEA/fmt/png/Slipstream-Sneakers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/195201/01/sv01/fnd/SEA/fmt/png/Flyer-Flex-Running-Shoes)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/195201/29/sv01/fnd/SEA/fmt/png/Flyer-Flex-Running-Shoes)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/383401/10/fnd/SEA/fmt/png/Slipstream-Lo-Trainers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/383401/09/fnd/SEA/fmt/png/Slipstream-Lo-Trainers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/383401/11/fnd/SEA/fmt/png/Slipstream-Lo-Trainers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/387327/01/fnd/SEA/fmt/png/CA-Pro-Suede-FS-Sneakers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/387327/03/fnd/SEA/fmt/png/CA-Pro-Suede-FS-Sneakers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/385555/01/fnd/SEA/fmt/png/Extent-Nitro-Europa-Sneakers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/385555/02/fnd/SEA/fmt/png/Extent-Nitro-Europa-Sneakers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/380673/09/fnd/SEA/fmt/png/Leadcat-FTR-Comfort-Sandals)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/371128/02/sv01/fnd/SEA/fmt/png/Anzarun-Lite-Trainers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/371128/36/sv01/fnd/SEA/fmt/png/Anzarun-Lite-Trainers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/371128/35/sv01/fnd/SEA/fmt/png/Anzarun-Lite-Trainers)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/384872/02/fnd/SEA/fmt/png/Leadcat-2.0-Suede-Classic-Sandals)
+- [Puma Shoes](https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/384872/01/fnd/SEA/fmt/png/Leadcat-2.0-Suede-Classic-Sandals)
+### Acknowledgement
