@@ -1,5 +1,6 @@
 // localStorage.clear()
-let users=[]
+
+let allproducts=[]
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
@@ -31,6 +32,8 @@ const APIKEY="63df8e643bc6b255ed0c46a6";
 
   
     for (var i = 0; i < response.length ; i++) {
+        allproducts.push(response[i])
+        console.log(allproducts)
         
        if(response[i]["productcode"]=="ms")
        {
@@ -73,7 +76,7 @@ const APIKEY="63df8e643bc6b255ed0c46a6";
 
   
        }
-      
+       localStorage.setItem("allproducts",JSON.stringify(allproducts))
       
    
 
@@ -85,6 +88,7 @@ const APIKEY="63df8e643bc6b255ed0c46a6";
      
         localStorage.setItem("cart",JSON.stringify([]))
         localStorage.setItem("hasCodeRunBefore", true);
+       
         localStorage.setItem("isloggedin", false);
     }
   }

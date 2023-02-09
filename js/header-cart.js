@@ -1,5 +1,6 @@
 let products=document.querySelector("#products")
 let cart=JSON.parse(localStorage.getItem("cart"))
+let ap=JSON.parse(localStorage.getItem("allproducts"))
 // console.log(document.querySelector("#products"))
 
 cart.forEach(product => {
@@ -196,6 +197,45 @@ function openNav1(){
 
 
 
+
+function popup(e){
+let sbdisplay=document.querySelector("#sb-pop-up")
+let show=[]
+let query=document.querySelector(".textbox").value.toUpperCase()
+console.log(query)
+
+ap.forEach(element => {
+let name=element.name.toUpperCase()
+let category=element.category.toUpperCase()
+if(name.includes(query)){
+  show.push(element)
+}
+if(category.includes(query)){
+show.push(element)
+}
+});
+console.log(show)
+
+  show.forEach(element => {
+    let thisname=element.name
+    let color=element.color[0]
+    let thisimage=element.colorspicture[color].link1
+    sbdisplay.innerHTML=`
+    <div class="sps">
+    <img class="sp-img"   src="${thisimage}" alt="p-img">
+    <p id="spname">${thisname}</p>
+    </div>
+    
+    `
+
+  });
+
+
+  
+
+
+
+}
 
 
 
