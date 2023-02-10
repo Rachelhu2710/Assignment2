@@ -1,4 +1,5 @@
 let users=[]
+let userreward=JSON.parse(localStorage.getItem("userreward"))
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
@@ -81,10 +82,22 @@ $("#log-in-button").click(function(e) {
     let username = element.Email
     let password=   element.password
     if(username==myusername && password==mypassword)
-    { console.log("hello")
-      localStorage.setItem("isloggedin", true);
-      localStorage.setItem("username",username)
-      localStorage.setItem("password",password)
+    {              
+      userreward.forEach(element => { 
+        if (element.username==username && element.password==password) {
+      
+          
+          localStorage.setItem("username",username)
+          localStorage.setItem("password",password)
+          localStorage.setItem("cart",JSON.stringify([]))
+          localStorage.setItem("points",element.coins) 
+          localStorage.setItem("rewards",JSON.stringify(element.voucher))
+          
+        }
+        
+      });
+
+localStorage.setItem("isloggedin", true);
     }
     // else{
 
