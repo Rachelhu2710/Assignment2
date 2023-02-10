@@ -200,6 +200,8 @@ function openNav1(){
 
 function popup(e){
 let sbdisplay=document.querySelector("#sb-pop-up")
+// sbdisplay.style.display="flex"
+sbdisplay.innerHTML=``
 let show=[]
 let query=document.querySelector(".textbox").value.toUpperCase()
 console.log(query)
@@ -220,8 +222,8 @@ console.log(show)
     let thisname=element.name
     let color=element.color[0]
     let thisimage=element.colorspicture[color].link1
-    sbdisplay.innerHTML=`
-    <div class="sps">
+    sbdisplay.innerHTML+=`
+    <div class="sps"  onclick="lead(this)" >
     <img class="sp-img"   src="${thisimage}" alt="p-img">
     <p id="spname">${thisname}</p>
     </div>
@@ -240,3 +242,10 @@ console.log(show)
 
 
 
+function loggedout()
+{
+  localStorage.setItem("isloggedin",false)
+  localStorage.setItem("username","")
+  localStorage.setItem("password","")
+  window.location.reload()
+}

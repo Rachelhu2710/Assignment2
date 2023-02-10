@@ -79,6 +79,8 @@ $("#log-in-button").click(function(e) {
     if(username==myusername && password==mypassword)
     { console.log("hello")
       localStorage.setItem("isloggedin", true);
+      localStorage.setItem("username",username)
+      localStorage.setItem("password",password)
     }
     // else{
 

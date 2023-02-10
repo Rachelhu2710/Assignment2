@@ -1,65 +1,61 @@
-// function item1()
-// {
-//     let itemid = "shoes1"
-//     localStorage.setItem("id",itemid)
-// }
+let Products=document.querySelector("#cart-overview")
+let cart1 = JSON.parse(localStorage.getItem("cart"))
+let tp=0;
 
-// function checkout()
-// {
-//  let quantity= document.getElementById("quantity").value
-//  console.log(quantity)
-//  let size = document.getElementById("size").value
-//  localStorage.setItem("quantity",quantity)
-//  localStorage.setItem("size",size)
-// }
-// function validate()
-// {
-//     let naming = document.getElementById('naming').value
-//     if(naming.length<=2)
-//     {
-//         alert("Name must be more than 2 charaters")
-//     }
-// }
+cart1.forEach(product => {
+    let color = product.Color
+    let image = product.Image
+    let name = product.Name
+    let size = product.Size
+    let quantity=product.Quantity
+    let price=product.Price
+    let id = product.ID
+    let UId=product.UID
+    let pc=product.PRODUCTCODE
+  
+  
+    Products.innerHTML+=
+    `<div class="product1" data-id="${id}" data-pc="${pc}" data-size="${size}" data-quantity="${quantity}" data-price="${price}"  data-uid="${UId}">
+    
+        <img class="ip-img1"   src="${image}" alt="p-img">
+        <div id="encloser1">
+        <div id="info1">
+        <p id="name1">${name}</p>
+        <p id="price1">Price:$${price}</p>
+        <p id="color1">Color:${color}</p>
+        <p id="size51">Size:${size}</p>
+        <p id="total-price1"> Total price : $${price*quantity}</p>
+       </div>     
+   
+        <div id="i-d-b">
+          <button id="add-btn" class="i-button">+</button>
+          <input type="number" class="number-box" value="${quantity}" min="1" max="5"/>
+          <button id="minus-btn" class="i-button">-</button>
+        </div>
+      </div>
+   </div>  
+    
+   `
+    
+  });
 
-// let products=function()
+cart1.forEach(product=>{
 
-// let shoes = function(name,price,stock)
-// {
+    let QUANTITY=product.Quantity
+    let PRICE=product.Price
+    tp+=(QUANTITY*PRICE)
+    
 
-
-//     this.name=name,
-//     this.
-// }
-
-
-// let shirts = function(name,price,stock)
-// {
-
-
-//     this.name=name,
-//     this.
-// }
+  })
+  let calc=document.querySelector("#calculation")
+  console.log(calc)
+  console.log(tp)
+  calc.innerHTML=`Total cart Price:$${tp}`
 
 
+  function showcheckout(){
+   let cform=document.querySelector("#checkout-form")
+   console.log(cform)
+   cform.style.display="flex"
 
-
-// let shoes =
-// [  
-//     {idname: "shoes1",name:"PUMA x COCA-COLA Suede Sneakers",price:179.00},
-// ]
-// let itemid = localStorage.getItem("id")
-// for(let item of shoes)
-// {
-//     if (item.idname===itemid) 
-//     {
-//         let price = item.price
-//         let itemname = item.name
-//         let output = document.getElementById('display')
-//         let amount = localStorage.getItem('quantity')
-//         let size = localStorage.getItem("size")
-//         let totalamount = price*amount
-//         output.innerHTML+= itemname+" x"+amount+"<p></p>Price:$"+price+"<p></p>"+"Size: "+size+"<p></p>"+"Total:$"+totalamount
-//         break 
-//     }
-// }
-// localStorage.clear()
+  }

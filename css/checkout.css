@@ -1,36 +1,233 @@
-form
-{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap ;
-    width: 50%;
-}
-.submit
-{
-    width: 100px;
-}
-div
-{
-    margin-top: 5%;
-    display: flex;
-    width: 40%;
-    justify-content: flex-end;
-    flex-direction: column;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    padding-left: 2%;
-    background-color:#F1E0CE
-}
-h2
-{
+
+h2{
     text-align: center;
 }
-body
-{
-    background-image:url("../images/PUMA-GIF.gif") ;
-    background-attachment: fixed;
-    background-position: 80%;
-    background-repeat: no-repeat;
-    background-size:50%;
+
+
+#cart-display{
+    position: absolute;
+    display: flex;
+    width: 30%;
+    height: 90%;
+    border: 1px solid black;
+    flex-direction: column;
+    left: 10%;
 }
 
+#cart-overview{
+
+    width: 100%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    
+}
+
+
+
+
+.product1{
+    display: flex;
+    width: 99%;
+    height: 100%;
+    border: 1px solid black;
+    margin-bottom: 10%;
+    box-shadow: 1px 1px 1px 1px #696161;
+    
+    
+    
+  
+  }
+  .ip-img1{
+    width:50%;
+    height: 100%;
+  }
+  #i-d-b{
+  text-align: center;
+  bottom: 10%;
+  }
+  
+  
+  #name1{
+    font-size: 100%;
+    margin: 0;
+    margin: 4%;
+  }
+  #price1{
+    font-size: 100%;
+    margin: 0;
+    margin: 4%;
+  }
+  #color1{
+    font-size: 100%;
+    margin: 0;
+    margin: 4%;
+  }
+  #size51{
+    font-size: 100%;
+    margin: 4%;
+  }
+  #total-price1{
+    font-size: 100%;
+    margin: 4%;
+    width: 100%;
+   
+  }
+  #info1{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   
+  }
+  #encloser1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+   
+  }
+  .i-button
+  {
+   border: none;
+   background-color: transparent;
+   font-size: 150%;
+  }
+  #add-btn:hover{
+    color: greenyellow;
+  
+  }
+  #minus-btn:hover{
+    color: rgb(248, 26, 26);
+  
+  }
+
+
+#checkout-form{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10%;
+    height: 90%;
+    width: 30%;
+    border: hidden;
+    border-radius: 35px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(242, 233, 226);
+}
+
+.header {
+    background-color:rgb(205, 193, 183);
+    border: hidden;
+    border-radius: 14px;
+    padding: 22px 28px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* .inputbox {
+    position:relative;
+    left: 5%;
+} */
+
+input {
+    position:relative;
+    border: 3px solid #696161;
+    border-radius: 6px;
+}
+
+input::placeholder {
+    opacity: 50%;
+}
+
+.label {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.submit {
+    background-color: rgb(205, 193, 183);
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: hidden;
+    border-radius: 14px;
+    padding: 12px 36px;
+    margin-bottom: 30px;
+}
+
+.submit:hover {
+    background-color: rgb(0, 255, 0);
+    transition: 0.75s ease-out;
+}
+
+.submit:not(:hover) {
+    transition: 0.75s ease;
+}
+
+#calculation
+{ position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 27%;
+    font-size: 30px;
+
+
+}
+#check-out-box{
+  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#calculation
+{ 
+    
+    width: 100%;
+    height: 27%;
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+
+
+
+}
+#check-out-btn
+{
+    position:absolute;
+    bottom: 5%;
+    padding: 5%;
+    background-color: #f0efef;
+}
+
+div::-webkit-scrollbar {
+width: 5px;
+  }
+  
+  /* Track */
+  div::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  div::-webkit-scrollbar-thumb {
+    background: #291b1b;
+  }
+  
+  /* Handle on hover */
+  div::-webkit-scrollbar-thumb:hover {
+    background: #e05151;
+  }

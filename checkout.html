@@ -13,39 +13,63 @@
 </head>
 <body>
     <div id="nav"></div>
-    <form>
-        <p>
-            <label>Name: </label>
+
+
+
+
+   <div id="cart-display">
+        <h2>cart</h2>
+        <div id="cart-overview">
+
+        </div>
+
+        <div id="check-out-box">
+
+            <div id="calculation"></div>
+            <div id="check-out-btn" onclick="showcheckout()"> Checkout</div>
+        </div>
+
+
+
+   </div>
+
+
+
+
+    <form id="checkout-form">
+        <p class="header">Checkout</p>
+        <div class="inputbox">
+            <label class="label">Name: </label><br>
             <input id="naming" type="text" placeholder="Name" required>
-        </p>
-        <p>
-            <label>Phone Number:</label>
+        </div>
+        <p class="inputbox">
+            <label class="label">Phone Number:</label><br>
             <input id="phoneno" type="tel" placeholder="Phone Number" pattern = "[8-9]{1}[0-9]{7}" required>
         </p>
-        <p>
-            <label>Email: </label>
+        <p class="inputbox">
+            <label class="label">Email: </label><br>
             <input id="email" type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
         </p>
-        <p>
-            <Label>Address:</Label>
+        <p class="inputbox">
+            <label class="label">Address:</label><br>
             <input id="add" type="text" placeholder="Address" pattern="[A-Za-z0-9\s,.'-]+" required>
         </p>
-        <p>
-            <Label>Payment Method:</Label>
-            <input class="payment" type="radio" name="payment" value="paynow" required> Paynow
-            <input class="payment" type="radio" name="payment" value="Credit/Debit Card" required> Credit/Debit Card
-            <input class="payment" type="radio" name="payment" value="paylah" required> PayLah
-            <input class="payment" type="radio" name="payment" value="banktransfer" required> Bank Transfer
+        <p class="inputbox">
+            <Label class="label">Payment Method:</Label><br>
+            
+            <input type="radio" name="payment" value="Credit/Debit Card" required> Credit/Debit Card<br>
+            <input type="radio" name="payment" value="paylah" required> PayLah<br>
+            <input type="radio" name="payment" value="paynow" required> Paynow<br>
+            <input type="radio" name="payment" value="banktransfer" required>Bank Transfer
+            
         </p>
         <input class="submit" type="submit" onclick="validate()">
     </form>
-    <div id = "display">
-       <h2><u>Receipt</u> </h2>
-    </div>
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="header.html"></script>
+    <script src="js/header.js"></script>
     <script src="js/order.js"></script>
 </body>
 </html>

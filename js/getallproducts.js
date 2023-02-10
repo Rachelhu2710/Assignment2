@@ -88,11 +88,49 @@ const APIKEY="63df8e643bc6b255ed0c46a6";
      
         localStorage.setItem("cart",JSON.stringify([]))
         localStorage.setItem("hasCodeRunBefore", true);
-       
+        localStorage.setItem("rewards",JSON.stringify([]))
         localStorage.setItem("isloggedin", false);
     }
   }
+
+
   
+let prizes=[prize1={
+  name:"$5 off total bill",
+  type:"discount",
+  id:1},
+  prize2={
+      name:"10 points",
+      type:"points",
+      id:2},
+      prize3={
+          name:"5 points",
+          type:"points",
+          id:3},
+          prize4={
+              name:"$20 off total bill",
+              type:"discount",
+              id:4},
+              prize5={
+                  name:"100 points",
+                  type:"points",
+                  id:5},
+                  prize6={
+                      name:"50 points",
+                      type:"points",
+                      id:6},
+                      prize7={
+                          name:"20 points",
+                          type:"points",
+                          id:7},
+                          prize8={
+                              name:"$10 off total bill",
+                              type:"discount",
+                              id:8},
+  
+
+  ]
+localStorage.setItem("rewardslist", JSON.stringify(prizes))  
 
 
   

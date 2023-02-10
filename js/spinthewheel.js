@@ -1,23 +1,22 @@
 let wheels = document.querySelector('.wheel');
 let spinBtn = document.querySelector('.spinBtn');
 let value = Math.ceil(Math.random() * 3600);
+
 let a = 1
+if(points<10){
+    document.querySelector(".container").style.display="none"
+    document.querySelector(".container").innerHTML=`You dont have enough coins to play`
+}
 spinBtn.addEventListener('click', function() {
-<<<<<<< HEAD
-    turn = value+22.5
-    for (let i = 0; i < wheels.length; i++) {
-        wheels[i].style.transform = "rotate("+turn +"deg)";
-        wheels[i].style.transition = "transform 11s ease-in-out";
-    }
-=======
     turn = value + 25
     wheels.style.transform = "rotate("+turn +"deg)";
     wheels.style.transition = "transform 11s ease-in-out";
 })
->>>>>>> 991206e29b231edf1eea82ad64f46ab55ffdb584
 
 // countselect = 360-(((value/360)-Math.floor(value/360))360)
 wheels.addEventListener("transitionend", function() {
+    let rewards=JSON.parse(localStorage.getItem("rewards"))
+    let rewardslist=JSON.parse(localStorage.getItem("rewardslist"))
     values = value
     while (values>360)
     {
@@ -64,7 +63,14 @@ wheels.addEventListener("transitionend", function() {
     // to display the won value 
     let voucher = prize.querySelector('span').innerHTML
     console.log(voucher)
-    localStorage.setItem("prize"+a,voucher)
+    localStorage.setItem("prize",voucher)
+    rewardslist.forEach(element => {
+        if (element.name==voucher) {
+            rewards.push(element)
+            
+        }
+    });
     alert("congratulations you have won " + voucher)
     a+=1
+    localStorage.setItem("rewards",JSON.stringify(rewards))
 })
