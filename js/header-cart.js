@@ -220,7 +220,7 @@ console.log(show)
     let thisname=element.name
     let color=element.color[0]
     let thisimage=element.colorspicture[color].link1
-    sbdisplay.innerHTML=`
+    sbdisplay.innerHTML+=`
     <div class="sps">
     <img class="sp-img"   src="${thisimage}" alt="p-img">
     <p id="spname">${thisname}</p>

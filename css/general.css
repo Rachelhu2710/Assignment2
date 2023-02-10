@@ -6,10 +6,11 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 4px 4px 4px lightgray; */
+  box-shadow: 4px 4px 4px lightgray;
   width: 100%;
   position: relative;
-  background:linear-gradient(rgb(255, 255, 255) );
+  /* background:linear-gradient(black,white); */
+  background-color: white;
 
  
 }

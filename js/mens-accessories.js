@@ -62,13 +62,27 @@ if (document.title=="Mens accessories 1") {
     
     for (const key in element.sizestock[color]) 
     {
-      sizes.innerHTML+=`<div class="sizes" data-size=${key}><button class="sized" onclick="checkout(this)">${key}</button></div>`
+      sizes.innerHTML+=`<div class="sizes" data-size=${key}><button class="sized" onclick="checkout(this)"><strong>${key}</strong></button></div>`
     }
     let description=document.getElementById("description")
     description.innerHTML=element.description
     $('button').on('click',function (e){
       e.preventDefault();
-    $(this).css('background-color', 'grey');
+      let buttons = $(".sizes");
+      let thisbutton  = $(this).parent().data("size")
+      buttons.each(function(){
+        let data = $(this).data("size")
+        console.log (thisbutton)
+        if (data == thisbutton)
+        {
+          console.log(data)
+          $(this).children("button").css('background-color', 'grey');
+        }
+        else{
+          $(this).children("button").css('background-color', '#EEEBE7');
+
+        }
+      })
     
     })
     }

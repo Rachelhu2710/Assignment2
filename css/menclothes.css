@@ -10,7 +10,9 @@
 } 
  .container img
 {
+  margin-top: 7%;
   max-width: 95%;
+  border: 1px solid black;
 } 
 
 #clothes1
@@ -23,7 +25,7 @@
 }
 #clothes1:hover
 {
-  color: lightslategray;
+  color:#C6AA86;
 }
 #clothes2
 {
@@ -35,7 +37,7 @@
 }
 #clothes2:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #clothes3
 {
@@ -47,7 +49,7 @@
 }
 #clothes3:hover
 {
-  color: lightslategrey;
+  color: #C6AA86;
 }
 #clothes4
 {
@@ -59,7 +61,7 @@
 }
 #clothes4:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #clothes5
 {
@@ -71,7 +73,7 @@
 }
 #clothes5:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #clothes6
 {
@@ -83,7 +85,7 @@
 }
 #clothes6:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #clothes7
 {
@@ -95,7 +97,7 @@
 }
 #clothes7:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #clothes8
 {
@@ -107,7 +109,7 @@
 }
 #clothes8:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #item1-1
 {

@@ -3,18 +3,10 @@ let spinBtn = document.querySelector('.spinBtn');
 let value = Math.ceil(Math.random() * 3600);
 let a = 1
 spinBtn.addEventListener('click', function() {
-<<<<<<< HEAD
-    turn = value+22.5
-    for (let i = 0; i < wheels.length; i++) {
-        wheels[i].style.transform = "rotate("+turn +"deg)";
-        wheels[i].style.transition = "transform 11s ease-in-out";
-    }
-=======
     turn = value + 25
     wheels.style.transform = "rotate("+turn +"deg)";
     wheels.style.transition = "transform 11s ease-in-out";
 })
->>>>>>> 991206e29b231edf1eea82ad64f46ab55ffdb584
 
 // countselect = 360-(((value/360)-Math.floor(value/360))360)
 wheels.addEventListener("transitionend", function() {
@@ -25,7 +17,6 @@ wheels.addEventListener("transitionend", function() {
     }
     countselect= 360 - values 
     console.log(values);
-    // extract prize
     if (countselect<=45)
     {
         var prize=document.getElementById("1");

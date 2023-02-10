@@ -10,7 +10,9 @@
 } 
  .container img
 {
+  margin-top: 7%;
   max-width: 95%;
+  border: 1px solid black;
 } 
 #shoes1
 {
@@ -22,7 +24,7 @@
 }
 #shoes1:hover
 {
-  color: lightslategray;
+  color:#C6AA86;
 }
 #shoes2
 {
@@ -34,7 +36,7 @@
 }
 #shoes2:hover
 {
-  color: lightslategray;
+  color:#C6AA86;
 }
 #shoes3
 {
@@ -46,7 +48,7 @@
 }
 #shoes3:hover
 {
-  color: lightslategrey;
+  color: #C6AA86;
 }
 #shoes4
 {
@@ -58,7 +60,7 @@
 }
 #shoes4:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #shoes5
 {
@@ -70,7 +72,7 @@
 }
 #shoes5:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #shoes6
 {
@@ -82,7 +84,7 @@
 }
 #shoes6:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #shoes7
 {
@@ -94,7 +96,7 @@
 }
 #shoes7:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #shoes8
 {
@@ -106,7 +108,7 @@
 }
 #shoes8:hover
 {
-  color: lightslategray;
+  color: #C6AA86;
 }
 #item1-1
 {
