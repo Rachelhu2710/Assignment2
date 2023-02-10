@@ -11,7 +11,7 @@ spinBtn.addEventListener('click', function() {
     turn = value + 25
     wheels.style.transform = "rotate("+turn +"deg)";
     wheels.style.transition = "transform 11s ease-in-out";
-})
+})  
 
 // countselect = 360-(((value/360)-Math.floor(value/360))360)
 wheels.addEventListener("transitionend", function() {
