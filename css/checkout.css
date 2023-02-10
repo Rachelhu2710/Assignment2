@@ -134,10 +134,7 @@ h2{
     font-weight: bold;
 }
 
-/* .inputbox {
-    position:relative;
-    left: 5%;
-} */
+
 
 input {
     position:relative;
@@ -231,3 +228,14 @@ width: 5px;
   div::-webkit-scrollbar-thumb:hover {
     background: #e05151;
   }
+  @media (max-width: 426px) 
+{
+  #info1
+  {
+    font-size: 50%;
+  }
+  #calculation 
+  {
+    font-size: 100%;
+  }
+}
