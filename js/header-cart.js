@@ -1,6 +1,7 @@
 let products=document.querySelector("#products")
 let cart=JSON.parse(localStorage.getItem("cart"))
 let ap=JSON.parse(localStorage.getItem("allproducts"))
+let userreward=[]
 // console.log(document.querySelector("#products"))
 
 cart.forEach(product => {
@@ -244,8 +245,95 @@ console.log(show)
 
 function loggedout()
 {
+  
+  
+const APIKEY="63df8e643bc6b255ed0c46a6";
+
+
+  //[STEP 3]: get form values when user clicks on send
+  //Adapted from restdb api
+  let jsondata = {
+    "username":localStorage.getItem("username"),
+    "password":localStorage.getItem("password"),
+    "voucher":localStorage.getItem("rewards"),
+    "coins":localStorage.getItem("points")
+    
+  }   
+
+
+
+
+
+let settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://assignment-7a34.restdb.io/rest/reward",
+  "method": "POST", //[cher] we will use post to send info
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": APIKEY,
+    "cache-control": "no-cache"
+    
+  }
+  ,
+  "processData": false,
+  "data": JSON.stringify(jsondata),
+  // "beforeSend": function(){
+  //   //@TODO use loading bar instead
+  //   //disable our button or show loading bar
+  // //   $("#sub,").prop( "disabled", true);
+  // //   //clear our form using the form id and triggering it's reset feature
+  // //   $("#add-contact-form").trigger("reset");
+  // }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  
+  // $("#contact-submit").prop( "disabled", false);
+  
+  // //@TODO update frontend UI 
+  // $("#add-update-msg").show().fadeOut(3000);
+
+  // //update our table 
+  // getContacts();
+});
   localStorage.setItem("isloggedin",false)
   localStorage.setItem("username","")
   localStorage.setItem("password","")
+  localStorage.setItem("rewards","")
   window.location.reload()
 }
+
+
+
+
+
+const APIKEY1="63df8e643bc6b255ed0c46a6";
+
+
+
+let settings1 = {
+"async": true,
+"crossDomain": true,
+"url": "https://assignment-7a34.restdb.io/rest/reward",
+"method": "GET", //[cher] we will use post to send info
+"headers": {
+  "content-type": "application/json",
+  "x-apikey": APIKEY1,
+  "cache-control": "no-cache"
+  
+}
+,
+
+
+}
+
+$.ajax(settings1).done(function (response) {
+response.forEach(element => {
+  userreward.push(element)
+});
+localStorage.setItem("userreward",JSON.stringify(userreward))
+
+});
+
