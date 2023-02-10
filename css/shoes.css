@@ -5,8 +5,6 @@
     height: 100%;
     width: 100%;
     background-color: white;
-    
-   
 }
 
 #right
@@ -19,23 +17,14 @@
     display: flex;
    
 }
-/* #img
-{
- 
- max-width: 90%;
- position: relative;
- background-color: aliceblue;
- border: 1px solid black;
- /* border-radius: ; 
-} */
+
 #img1
 {
     max-width: 80%;
-    height: auto;
+    max-height: 90%;
     border: 3px solid #BFAA88;
     border-radius: 2%;
     margin-bottom: 5%;
-    /* object-fit: cover; */
 }
 
 
@@ -84,14 +73,7 @@
 #description
 {
     position: absolute;
-    bottom: 19%;
-}
-#heart
-{
-    position: absolute;
-    width: 8%;
-    left: 60%;
-    bottom: 35.5%;
+    bottom: 16%;
 }
 
 .back
@@ -104,41 +86,57 @@
 {
     color: cadetblue;
 }
-/* .image
+
+@media (max-width: 769px) 
 {
-    width: 100%;
+    #description
+    {
+        font-size: 15px;
+    }
+}
+@media (max-width: 426px) 
+{
+    #description
+    {
+        font-size: 12px;
+    }
+    #img1
+    {
+        max-width: 90%;
+        max-height: 50%;
+    }
 }
 
-img,.text
+@media (max-width: 376px) 
 {
-    float:left;
+    #description
+    {
+        font-size: 10px;
+    }
+    #addtobag
+    {
+        padding: 3% 15%;
+    }
+    #img1
+    {
+        max-width: 90%;
+        max-height: 50%;
+    }
 }
 
-.text
+@media (max-width: 376px) 
 {
-    width:50%;
+    #description
+    {
+        font-size: 10px;
+    }
+    #addtobag
+    {
+        padding: 3% 10%;
+    }
+    #img1
+    {
+        max-width: 80%;
+        max-height: 30%;
+    }
 }
-
-img
-{
-    width:50%;
-}
-.back
-{
-    color: black;
-    text-decoration: none;
-    padding: 5%;
-}
-.back:hover
-{
-    color: cadetblue;
-}
-.checkout
-{
-    color: black;
-    text-decoration: none;
-}
-.checkout:hover
-{
-    color: cornflowerblue;
-}  */
