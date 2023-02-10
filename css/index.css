@@ -6,6 +6,8 @@
 }
 
 .wrapper {
+  font-family: 'Aboreto', 'cursive';
+  font-size: 15px;
    display: flex;
   justify-content: flex-start;
   overflow: hidden;
@@ -24,7 +26,10 @@
 .wrapper:hover .moving-text-box-message{
 animation-play-state: paused;
 }
-
+.moving-text-box-message a 
+{
+  text-decoration: none;
+}
 @keyframes rightToLeft {
   0%{
    transform: translateX(100%);
