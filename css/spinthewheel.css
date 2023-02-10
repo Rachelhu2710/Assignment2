@@ -14,6 +14,14 @@ body{
     background: #F1EBE9;
 
 }
+#rules
+{
+    margin-left: 2%;
+}
+#back
+{
+    width: 20%;
+}
 .container
 {
     position: relative;

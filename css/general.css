@@ -190,7 +190,7 @@ transition: .3s;
     0 calc(-1 * var(--h)) #000, 
     0 0 lightgray;
 }
-#Wallet{
+#About{
   position: absolute;
   top: 30%;
   --h: 1.2em;   
@@ -201,57 +201,57 @@ transition: .3s;
     0 calc(-1*var(--_t, 0em)) #000, 
     0 calc(var(--h) - var(--_t, 0em)) lightgray;
   overflow: hidden;
-  transition: .3s;}
+  transition: .3s;
+}
+#About:hover {
+  text-shadow: 
+  0 calc(-1 * var(--h)) #000, 
+  0 0 lightgray;}
 
-  #Wallet:hover {
+
+  
+
+
+  
+
+
+#checkout{
+position: absolute;
+top: 40%;
+--h: 1.2em;   
+
+line-height: var(--h);
+color: #0000;
+text-shadow: 
+  0 calc(-1*var(--_t, 0em)) #000, 
+  0 calc(var(--h) - var(--_t, 0em)) lightgray;
+overflow: hidden;
+transition: .3s;}
+
+
+#checkout:hover {
+  text-shadow: 
+    0 calc(-1 * var(--h)) #000, 
+    0 0 lightgray}
+
+
+#settings{
+  position: absolute;
+  top: 50%;
+  --h: 1.2em;   
+
+  line-height: var(--h);
+  color: #0000;
+  text-shadow: 
+    0 calc(-1*var(--_t, 0em)) #000, 
+    0 calc(var(--h) - var(--_t, 0em)) lightgray;
+  overflow: hidden;
+  transition: .3s;}
+  #settings:hover {
     text-shadow: 
       0 calc(-1 * var(--h)) #000, 
       0 0 lightgray;}
 
-
-  
-
-
-  
-
-
-  #checkout{
-    position: absolute;
-    top: 40%;
-    --h: 1.2em;   
-
-    line-height: var(--h);
-    color: #0000;
-    text-shadow: 
-      0 calc(-1*var(--_t, 0em)) #000, 
-      0 calc(var(--h) - var(--_t, 0em)) lightgray;
-    overflow: hidden;
-    transition: .3s;}
-
-
-    #checkout:hover {
-      text-shadow: 
-        0 calc(-1 * var(--h)) #000, 
-        0 0 lightgray}
-  
-
-    #settings{
-      position: absolute;
-      top: 50%;
-      --h: 1.2em;   
-
-      line-height: var(--h);
-      color: #0000;
-      text-shadow: 
-        0 calc(-1*var(--_t, 0em)) #000, 
-        0 calc(var(--h) - var(--_t, 0em)) lightgray;
-      overflow: hidden;
-      transition: .3s;}
-      #settings:hover {
-        text-shadow: 
-          0 calc(-1 * var(--h)) #000, 
-          0 0 lightgray;}
-    
 #log-out{
   position: absolute;
 top: 70%;
