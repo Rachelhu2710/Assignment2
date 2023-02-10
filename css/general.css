@@ -2,14 +2,20 @@
 body::-webkit-scrollbar {
   display: none;
 }
+body
+{
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 18px;
+}
 header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 4px 4px 4px lightgray; */
-  width: 100%;
+  box-shadow: 4px 4px 4px lightgray;
+  max-width: 100%;
   position: relative;
-  background:linear-gradient(rgb(255, 255, 255) );
+  /* background:linear-gradient(black,white); */
+  background-color: white;
 
  
 }
@@ -26,7 +32,6 @@ height: 40px;}
 
 
  .column a {
-   font-size: 16px;
    color: white;
    text-align: center;
    padding: 14px 16px;
@@ -43,7 +48,6 @@ height: 40px;}
 
  /* Dropdown button */
  .dropdown  {
-   font-size: 16px;
    border: none;
    outline: none;
    color: rgb(255, 255, 255);
@@ -53,8 +57,6 @@ height: 40px;}
    margin: 0; /* Important for vertical align on mobile phones */
  }
  .dropbtn{
-
-   font-size: 16px;
    border: none;
    outline: none;
    color:black;
@@ -64,8 +66,6 @@ height: 40px;}
 
  }
  .dropbtn1{
-
-  font-size: 16px;
   border: none;
   outline: none;
   color:black;
@@ -150,7 +150,6 @@ user dropdown 2 */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   flex-direction: column;
-  font-size: 150%;
   
 
 }
@@ -442,7 +441,6 @@ top: 40%;
   right: 0;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-size: 200%;
   cursor: pointer;
   
 }
@@ -478,7 +476,6 @@ top: 40%;
   padding: 0;
   margin: 0;
   border: none;
-  font-size: 100%;
   background-color: transparent;
   outline: none;
   transition-duration: 0.05s;
@@ -649,7 +646,6 @@ top: 40%;
 }
 .cart-amt
 {
-  font-size: 24px;
   background-color: red;
   position: absolute;
   top: -15px;
@@ -679,7 +675,6 @@ top: 40%;
 .sidepanel a {
 
   text-decoration: none;
-  font-size: 25px;
   color: #000000;
   display: block;
   transition: 0.3s;
@@ -690,7 +685,6 @@ top: 40%;
 .sidepanel p{
   text-align: center;
   text-decoration: none;
-  font-size: 25px;
   color: #000000;
   display: block;
   transition: 0.3s;
@@ -706,7 +700,6 @@ top: 40%;
   position: absolute;
   top: 0;
   right: 0%;
-  font-size: 36px;
   margin-left: 50px;
 }
 
@@ -734,26 +727,21 @@ text-align: center;
 
 
 #name{
-  font-size: 100%;
   margin: 0;
   margin: 4%;
 }
 #price{
-  font-size: 100%;
   margin: 0;
   margin: 4%;
 }
 #color{
-  font-size: 100%;
   margin: 0;
   margin: 4%;
 }
 #size5{
-  font-size: 100%;
   margin: 4%;
 }
 #total-price{
-  font-size: 100%;
   margin: 4%;
 }
 #info{
@@ -764,7 +752,6 @@ text-align: center;
 {
  border: none;
  background-color: transparent;
- font-size: 150%;
 }
 #add-btn:hover{
   color: greenyellow;
@@ -785,8 +772,6 @@ text-align: center;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 
 

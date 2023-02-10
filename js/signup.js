@@ -90,6 +90,8 @@ $(document).ready(function(){
           alert("Please Select a Gender");
           return;
         }
+        
+        
     
         //[STEP 3]: get form values when user clicks on send
         //Adapted from restdb api
@@ -148,17 +150,18 @@ $(document).ready(function(){
     })
 
 
-
-
-
-
-
-
-
-
-
-
-
 })
 
+// let container = document.querySelector("#sign-up-button")
+// let animamation;
+// animamation = lottiePlayer.loadAnimation({
+//   container: container,
+//   renderer: 'svg',
+//   loop: false,
+//   autoplay: false,
+//   path: 'https://assets2.lottiefiles.com/packages/lf20_kkhbkdd3.json'
+// });
 
+
+// const player =document.querySelector('lottie-player');
+// player.load('https://assets2.lottiefiles.com/packages/lf20_kkhbkdd3.json');

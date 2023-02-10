@@ -92,7 +92,6 @@ body{
     font-weight: 600;
     color: black;
 }
-
 @media (max-width: 769px) 
 {
     .container 
@@ -104,7 +103,7 @@ body{
         font-size: 70% ;
     }
   }
-  
+
 @media (max-width: 426px) 
 {
     .container 

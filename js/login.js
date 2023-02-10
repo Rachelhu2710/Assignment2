@@ -65,8 +65,12 @@ $("#log-in-button").click(function(e) {
       alert("Password must be at least 8 characters long");
       return;
     }
-
-
+    const player =document.querySelector('lottie-player');
+    player.load('https://assets2.lottiefiles.com/packages/lf20_kkhbkdd3.json');
+    $("lottie-player").css({"position":"absolute","z-index":"20"});
+    player.addEventListener('complete', function() {
+      window.location.href = "index.html";
+        });
 
 
     let users = JSON.parse(localStorage.getItem("users"))
